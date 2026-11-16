@@ -184,5 +184,8 @@
   },
   "colAliasesCustom": {
     "message": "Keywords"
+  },
+  "supportText": {
+    "message": "Enjoying Barkeys? Support it with a coffee:"
   }
 }

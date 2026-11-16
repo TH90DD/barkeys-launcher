@@ -188,3 +188,15 @@ button.icon:hover { color: var(--error); }
 }
 .note p { margin-top: 2px; font-size: .95em; }
 .tips { margin: 14px 0 0; padding-left: 20px; color: var(--muted); font-size: .92em; display: grid; gap: 4px; }
+
+.support { margin-top: 28px; text-align: center; color: var(--muted); font-size: .9em; }
+.support a {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 4px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: inherit;
+  text-decoration: none;
+}
+.support a:hover { border-color: var(--accent); }

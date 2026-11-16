@@ -51,6 +51,10 @@ Or load it temporarily: `about:debugging#/runtime/this-firefox` → "Load Tempor
 - Live suggestions in the address bar via a dedicated keyword
 - Smarter bookmark search
 
+## Support
+
+If Barkeys saves you some keystrokes, you can [buy me a coffee ☕](https://buymeacoffee.com/th90dd).
+
 ## License
 
 [MPL-2.0](LICENSE) © TH90DD

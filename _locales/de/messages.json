@@ -184,5 +184,8 @@
   },
   "colAliasesCustom": {
     "message": "Kürzel"
+  },
+  "supportText": {
+    "message": "Gefällt dir Barkeys? Ich freue mich über einen Kaffee:"
   }
 }
