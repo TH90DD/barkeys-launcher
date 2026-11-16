@@ -8,6 +8,8 @@ Firefox erlaubt pro Suchmaschine genau **ein** Kürzel. Barkeys Launcher ergänz
 
 Barkeys **erweitert** deine Firefox-Suchmaschinen, es ersetzt sie nicht.
 
+> **Ein Nebenprojekt.** Ich habe Barkeys Launcher für meinen eigenen Bedarf gebaut und teile es, weil es anderen vielleicht auch hilft. Updates und neue Funktionen kommen nach eigenem Ermessen, ohne festen Zeitplan oder zugesicherten Support, und es kann Fehler enthalten. Die Nutzung erfolgt *ohne Gewähr* – siehe [MPL-2.0](LICENSE). Fehlerberichte und Ideen sind über [Issues](https://github.com/TH90DD/barkeys-launcher/issues) willkommen.
+
 ## So funktioniert's
 
 | Suchmaschine | Haupt-Kürzel (in Firefox) | Weitere Kürzel (in Barkeys) |

@@ -33,7 +33,7 @@ App.register({
     // 2. Main keywords in Firefox
     const mains = App.ff.filter(e => e.mains.length).length;
     item(mains > 0,
-      mains ? t("setupMainOk", String(mains)) : t("setupMainTodo"),
+      mains === 1 ? t("setupMainOkOne") : mains ? t("setupMainOk", String(mains)) : t("setupMainTodo"),
       mains ? "" : t("setupMainTodoText"),
       mains ? null : h("button", { class: "btn small", text: t("btnHowTo"), onclick: () => Tabs.show("guide") }));
 
@@ -43,7 +43,7 @@ App.register({
       + App.state.sites.reduce((s, x) => s + x.a.length, 0)
       + App.state.bundles.reduce((s, x) => s + x.a.length, 0);
     item(extras > 0,
-      extras ? t("setupExtraOk", String(extras)) : t("setupExtraTodo"),
+      extras === 1 ? t("setupExtraOkOne") : extras ? t("setupExtraOk", String(extras)) : t("setupExtraTodo"),
       extras ? "" : t("setupExtraTodoText"),
       extras ? null : h("button", { class: "btn small", text: t("btnGoEngines"), onclick: () => Tabs.show("engines") }));
   },

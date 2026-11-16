@@ -561,3 +561,18 @@ textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-
 .credit-list li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .credit-list .tag { font-size: .75rem; padding: 1px 8px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
 .modal-body .muted a { color: var(--accent); }
+
+/* Side-project notice on the welcome tab */
+.notice {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  padding: 16px 20px;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: .92rem;
+}
+.notice strong { color: var(--ink-soft); }
+.notice p { margin: 2px 0 6px; }
+.notice-icon { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--surface-2); color: var(--muted); }

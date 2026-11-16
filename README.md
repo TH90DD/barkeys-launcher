@@ -8,6 +8,8 @@ Firefox lets you give each search engine exactly **one** keyword. Barkeys Launch
 
 It **extends** your Firefox search engines, it doesn't replace them.
 
+> **A side project.** I built Barkeys Launcher for my own needs and share it because others might find it useful. Updates and new features happen at my own discretion, without a fixed schedule or guaranteed support, and it may contain bugs. It's provided *as is*, without warranty – see the [MPL-2.0](LICENSE). Bug reports and ideas are welcome via [issues](https://github.com/TH90DD/barkeys-launcher/issues).
+
 ## How it works
 
 | Search engine | Main keyword (set in Firefox) | Extra keywords (set in Barkeys) |

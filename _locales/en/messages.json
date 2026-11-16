@@ -755,5 +755,20 @@
   },
   "creditsOwnLicense": {
     "message": "Barkeys Launcher is licensed under the Mozilla Public License 2.0."
+  },
+  "disclaimerTitle": {
+    "message": "A side project – made with care, but no guarantees"
+  },
+  "disclaimerText": {
+    "message": "I built Barkeys because I needed it myself. Updates and new features come at my own discretion, without a fixed schedule, and it may contain bugs. It's provided as is, without warranty (see the MPL-2.0 license). Bug reports and ideas are still very welcome."
+  },
+  "disclaimerLink": {
+    "message": "Report a bug or share an idea"
+  },
+  "setupMainOkOne": {
+    "message": "1 search engine with a main keyword in Firefox"
+  },
+  "setupExtraOkOne": {
+    "message": "1 extra keyword set up"
   }
 }
