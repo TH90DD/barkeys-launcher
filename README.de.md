@@ -2,11 +2,30 @@
 
 # Barkeys Launcher
 
-[English](README.md) · **Deutsch**
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/github/manifest-json/v/TH90DD/barkeys-launcher?label=version&color=d60042">
+  <img alt="Firefox 142+" src="https://img.shields.io/badge/Firefox-142%2B-ff7139?logo=firefoxbrowser&logoColor=white">
+  <img alt="License MPL-2.0" src="https://img.shields.io/github/license/TH90DD/barkeys-launcher?color=181721">
+  <img alt="Data collection: none" src="https://img.shields.io/badge/data%20collection-none-2ea44f">
+  <img alt="Sprachen EN | DE" src="https://img.shields.io/badge/languages-EN%20%7C%20DE-6b6a76">
+</p>
 
-**Schlauer suchen mit Kürzeln in der Adressleiste.**
+<p align="center"><a href="README.md">English</a> · <b>Deutsch</b></p>
 
-Firefox erlaubt pro Suchmaschine genau **ein** Kürzel. Barkeys Launcher ergänzt beliebig viele weitere – `@w`, `@wiki` und `@wikipedia` durchsuchen alle Wikipedia.
+**Mehr Kürzel für deine Firefox-Adressleiste.**
+
+Firefox gibt jeder Suchmaschine genau **ein** Kürzel. Barkeys Launcher macht die Adressleiste zum Launcher: beliebig viele Kürzel pro Suchmaschine, jede Seite mit Suchfunktion als eigenes Kürzel, Abkürzungen zu deinen Lieblingsseiten und Bündel, die mehrere Tabs auf einmal öffnen – alles direkt in die Adressleiste getippt.
+
+**Funktionen auf einen Blick**
+
+- **Mehr Kürzel pro Suchmaschine** – `@w`, `@wiki` und `@wikipedia` durchsuchen alle Wikipedia.
+- **Eigene Ziele** – jede Seite mit Suchfunktion wird per URL zum Kürzel, z. B. `@dict wort`.
+- **Seiten-Kürzel** – `@news` öffnet direkt deine Nachrichtenseite, auf Wunsch aus deinen Lesezeichen gewählt.
+- **Bündel** – `@workspace` öffnet Mail, Kalender und Projekt-Tool auf einmal.
+- **45+ Vorlagen** – Wikipedia, DeepL, Amazon, GitHub, Flathub und mehr, mit Länder- und Sprachvarianten.
+- **Sync, Backup & Teilen** – Kürzel reisen per Firefox Sync mit; Export/Import als Datei.
+- **Datenschutz eingebaut** – keine Datensammlung, keine eigenen Netzwerkverbindungen, optionale Rechte nur, wenn du eine Funktion nutzt.
+- **Deutsch & Englisch** – folgt der Sprache deines Firefox, oder du wählst selbst.
 
 Barkeys Launcher **erweitert** deine Firefox-Suchmaschinen, es ersetzt sie nicht.
 
@@ -22,8 +41,6 @@ Barkeys Launcher **erweitert** deine Firefox-Suchmaschinen, es ersetzt sie nicht
 1. Du tippst `@wiki katzen` in die Adressleiste.
 2. Firefox kennt `@wiki` nicht und schickt den Text an deine Standardsuchmaschine.
 3. Barkeys Launcher fängt diese Ergebnisseite ab, bevor sie lädt, und übergibt die Suche stattdessen an deine Firefox-Suchmaschine „Wikipedia“.
-
-Außerdem kannst du Ziele ganz ohne Firefox-Suchmaschine anlegen – nur mit einer URL mit `%s` –, **Seiten-Kürzel**, die direkt eine Seite öffnen (`@news` → deine Nachrichtenseite), optional aus deinen Lesezeichen gewählt, und **Bündel**, die mehrere Seiten auf einmal öffnen (`@workspace` → Mail, Kalender, Projekt-Tool). Im Tab „Vorlagen“ warten rund 45 fertige Such-Adressen (Wikipedia, DeepL, Amazon, GitHub, Flathub …), die du mit einem Klick übernimmst.
 
 ### Screenshots
 

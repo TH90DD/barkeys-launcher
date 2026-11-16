@@ -2,11 +2,30 @@
 
 # Barkeys Launcher
 
-**English** · [Deutsch](README.de.md)
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/github/manifest-json/v/TH90DD/barkeys-launcher?label=version&color=d60042">
+  <img alt="Firefox 142+" src="https://img.shields.io/badge/Firefox-142%2B-ff7139?logo=firefoxbrowser&logoColor=white">
+  <img alt="License MPL-2.0" src="https://img.shields.io/github/license/TH90DD/barkeys-launcher?color=181721">
+  <img alt="Data collection: none" src="https://img.shields.io/badge/data%20collection-none-2ea44f">
+  <img alt="Languages EN | DE" src="https://img.shields.io/badge/languages-EN%20%7C%20DE-6b6a76">
+</p>
 
-**Smarter search with address bar keywords.**
+<p align="center"><b>English</b> · <a href="README.de.md">Deutsch</a></p>
 
-Firefox lets you give each search engine exactly **one** keyword. Barkeys Launcher adds as many extra keywords as you like – `@w`, `@wiki` and `@wikipedia` all search Wikipedia.
+**More keywords for your Firefox address bar.**
+
+Firefox gives each search engine exactly **one** keyword. Barkeys Launcher turns the address bar into a launcher: as many keywords per search engine as you like, any site with a search as its own keyword, shortcuts to your favourite pages and bundles that open several tabs at once – all typed straight into the address bar.
+
+**Features at a glance**
+
+- **More keywords per search engine** – `@w`, `@wiki` and `@wikipedia` all search Wikipedia.
+- **Custom targets** – any site with a search becomes a keyword via its URL, e.g. `@dict word`.
+- **Site keywords** – `@news` opens your news site directly; pick them from your bookmarks if you like.
+- **Bundles** – `@workspace` opens mail, calendar and project tool in one go.
+- **45+ presets** – Wikipedia, DeepL, Amazon, GitHub, Flathub and more, with country and language variants.
+- **Sync, backup & sharing** – keywords travel with Firefox Sync; export/import as a file.
+- **Private by design** – no data collection, no network requests of its own, optional permissions only when you use a feature.
+- **English & German** – follows your Firefox language, or pick one.
 
 It **extends** your Firefox search engines, it doesn't replace them.
 
@@ -22,8 +41,6 @@ It **extends** your Firefox search engines, it doesn't replace them.
 1. You type `@wiki cats` into the address bar.
 2. Firefox doesn't know `@wiki`, so it sends the text to your default search engine.
 3. Barkeys Launcher catches that result page before it loads and hands the search to your Firefox engine "Wikipedia" instead.
-
-You can also add targets that have no Firefox search engine at all, just a URL with `%s` – **site keywords** that open a page directly (`@news` → your news site), optionally picked from your bookmarks, and **bundles** that open several sites at once (`@workspace` → mail, calendar, project tool). The guide includes ~45 ready-made search presets (Wikipedia, DeepL, Amazon, GitHub, Flathub, …) you can add with one click.
 
 ### Screenshots
 
