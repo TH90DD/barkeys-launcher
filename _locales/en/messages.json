@@ -5,17 +5,151 @@
   "extDescription": {
     "message": "Multiple address bar keywords for your search engines – e.g. @w, @wiki and @wikipedia for Wikipedia."
   },
-  "optEnginesTitle": {
-    "message": "1. Your default search engine"
+  "tagline": {
+    "message": "More keywords for your address bar"
   },
-  "optEnginesHint": {
-    "message": "Enable the search engine that is set as default in Firefox. The add-on spots extra keywords on its result page – it only gets access to that, nothing else."
+  "tabWelcome": {
+    "message": "Welcome"
   },
-  "optFfTitle": {
-    "message": "2. Your Firefox search engines"
+  "tabEngines": {
+    "message": "Search engines"
   },
-  "optFfHint": {
+  "tabCustom": {
+    "message": "Custom targets"
+  },
+  "tabData": {
+    "message": "Data & sync"
+  },
+  "tabGuide": {
+    "message": "Guide"
+  },
+  "statusSaved": {
+    "message": "Saved ✓"
+  },
+  "statusSaving": {
+    "message": "Saving …"
+  },
+  "statusInvalid": {
+    "message": "Not saved – check the fields marked red"
+  },
+  "statusError": {
+    "message": "Saving failed: $msg$",
+    "placeholders": {
+      "msg": {
+        "content": "$1"
+      }
+    }
+  },
+  "welcomeTitle": {
+    "message": "Welcome to Barkeys Launcher"
+  },
+  "welcomeLead": {
+    "message": "Firefox allows only one keyword per search engine. Barkeys gives each engine as many extra keywords as you like – and turns any site with a search into a keyword."
+  },
+  "featKeywordsTitle": {
+    "message": "More keywords"
+  },
+  "featKeywordsText": {
+    "message": "@w, @wiki and @wikipedia all lead to the same search."
+  },
+  "featCustomTitle": {
+    "message": "Custom targets"
+  },
+  "featCustomText": {
+    "message": "Any site with a search becomes a keyword via its URL – no Firefox search engine needed."
+  },
+  "featPrivacyTitle": {
+    "message": "Private & synced"
+  },
+  "featPrivacyText": {
+    "message": "No data collection, no network requests of its own. Your keywords travel with Firefox Sync."
+  },
+  "setupTitle": {
+    "message": "Setup"
+  },
+  "setupHint": {
+    "message": "Three steps and you're done."
+  },
+  "setupDefaultOk": {
+    "message": "Default search “$engine$” is enabled",
+    "placeholders": {
+      "engine": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupDefaultTodo": {
+    "message": "Enable default search “$engine$”",
+    "placeholders": {
+      "engine": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupDefaultTodoText": {
+    "message": "Barkeys needs access to its result page to spot extra keywords – nothing else."
+  },
+  "setupDefaultUnsupported": {
+    "message": "Your default search “$engine$” isn't supported yet",
+    "placeholders": {
+      "engine": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupDefaultUnsupportedText": {
+    "message": "In Firefox Settings → Search, make one of these your default: $list$",
+    "placeholders": {
+      "list": {
+        "content": "$1"
+      }
+    }
+  },
+  "btnAllow": {
+    "message": "Enable"
+  },
+  "setupMainOk": {
+    "message": "$count$ search engines with a main keyword in Firefox",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupMainTodo": {
+    "message": "No search engine with a keyword in Firefox yet"
+  },
+  "setupMainTodoText": {
+    "message": "Add a keyword in Firefox Settings → Search, e.g. @y for YouTube."
+  },
+  "setupExtraOk": {
+    "message": "$count$ extra keywords set up",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupExtraTodo": {
+    "message": "No extra keywords yet"
+  },
+  "setupExtraTodoText": {
+    "message": "Add extra keywords under “Search engines”."
+  },
+  "btnHowTo": {
+    "message": "Guide"
+  },
+  "btnGoEngines": {
+    "message": "Add keywords"
+  },
+  "enginesTitle": {
+    "message": "Your Firefox search engines"
+  },
+  "enginesHint": {
     "message": "Enter extra keywords on the right, separated by commas. Saved automatically."
+  },
+  "enginesEmpty": {
+    "message": "No search engines found."
   },
   "btnNewEngine": {
     "message": "+ New search engine in Firefox"
@@ -32,9 +166,6 @@
   "newEngineStep3": {
     "message": "Switch back to this tab – the engine appears here automatically"
   },
-  "newEngineAfter": {
-    "message": "Then add the extra keywords here."
-  },
   "colEngine": {
     "message": "Search engine"
   },
@@ -44,8 +175,14 @@
   "colExtra": {
     "message": "Extra keywords"
   },
+  "mainNone": {
+    "message": "none"
+  },
+  "mainNoneTip": {
+    "message": "This engine has no keyword in Firefox. Extra keywords still work; a main keyword (Firefox Settings → Search → pencil) adds the name label."
+  },
   "mainActiveTip": {
-    "message": "Typing $alias$ makes Firefox show “$engine$”. Change it in Firefox Settings → Search.",
+    "message": "Typing $alias$ makes Firefox show “$engine$”.",
     "placeholders": {
       "alias": {
         "content": "$1"
@@ -55,23 +192,46 @@
       }
     }
   },
-  "mainNone": {
-    "message": "none"
-  },
-  "mainNoneTip": {
-    "message": "This engine has no keyword in Firefox. Extra keywords still work, but a main keyword (Firefox Settings → Search → pencil) adds the name label."
-  },
   "extraPlaceholder": {
     "message": "more keywords …"
   },
-  "optCustomTitle": {
-    "message": "3. Exception: targets without a Firefox search engine"
+  "sourceDefaultBadge": {
+    "message": "Default"
   },
-  "optCustomHint": {
-    "message": "Only needed if you don't want to add a target as a Firefox search engine. Target by URL, %s stands for the search terms. No name label while typing."
+  "orphansTitle": {
+    "message": "Not found in Firefox"
+  },
+  "orphansHint": {
+    "message": "These keywords belong to search engines that don't exist in Firefox on this device – e.g. renamed, deleted or synced from another device. They stay inactive until you assign them or add the engine in Firefox."
+  },
+  "orphanAssign": {
+    "message": "Assign to …"
+  },
+  "orphanUrl": {
+    "message": "Search URL: $url$",
+    "placeholders": {
+      "url": {
+        "content": "$1"
+      }
+    }
+  },
+  "btnDelete": {
+    "message": "Remove"
+  },
+  "customTitle": {
+    "message": "Custom targets"
+  },
+  "customHint": {
+    "message": "Targets by URL, with no Firefox search engine – but without a name label while typing. %s stands for the search terms."
+  },
+  "customEmpty": {
+    "message": "No custom targets yet."
   },
   "colName": {
     "message": "Name"
+  },
+  "colKeywords": {
+    "message": "Keywords"
   },
   "colUrl": {
     "message": "Search URL"
@@ -79,23 +239,133 @@
   "btnAdd": {
     "message": "+ Add target"
   },
-  "btnReset": {
-    "message": "Restore examples"
+  "btnExamples": {
+    "message": "Add examples"
   },
-  "btnDelete": {
-    "message": "Remove"
+  "dataSourceTitle": {
+    "message": "Default search engine"
+  },
+  "dataSourceHint": {
+    "message": "Enable the search engine that is your Firefox default. Barkeys spots extra keywords on its result page – it gets access to that and nothing else."
+  },
+  "syncTitle": {
+    "message": "Firefox Sync"
+  },
+  "syncText": {
+    "message": "Your keywords live in Firefox's sync storage. With Firefox Sync and “Add-ons” enabled, they're available on all your devices."
+  },
+  "syncUsage": {
+    "message": "$used$ of $total$ used · $items$ entries",
+    "placeholders": {
+      "used": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      },
+      "items": {
+        "content": "$3"
+      }
+    }
+  },
+  "syncNoteEngines": {
+    "message": "Note: Firefox doesn't sync custom search engines itself. Add them again on other devices – or use export/import, which can carry their URLs."
+  },
+  "backupTitle": {
+    "message": "Backup & share"
+  },
+  "backupHint": {
+    "message": "Export your keywords to a file – as a backup, for devices without Sync, or to share. The file stays on your computer."
+  },
+  "btnExport": {
+    "message": "Export"
+  },
+  "btnImport": {
+    "message": "Import …"
+  },
+  "urlsTitle": {
+    "message": "Search URLs for export (optional)"
+  },
+  "urlsHint": {
+    "message": "Firefox doesn't tell add-ons the URLs of its search engines. If you enter them here, Barkeys shows them on import so you can add the engines on a new device."
+  },
+  "importPreviewTitle": {
+    "message": "Import preview"
+  },
+  "importSummary": {
+    "message": "$engines$ search engines, $custom$ custom targets, $keywords$ keywords",
+    "placeholders": {
+      "engines": {
+        "content": "$1"
+      },
+      "custom": {
+        "content": "$2"
+      },
+      "keywords": {
+        "content": "$3"
+      }
+    }
+  },
+  "importSkipped": {
+    "message": "$count$ invalid entries will be skipped.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importModeMerge": {
+    "message": "Merge – existing keywords stay"
+  },
+  "importModeReplace": {
+    "message": "Replace – everything else is deleted"
+  },
+  "btnImportConfirm": {
+    "message": "Import"
+  },
+  "btnCancel": {
+    "message": "Cancel"
+  },
+  "importDone": {
+    "message": "Import done: $added$ keywords added, $skipped$ skipped (already in use).",
+    "placeholders": {
+      "added": {
+        "content": "$1"
+      },
+      "skipped": {
+        "content": "$2"
+      }
+    }
+  },
+  "importMissingTitle": {
+    "message": "These search engines are missing in Firefox"
+  },
+  "importMissingHint": {
+    "message": "Add them in Firefox Settings → Search so their keywords work:"
+  },
+  "btnCopyUrl": {
+    "message": "Copy URL"
+  },
+  "copied": {
+    "message": "Copied ✓"
+  },
+  "errImportFile": {
+    "message": "This isn't a valid Barkeys export file."
+  },
+  "errImportSize": {
+    "message": "The file is too large (max. 256 KB)."
+  },
+  "resetTitle": {
+    "message": "Reset everything"
+  },
+  "resetHint": {
+    "message": "Deletes all Barkeys keywords and custom targets – with Sync, on all devices. Your Firefox search engines stay untouched."
+  },
+  "btnResetAll": {
+    "message": "Delete all Barkeys data"
   },
   "confirmReset": {
-    "message": "Replace all custom targets with the examples?"
-  },
-  "statusSaved": {
-    "message": "Saved ✓"
-  },
-  "statusUnsaved": {
-    "message": "Saving …"
-  },
-  "statusInvalid": {
-    "message": "Not saved – please check the fields marked red"
+    "message": "Really delete all Barkeys data? This can't be undone."
   },
   "errFirefoxAlias": {
     "message": "$alias$ is already the Firefox keyword of “$engine$”",
@@ -125,11 +395,47 @@
   "errUrl": {
     "message": "URL must start with http(s):// and contain %s"
   },
+  "errInvalidAlias": {
+    "message": "“$alias$” isn't a valid keyword (max. 32 characters, no spaces)",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      }
+    }
+  },
+  "errTooMany": {
+    "message": "At most $max$ keywords per entry",
+    "placeholders": {
+      "max": {
+        "content": "$1"
+      }
+    }
+  },
+  "errTooLarge": {
+    "message": "An entry is too large for sync storage"
+  },
+  "errMaxEntries": {
+    "message": "Too many entries (max. 400)"
+  },
+  "errQuota": {
+    "message": "Sync storage full (max. 100 KB)"
+  },
+  "warnPlainWord": {
+    "message": "Heads-up: with “$alias$” you can no longer search for that word normally. Tip: $tip$",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      },
+      "tip": {
+        "content": "$2"
+      }
+    }
+  },
   "guideTitle": {
-    "message": "Quick guide"
+    "message": "How Barkeys works"
   },
   "guideLead": {
-    "message": "This add-on doesn't replace your Firefox search engines, it extends them: each engine has one main keyword in Firefox, and here you give it as many extra keywords as you like."
+    "message": "Barkeys doesn't replace your Firefox search engines, it extends them: each engine has one main keyword in Firefox, and in Barkeys you add as many extra keywords as you like."
   },
   "guideStep1Title": {
     "message": "Add the engine in Firefox, with your favourite keyword"
@@ -138,16 +444,16 @@
     "message": "Firefox Settings → Search. Use the keyword you type most often (e.g. @y). Only for that one does Firefox show the engine's name while you type."
   },
   "guideStep2Title": {
-    "message": "Add extra keywords here"
+    "message": "Add extra keywords in Barkeys"
   },
   "guideStep2Text": {
-    "message": "Under “2. Your Firefox search engines”, enter e.g. @yt and @youtube. They lead to the same search – handy as a safety net when you mistype or are used to a different keyword."
+    "message": "In the “Search engines” tab, enter e.g. @yt and @youtube. They lead to the same search – handy as a safety net."
   },
   "guideStep3Title": {
-    "message": "Allow your default search engine"
+    "message": "Enable your default search engine"
   },
   "guideStep3Text": {
-    "message": "Under “1.” tick the search engine that's your Firefox default. That's how the add-on spots the extra keywords."
+    "message": "Once, in the “Welcome” or “Data & sync” tab. That's how Barkeys spots the extra keywords."
   },
   "guideExampleTitle": {
     "message": "Example"
@@ -156,7 +462,7 @@
     "message": "Main keyword in Firefox"
   },
   "guideExAddon": {
-    "message": "Extra keywords in the add-on"
+    "message": "Extra keywords in Barkeys"
   },
   "exQuery": {
     "message": "cats"
@@ -170,22 +476,61 @@
   "guideBarExtra": {
     "message": "Firefox says “Search with Google”, but after Enter you still land on YouTube."
   },
-  "guideNoteTitle": {
+  "faqTitle": {
+    "message": "FAQ"
+  },
+  "faq1Q": {
     "message": "Why doesn't Firefox show the name for extra keywords?"
   },
-  "guideNoteText": {
-    "message": "Add-ons aren't allowed to change the address bar. The add-on only steps in after Enter and redirects the search. So: the keyword you use most belongs in Firefox as the main keyword – the extra keywords are the add-on."
+  "faq1A": {
+    "message": "Add-ons aren't allowed to change the address bar. Barkeys only steps in after Enter and redirects the search. So the keyword you use most belongs in Firefox as the main keyword – the extra keywords are the add-on."
   },
-  "guideTipAt": {
-    "message": "Tip: type just @ into the address bar and Firefox lists all engines with their main keywords."
+  "faq2Q": {
+    "message": "Why do I have to enable my default search?"
   },
-  "guideTipCustom": {
-    "message": "Exception: under “3.” you can add targets with no Firefox search engine at all, just a URL. None of their keywords get a name label then."
+  "faq2A": {
+    "message": "When Firefox doesn't know a keyword, it sends the text to your default search. Barkeys spots the keyword on that result page and redirects before it loads. Barkeys never sees any other site."
   },
-  "colAliasesCustom": {
-    "message": "Keywords"
+  "faq3Q": {
+    "message": "Why keywords with @?"
+  },
+  "faq3A": {
+    "message": "A keyword without a special character also catches normal searches: with “wiki” as a keyword you can never search for the word “wiki” again. With @ or another character that doesn't happen."
+  },
+  "faq4Q": {
+    "message": "Are my keywords synced?"
+  },
+  "faq4A": {
+    "message": "Yes, via Firefox Sync when “Add-ons” is enabled there. Firefox doesn't sync custom search engines, though – add them on each device. If one is missing, Barkeys lists its keywords under “Not found in Firefox”."
+  },
+  "faq5Q": {
+    "message": "What happens to my data on export?"
+  },
+  "faq5A": {
+    "message": "The file is only saved locally. Barkeys sends nothing to the internet. On import every value is checked; invalid entries are dropped."
+  },
+  "privacyTitle": {
+    "message": "Privacy & permissions"
+  },
+  "privacyLead": {
+    "message": "Barkeys collects no data, has no analytics and makes no network requests of its own. It needs these permissions:"
+  },
+  "permSearch": {
+    "message": "List your Firefox search engines and search with them"
+  },
+  "permStorage": {
+    "message": "Save your keywords (via Firefox Sync, if enabled)"
+  },
+  "permWebRequest": {
+    "message": "Catch the default search's result page and redirect it"
+  },
+  "permHostLabel": {
+    "message": "Access to one search site"
+  },
+  "permHost": {
+    "message": "Only the result page of the default search you enable – e.g. www.google.com/search. Revocable at any time."
   },
   "supportText": {
-    "message": "Enjoying Barkeys? Support it with a coffee:"
+    "message": "Enjoying Barkeys?"
   }
 }

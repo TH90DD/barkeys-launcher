@@ -3,19 +3,153 @@
     "message": "Barkeys Launcher"
   },
   "extDescription": {
-    "message": "Mehrere Kürzel für Suchmaschinen direkt in der Adressleiste – z. B. @w, @wiki und @wikipedia für Wikipedia."
+    "message": "Mehrere Kürzel für deine Suchmaschinen direkt in der Adressleiste – z. B. @w, @wiki und @wikipedia für Wikipedia."
   },
-  "optEnginesTitle": {
-    "message": "1. Deine Standardsuchmaschine"
+  "tagline": {
+    "message": "Mehr Kürzel für deine Adressleiste"
   },
-  "optEnginesHint": {
-    "message": "Aktiviere die Suchmaschine, die in Firefox als Standard eingestellt ist. Über deren Ergebnisseite erkennt das Add-on die weiteren Kürzel – es bekommt nur darauf Zugriff, sonst nichts."
+  "tabWelcome": {
+    "message": "Willkommen"
   },
-  "optFfTitle": {
-    "message": "2. Deine Firefox-Suchmaschinen"
+  "tabEngines": {
+    "message": "Suchmaschinen"
   },
-  "optFfHint": {
-    "message": "Trag rechts die weiteren Kürzel ein, mehrere mit Komma getrennt. Wird automatisch gespeichert."
+  "tabCustom": {
+    "message": "Eigene Ziele"
+  },
+  "tabData": {
+    "message": "Daten & Sync"
+  },
+  "tabGuide": {
+    "message": "Anleitung"
+  },
+  "statusSaved": {
+    "message": "Gespeichert ✓"
+  },
+  "statusSaving": {
+    "message": "Speichert …"
+  },
+  "statusInvalid": {
+    "message": "Nicht gespeichert – rot markierte Felder prüfen"
+  },
+  "statusError": {
+    "message": "Speichern fehlgeschlagen: $msg$",
+    "placeholders": {
+      "msg": {
+        "content": "$1"
+      }
+    }
+  },
+  "welcomeTitle": {
+    "message": "Willkommen bei Barkeys Launcher"
+  },
+  "welcomeLead": {
+    "message": "Firefox erlaubt pro Suchmaschine nur ein Kürzel. Barkeys gibt jeder Suchmaschine so viele weitere, wie du willst – und macht jede Seite mit Suchfunktion zum Kürzel."
+  },
+  "featKeywordsTitle": {
+    "message": "Mehr Kürzel"
+  },
+  "featKeywordsText": {
+    "message": "@w, @wiki und @wikipedia führen zur selben Suche."
+  },
+  "featCustomTitle": {
+    "message": "Eigene Ziele"
+  },
+  "featCustomText": {
+    "message": "Jede Seite mit Suchfunktion wird per URL zum Kürzel – ganz ohne Firefox-Suchmaschine."
+  },
+  "featPrivacyTitle": {
+    "message": "Privat & synchron"
+  },
+  "featPrivacyText": {
+    "message": "Keine Datensammlung, keine eigenen Verbindungen. Deine Kürzel reisen per Firefox Sync mit."
+  },
+  "setupTitle": {
+    "message": "Einrichtung"
+  },
+  "setupHint": {
+    "message": "Drei Schritte, dann läuft alles."
+  },
+  "setupDefaultOk": {
+    "message": "Standardsuche „$engine$“ ist freigegeben",
+    "placeholders": {
+      "engine": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupDefaultTodo": {
+    "message": "Standardsuche „$engine$“ freigeben",
+    "placeholders": {
+      "engine": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupDefaultTodoText": {
+    "message": "Barkeys braucht Zugriff auf deren Ergebnisseite, um weitere Kürzel zu erkennen – auf nichts sonst."
+  },
+  "setupDefaultUnsupported": {
+    "message": "Deine Standardsuche „$engine$“ wird noch nicht unterstützt",
+    "placeholders": {
+      "engine": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupDefaultUnsupportedText": {
+    "message": "Stell in den Firefox-Einstellungen unter Suche eine davon als Standard ein: $list$",
+    "placeholders": {
+      "list": {
+        "content": "$1"
+      }
+    }
+  },
+  "btnAllow": {
+    "message": "Freigeben"
+  },
+  "setupMainOk": {
+    "message": "$count$ Suchmaschinen mit Haupt-Kürzel in Firefox",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupMainTodo": {
+    "message": "Noch keine Suchmaschine mit Kürzel in Firefox"
+  },
+  "setupMainTodoText": {
+    "message": "Leg in den Firefox-Einstellungen unter Suche ein Kürzel an, z. B. @y für YouTube."
+  },
+  "setupExtraOk": {
+    "message": "$count$ weitere Kürzel eingerichtet",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "setupExtraTodo": {
+    "message": "Noch keine weiteren Kürzel"
+  },
+  "setupExtraTodoText": {
+    "message": "Ergänze unter „Suchmaschinen“ zusätzliche Kürzel."
+  },
+  "btnHowTo": {
+    "message": "Anleitung"
+  },
+  "btnGoEngines": {
+    "message": "Kürzel hinzufügen"
+  },
+  "enginesTitle": {
+    "message": "Deine Firefox-Suchmaschinen"
+  },
+  "enginesHint": {
+    "message": "Trag rechts weitere Kürzel ein, mehrere mit Komma getrennt. Wird automatisch gespeichert."
+  },
+  "enginesEmpty": {
+    "message": "Keine Suchmaschinen gefunden."
   },
   "btnNewEngine": {
     "message": "+ Neue Suchmaschine in Firefox"
@@ -32,9 +166,6 @@
   "newEngineStep3": {
     "message": "Zurück zu diesem Tab wechseln – die Suchmaschine erscheint hier automatisch"
   },
-  "newEngineAfter": {
-    "message": "Danach hier die weiteren Kürzel eintragen."
-  },
   "colEngine": {
     "message": "Suchmaschine"
   },
@@ -44,8 +175,14 @@
   "colExtra": {
     "message": "Weitere Kürzel"
   },
+  "mainNone": {
+    "message": "keins"
+  },
+  "mainNoneTip": {
+    "message": "Diese Suchmaschine hat in Firefox kein Kürzel. Weitere Kürzel funktionieren trotzdem; ein Haupt-Kürzel (Firefox-Einstellungen → Suche → Stift) bringt die Namensanzeige."
+  },
   "mainActiveTip": {
-    "message": "Beim Tippen von $alias$ zeigt Firefox „$engine$“ an. Ändern kannst du das in den Firefox-Einstellungen unter Suche.",
+    "message": "Beim Tippen von $alias$ zeigt Firefox „$engine$“ an.",
     "placeholders": {
       "alias": {
         "content": "$1"
@@ -55,23 +192,46 @@
       }
     }
   },
-  "mainNone": {
-    "message": "keins"
-  },
-  "mainNoneTip": {
-    "message": "Diese Suchmaschine hat in Firefox kein Kürzel. Die weiteren Kürzel funktionieren trotzdem, aber ein Haupt-Kürzel (Firefox-Einstellungen → Suche → Stift) bringt die Namensanzeige."
-  },
   "extraPlaceholder": {
     "message": "weitere Kürzel …"
   },
-  "optCustomTitle": {
-    "message": "3. Ausnahme: Ziele ohne Firefox-Suchmaschine"
+  "sourceDefaultBadge": {
+    "message": "Standard"
   },
-  "optCustomHint": {
-    "message": "Nur nötig, wenn du ein Ziel nicht als Firefox-Suchmaschine anlegen willst. Ziel per URL, %s steht für den Suchbegriff. Keine Namensanzeige beim Tippen."
+  "orphansTitle": {
+    "message": "Nicht in Firefox gefunden"
+  },
+  "orphansHint": {
+    "message": "Diese Kürzel gehören zu Suchmaschinen, die es in Firefox auf diesem Gerät nicht gibt – z. B. umbenannt, gelöscht oder per Sync von einem anderen Gerät. Sie sind inaktiv, bis du sie zuordnest oder die Suchmaschine in Firefox anlegst."
+  },
+  "orphanAssign": {
+    "message": "Zuordnen zu …"
+  },
+  "orphanUrl": {
+    "message": "Such-URL: $url$",
+    "placeholders": {
+      "url": {
+        "content": "$1"
+      }
+    }
+  },
+  "btnDelete": {
+    "message": "Entfernen"
+  },
+  "customTitle": {
+    "message": "Eigene Ziele"
+  },
+  "customHint": {
+    "message": "Ziele per URL, ganz ohne Firefox-Suchmaschine – dafür ohne Namensanzeige beim Tippen. %s steht für den Suchbegriff."
+  },
+  "customEmpty": {
+    "message": "Noch keine eigenen Ziele."
   },
   "colName": {
     "message": "Name"
+  },
+  "colKeywords": {
+    "message": "Kürzel"
   },
   "colUrl": {
     "message": "Such-URL"
@@ -79,23 +239,133 @@
   "btnAdd": {
     "message": "+ Ziel hinzufügen"
   },
-  "btnReset": {
-    "message": "Beispiele wiederherstellen"
+  "btnExamples": {
+    "message": "Beispiele hinzufügen"
   },
-  "btnDelete": {
-    "message": "Entfernen"
+  "dataSourceTitle": {
+    "message": "Standardsuchmaschine"
+  },
+  "dataSourceHint": {
+    "message": "Aktiviere die Suchmaschine, die in Firefox als Standard eingestellt ist. Über deren Ergebnisseite erkennt Barkeys die weiteren Kürzel – es bekommt nur darauf Zugriff, sonst nichts."
+  },
+  "syncTitle": {
+    "message": "Firefox Sync"
+  },
+  "syncText": {
+    "message": "Deine Kürzel liegen im Sync-Speicher von Firefox. Ist Firefox Sync mit „Add-ons“ aktiviert, sind sie auf all deinen Geräten verfügbar."
+  },
+  "syncUsage": {
+    "message": "$used$ von $total$ belegt · $items$ Einträge",
+    "placeholders": {
+      "used": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      },
+      "items": {
+        "content": "$3"
+      }
+    }
+  },
+  "syncNoteEngines": {
+    "message": "Hinweis: Firefox synchronisiert eigene Suchmaschinen selbst nicht. Leg sie auf anderen Geräten neu an – oder nutze Export/Import, der ihre URLs mitnehmen kann."
+  },
+  "backupTitle": {
+    "message": "Sichern & Teilen"
+  },
+  "backupHint": {
+    "message": "Exportiere deine Kürzel als Datei – als Backup, für Geräte ohne Sync oder zum Teilen. Die Datei bleibt auf deinem Rechner."
+  },
+  "btnExport": {
+    "message": "Exportieren"
+  },
+  "btnImport": {
+    "message": "Importieren …"
+  },
+  "urlsTitle": {
+    "message": "Such-URLs für den Export (optional)"
+  },
+  "urlsHint": {
+    "message": "Firefox verrät Add-ons die URLs seiner Suchmaschinen nicht. Trägst du sie hier ein, zeigt Barkeys sie beim Import auf einem neuen Gerät zum Anlegen an."
+  },
+  "importPreviewTitle": {
+    "message": "Import-Vorschau"
+  },
+  "importSummary": {
+    "message": "$engines$ Suchmaschinen, $custom$ eigene Ziele, $keywords$ Kürzel",
+    "placeholders": {
+      "engines": {
+        "content": "$1"
+      },
+      "custom": {
+        "content": "$2"
+      },
+      "keywords": {
+        "content": "$3"
+      }
+    }
+  },
+  "importSkipped": {
+    "message": "$count$ ungültige Einträge werden übersprungen.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "importModeMerge": {
+    "message": "Zusammenführen – bestehende Kürzel bleiben"
+  },
+  "importModeReplace": {
+    "message": "Ersetzen – alles Bisherige wird gelöscht"
+  },
+  "btnImportConfirm": {
+    "message": "Importieren"
+  },
+  "btnCancel": {
+    "message": "Abbrechen"
+  },
+  "importDone": {
+    "message": "Import abgeschlossen: $added$ Kürzel übernommen, $skipped$ übersprungen (schon vergeben).",
+    "placeholders": {
+      "added": {
+        "content": "$1"
+      },
+      "skipped": {
+        "content": "$2"
+      }
+    }
+  },
+  "importMissingTitle": {
+    "message": "Diese Suchmaschinen fehlen in Firefox"
+  },
+  "importMissingHint": {
+    "message": "Leg sie in den Firefox-Einstellungen unter Suche an, damit ihre Kürzel funktionieren:"
+  },
+  "btnCopyUrl": {
+    "message": "URL kopieren"
+  },
+  "copied": {
+    "message": "Kopiert ✓"
+  },
+  "errImportFile": {
+    "message": "Das ist keine gültige Barkeys-Exportdatei."
+  },
+  "errImportSize": {
+    "message": "Die Datei ist zu groß (max. 256 KB)."
+  },
+  "resetTitle": {
+    "message": "Alles zurücksetzen"
+  },
+  "resetHint": {
+    "message": "Löscht alle Kürzel und eigenen Ziele von Barkeys – mit Sync auf allen Geräten. Deine Firefox-Suchmaschinen bleiben unberührt."
+  },
+  "btnResetAll": {
+    "message": "Alle Barkeys-Daten löschen"
   },
   "confirmReset": {
-    "message": "Alle eigenen Ziele durch die Beispiele ersetzen?"
-  },
-  "statusSaved": {
-    "message": "Gespeichert ✓"
-  },
-  "statusUnsaved": {
-    "message": "Speichert …"
-  },
-  "statusInvalid": {
-    "message": "Nicht gespeichert – bitte rot markierte Felder prüfen"
+    "message": "Wirklich alle Barkeys-Daten löschen? Das lässt sich nicht rückgängig machen."
   },
   "errFirefoxAlias": {
     "message": "$alias$ ist schon das Firefox-Kürzel von „$engine$“",
@@ -125,11 +395,47 @@
   "errUrl": {
     "message": "URL muss mit http(s):// beginnen und %s enthalten"
   },
+  "errInvalidAlias": {
+    "message": "„$alias$“ ist kein gültiges Kürzel (max. 32 Zeichen, keine Leerzeichen)",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      }
+    }
+  },
+  "errTooMany": {
+    "message": "Höchstens $max$ Kürzel pro Eintrag",
+    "placeholders": {
+      "max": {
+        "content": "$1"
+      }
+    }
+  },
+  "errTooLarge": {
+    "message": "Ein Eintrag ist zu groß für den Sync-Speicher"
+  },
+  "errMaxEntries": {
+    "message": "Zu viele Einträge (max. 400)"
+  },
+  "errQuota": {
+    "message": "Sync-Speicher voll (max. 100 KB)"
+  },
+  "warnPlainWord": {
+    "message": "Achtung: Mit „$alias$“ kannst du nicht mehr normal nach diesem Wort suchen. Tipp: $tip$",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      },
+      "tip": {
+        "content": "$2"
+      }
+    }
+  },
   "guideTitle": {
-    "message": "Kurzanleitung"
+    "message": "So funktioniert Barkeys"
   },
   "guideLead": {
-    "message": "Dieses Add-on ersetzt deine Firefox-Suchmaschinen nicht, es erweitert sie: Jede Suchmaschine hat in Firefox ein Haupt-Kürzel, und hier gibst du ihr beliebig viele weitere dazu."
+    "message": "Barkeys ersetzt deine Firefox-Suchmaschinen nicht, es erweitert sie: Jede Suchmaschine hat in Firefox ein Haupt-Kürzel, und in Barkeys gibst du ihr beliebig viele weitere dazu."
   },
   "guideStep1Title": {
     "message": "Suchmaschine in Firefox anlegen, mit deinem Lieblingskürzel"
@@ -138,16 +444,16 @@
     "message": "Firefox-Einstellungen → Suche. Nimm als Kürzel das, was du am häufigsten tippst (z. B. @y). Nur dafür zeigt Firefox beim Tippen den Namen der Suchmaschine an."
   },
   "guideStep2Title": {
-    "message": "Hier weitere Kürzel ergänzen"
+    "message": "In Barkeys weitere Kürzel ergänzen"
   },
   "guideStep2Text": {
-    "message": "Unter „2. Deine Firefox-Suchmaschinen“ z. B. @yt und @youtube eintragen. Sie führen zur selben Suche – praktisch als Sicherheitsnetz, wenn du dich mal vertippst oder dir ein anderes Kürzel angewöhnt hast."
+    "message": "Im Tab „Suchmaschinen“ z. B. @yt und @youtube eintragen. Sie führen zur selben Suche – praktisch als Sicherheitsnetz."
   },
   "guideStep3Title": {
     "message": "Standardsuchmaschine freigeben"
   },
   "guideStep3Text": {
-    "message": "Unter „1.“ die Suchmaschine anhaken, die in Firefox Standard ist. Darüber erkennt das Add-on die weiteren Kürzel."
+    "message": "Einmalig im Tab „Willkommen“ oder „Daten & Sync“. Darüber erkennt Barkeys die weiteren Kürzel."
   },
   "guideExampleTitle": {
     "message": "Beispiel"
@@ -156,7 +462,7 @@
     "message": "Haupt-Kürzel in Firefox"
   },
   "guideExAddon": {
-    "message": "Weitere Kürzel im Add-on"
+    "message": "Weitere Kürzel in Barkeys"
   },
   "exQuery": {
     "message": "katzen"
@@ -170,22 +476,61 @@
   "guideBarExtra": {
     "message": "Firefox zeigt „Mit Google suchen“ an, nach Enter landest du trotzdem bei YouTube."
   },
-  "guideNoteTitle": {
-    "message": "Warum zeigt Firefox bei weiteren Kürzeln nicht den Namen an?"
+  "faqTitle": {
+    "message": "Häufige Fragen"
   },
-  "guideNoteText": {
-    "message": "Add-ons dürfen die Adressleiste nicht verändern. Das Add-on greift erst nach Enter ein und leitet die Suche um. Deshalb: Das Kürzel, das du am häufigsten benutzt, gehört als Haupt-Kürzel in Firefox – die weiteren Kürzel sind die Ergänzung."
+  "faq1Q": {
+    "message": "Warum zeigt Firefox bei weiteren Kürzeln keinen Namen an?"
   },
-  "guideTipAt": {
-    "message": "Tipp: Tippe nur @ in die Adressleiste, dann zeigt Firefox alle Suchmaschinen mit ihren Haupt-Kürzeln."
+  "faq1A": {
+    "message": "Add-ons dürfen die Adressleiste nicht verändern. Barkeys greift erst nach Enter ein und leitet die Suche um. Deshalb gehört das Kürzel, das du am häufigsten benutzt, als Haupt-Kürzel in Firefox – die weiteren Kürzel sind die Ergänzung."
   },
-  "guideTipCustom": {
-    "message": "Ausnahme: Unter „3.“ kannst du Ziele auch ganz ohne Firefox-Suchmaschine anlegen, nur mit URL. Dann gibt es für keines ihrer Kürzel eine Namensanzeige."
+  "faq2Q": {
+    "message": "Warum muss ich meine Standardsuche freigeben?"
   },
-  "colAliasesCustom": {
-    "message": "Kürzel"
+  "faq2A": {
+    "message": "Kennt Firefox ein Kürzel nicht, schickt es den Text an deine Standardsuche. Barkeys erkennt das Kürzel auf deren Ergebnisseite und leitet um, bevor die Seite lädt. Andere Seiten sieht Barkeys nie."
+  },
+  "faq3Q": {
+    "message": "Warum Kürzel mit @?"
+  },
+  "faq3A": {
+    "message": "Ein Kürzel ohne Sonderzeichen fängt auch normale Suchen ab: Wer „wiki“ als Kürzel hat, kann nie mehr nach dem Wort „wiki“ suchen. Mit @ oder einem anderen Zeichen passiert das nicht."
+  },
+  "faq4Q": {
+    "message": "Werden meine Kürzel synchronisiert?"
+  },
+  "faq4A": {
+    "message": "Ja, über Firefox Sync, wenn dort „Add-ons“ aktiviert ist. Firefox synchronisiert aber eigene Suchmaschinen nicht – die musst du auf jedem Gerät anlegen. Fehlt eine, zeigt Barkeys ihre Kürzel unter „Nicht in Firefox gefunden“."
+  },
+  "faq5Q": {
+    "message": "Was passiert beim Export mit meinen Daten?"
+  },
+  "faq5A": {
+    "message": "Die Datei wird nur lokal gespeichert. Barkeys schickt nichts ins Internet. Beim Import wird jede Angabe geprüft; ungültige Einträge werden verworfen."
+  },
+  "privacyTitle": {
+    "message": "Datenschutz & Rechte"
+  },
+  "privacyLead": {
+    "message": "Barkeys sammelt keine Daten, hat keine Statistik und baut keine eigenen Netzwerkverbindungen auf. Diese Rechte braucht es:"
+  },
+  "permSearch": {
+    "message": "Deine Firefox-Suchmaschinen auflisten und damit suchen"
+  },
+  "permStorage": {
+    "message": "Deine Kürzel speichern (per Firefox Sync, falls aktiv)"
+  },
+  "permWebRequest": {
+    "message": "Die Ergebnisseite der Standardsuche abfangen und umleiten"
+  },
+  "permHostLabel": {
+    "message": "Zugriff auf eine Suchseite"
+  },
+  "permHost": {
+    "message": "Nur die Ergebnisseite der Standardsuche, die du freigibst – z. B. www.google.com/search. Jederzeit widerrufbar."
   },
   "supportText": {
-    "message": "Gefällt dir Barkeys? Ich freue mich über einen Kaffee:"
+    "message": "Gefällt dir Barkeys?"
   }
 }

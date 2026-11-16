@@ -2,132 +2,244 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="extName"></title>
+  <link rel="icon" href="../icons/icon-small.svg">
   <link rel="stylesheet" href="options.css">
 </head>
 <body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="../icons/icon.svg" alt="" width="40" height="40">
+      <div>
+        <h1 data-i18n="extName"></h1>
+        <p data-i18n="tagline"></p>
+      </div>
+    </div>
+    <span id="status" class="status" role="status" aria-live="polite"></span>
+  </header>
+
+  <nav class="tabs" role="tablist" id="tabs">
+    <button role="tab" data-tab="welcome" data-icon="home"><span data-i18n="tabWelcome"></span></button>
+    <button role="tab" data-tab="engines" data-icon="search"><span data-i18n="tabEngines"></span></button>
+    <button role="tab" data-tab="custom" data-icon="link"><span data-i18n="tabCustom"></span></button>
+    <button role="tab" data-tab="data" data-icon="database"><span data-i18n="tabData"></span></button>
+    <button role="tab" data-tab="guide" data-icon="book"><span data-i18n="tabGuide"></span></button>
+  </nav>
+
   <main>
-    <header>
-      <h1 data-i18n="extName"></h1>
-      <span id="status" class="status"></span>
-    </header>
-    
-    <!-- Mini guide -->
-    <details id="guide" class="guide" open>
-      <summary><h2 data-i18n="guideTitle"></h2></summary>
-      <p class="lead" data-i18n="guideLead"></p>
-
-      <ol class="steps">
-        <li>
-          <strong data-i18n="guideStep1Title"></strong>
-          <p data-i18n="guideStep1Text"></p>
-        </li>
-        <li>
-          <strong data-i18n="guideStep2Title"></strong>
-          <p data-i18n="guideStep2Text"></p>
-        </li>
-        <li>
-          <strong data-i18n="guideStep3Title"></strong>
-          <p data-i18n="guideStep3Text"></p>
-        </li>
-      </ol>
-
-      <h3 data-i18n="guideExampleTitle"></h3>
-      <div class="example">
-        <div class="example-row head">
-          <span data-i18n="colEngine"></span>
-          <span data-i18n="guideExFirefox"></span>
-          <span data-i18n="guideExAddon"></span>
-        </div>
-        <div class="example-row">
-          <span>YouTube</span>
-          <span><span class="chip-mini">@y</span></span>
-          <span><span class="chip-mini plain">@yt</span> <span class="chip-mini plain">@youtube</span></span>
-        </div>
-        <div class="example-row">
-          <span>Wikipedia</span>
-          <span><span class="chip-mini">@w</span></span>
-          <span><span class="chip-mini plain">@wiki</span> <span class="chip-mini plain">@wikipedia</span></span>
-        </div>
-      </div>
-
-      <div class="explain">
-        <div class="explain-item">
-          <div class="bar"><span class="chip"><span class="dot"></span>YouTube <span class="x">×</span></span><span class="typed" data-i18n="exQuery"></span></div>
-          <p><strong>@y <span data-i18n="exQuery"></span></strong> – <span data-i18n="guideBarMain"></span></p>
-        </div>
-        <div class="explain-item">
-          <div class="bar"><span class="typed">@youtube <span data-i18n="exQuery"></span></span><span class="ghost" data-i18n="guideBarGhost"></span></div>
-          <p><strong>@youtube <span data-i18n="exQuery"></span></strong> – <span data-i18n="guideBarExtra"></span></p>
-        </div>
-      </div>
-
-      <div class="note">
-        <strong data-i18n="guideNoteTitle"></strong>
-        <p data-i18n="guideNoteText"></p>
-      </div>
-
-      <ul class="tips">
-        <li data-i18n="guideTipAt"></li>
-        <li data-i18n="guideTipCustom"></li>
-      </ul>
-    </details>
-
-    <section>
-      <h2 data-i18n="optEnginesTitle"></h2>
-      <p class="hint" data-i18n="optEnginesHint"></p>
-      <div id="sources" class="sources"></div>
-    </section>
-
-    <section>
-      <div class="section-head">
+    <!-- ============ Welcome ============ -->
+    <section role="tabpanel" id="panel-welcome" hidden>
+      <div class="hero card">
+        <img src="../icons/icon.svg" alt="" width="72" height="72">
         <div>
-          <h2 data-i18n="optFfTitle"></h2>
-          <p class="hint" data-i18n="optFfHint"></p>
+          <h2 data-i18n="welcomeTitle"></h2>
+          <p class="lead" data-i18n="welcomeLead"></p>
         </div>
-        <button id="openPrefs" class="secondary" data-i18n="btnNewEngine"></button>
       </div>
-      <div id="newEngineHelp" class="help" hidden>
-        <p data-i18n="newEngineIntro"></p>
-        <ol>
-          <li data-i18n="newEngineStep1"></li>
-          <li data-i18n="newEngineStep2"></li>
-          <li data-i18n="newEngineStep3"></li>
-        </ol>
-        <p class="hint" data-i18n="newEngineAfter"></p>
+
+      <div class="features">
+        <div class="card feature">
+          <span class="feature-icon" data-icon="search"></span>
+          <strong data-i18n="featKeywordsTitle"></strong>
+          <p data-i18n="featKeywordsText"></p>
+        </div>
+        <div class="card feature">
+          <span class="feature-icon" data-icon="link"></span>
+          <strong data-i18n="featCustomTitle"></strong>
+          <p data-i18n="featCustomText"></p>
+        </div>
+        <div class="card feature">
+          <span class="feature-icon" data-icon="shield"></span>
+          <strong data-i18n="featPrivacyTitle"></strong>
+          <p data-i18n="featPrivacyText"></p>
+        </div>
       </div>
-      <div class="list-head">
-        <span data-i18n="colEngine"></span>
-        <span data-i18n="colMain"></span>
-        <span data-i18n="colExtra"></span>
+
+      <div class="card">
+        <h3 data-i18n="setupTitle"></h3>
+        <p class="muted" data-i18n="setupHint"></p>
+        <ol id="setup" class="checklist"></ol>
       </div>
-      <div id="ffEngines"></div>
     </section>
 
-    <details id="customSection">
-      <summary>
-        <h2 data-i18n="optCustomTitle"></h2>
-        <p class="hint" data-i18n="optCustomHint"></p>
-      </summary>
-      <div class="list-head custom">
-        <span data-i18n="colName"></span>
-        <span data-i18n="colAliasesCustom"></span>
-        <span data-i18n="colUrl"></span>
-        <span></span>
+    <!-- ============ Firefox search engines ============ -->
+    <section role="tabpanel" id="panel-engines" hidden>
+      <div class="card">
+        <div class="card-head">
+          <div>
+            <h3 data-i18n="enginesTitle"></h3>
+            <p class="muted" data-i18n="enginesHint"></p>
+          </div>
+          <button id="newEngine" class="btn" data-i18n="btnNewEngine"></button>
+        </div>
+        <div id="newEngineHelp" class="callout" hidden>
+          <p data-i18n="newEngineIntro"></p>
+          <ol>
+            <li data-i18n="newEngineStep1"></li>
+            <li data-i18n="newEngineStep2"></li>
+            <li data-i18n="newEngineStep3"></li>
+          </ol>
+        </div>
+        <div class="table">
+          <div class="thead grid-engines">
+            <span data-i18n="colEngine"></span>
+            <span data-i18n="colMain"></span>
+            <span data-i18n="colExtra"></span>
+          </div>
+          <div id="engineRows"></div>
+        </div>
       </div>
-      <div id="rows"></div>
-      <div class="actions">
-        <button id="add" class="secondary" data-i18n="btnAdd"></button>
-        <button id="reset" class="secondary" data-i18n="btnReset"></button>
+
+      <div class="card" id="orphansCard" hidden>
+        <h3 data-i18n="orphansTitle"></h3>
+        <p class="muted" data-i18n="orphansHint"></p>
+        <div id="orphanRows"></div>
       </div>
-    </details>
+    </section>
+
+    <!-- ============ Custom targets ============ -->
+    <section role="tabpanel" id="panel-custom" hidden>
+      <div class="card">
+        <h3 data-i18n="customTitle"></h3>
+        <p class="muted" data-i18n="customHint"></p>
+        <div class="table">
+          <div class="thead grid-custom">
+            <span data-i18n="colName"></span>
+            <span data-i18n="colKeywords"></span>
+            <span data-i18n="colUrl"></span>
+            <span></span>
+          </div>
+          <div id="customRows"></div>
+          <p id="customEmpty" class="empty" data-i18n="customEmpty" hidden></p>
+        </div>
+        <div class="actions">
+          <button id="addCustom" class="btn" data-i18n="btnAdd"></button>
+          <button id="addExamples" class="btn ghost" data-i18n="btnExamples"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Data & sync ============ -->
+    <section role="tabpanel" id="panel-data" hidden>
+      <div class="card">
+        <h3 data-i18n="dataSourceTitle"></h3>
+        <p class="muted" data-i18n="dataSourceHint"></p>
+        <div id="sources" class="pills"></div>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="syncTitle"></h3>
+        <p data-i18n="syncText"></p>
+        <div class="meter"><div id="syncMeter"></div></div>
+        <p id="syncUsage" class="muted small"></p>
+        <p class="callout small" data-i18n="syncNoteEngines"></p>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="backupTitle"></h3>
+        <p class="muted" data-i18n="backupHint"></p>
+        <div class="actions">
+          <button id="export" class="btn primary" data-i18n="btnExport"></button>
+          <button id="importBtn" class="btn" data-i18n="btnImport"></button>
+          <input id="importFile" type="file" accept=".json,application/json" hidden>
+        </div>
+        <div id="importBox" hidden></div>
+
+        <details class="sub">
+          <summary data-i18n="urlsTitle"></summary>
+          <p class="muted small" data-i18n="urlsHint"></p>
+          <div id="urlRows"></div>
+        </details>
+      </div>
+
+      <div class="card danger-zone">
+        <h3 data-i18n="resetTitle"></h3>
+        <p class="muted" data-i18n="resetHint"></p>
+        <button id="resetAll" class="btn danger" data-i18n="btnResetAll"></button>
+      </div>
+    </section>
+
+    <!-- ============ Guide ============ -->
+    <section role="tabpanel" id="panel-guide" hidden>
+      <div class="card">
+        <h3 data-i18n="guideTitle"></h3>
+        <p class="lead" data-i18n="guideLead"></p>
+        <ol class="steps">
+          <li><strong data-i18n="guideStep1Title"></strong><p data-i18n="guideStep1Text"></p></li>
+          <li><strong data-i18n="guideStep2Title"></strong><p data-i18n="guideStep2Text"></p></li>
+          <li><strong data-i18n="guideStep3Title"></strong><p data-i18n="guideStep3Text"></p></li>
+        </ol>
+
+        <h4 data-i18n="guideExampleTitle"></h4>
+        <div class="example">
+          <div class="example-row head">
+            <span data-i18n="colEngine"></span>
+            <span data-i18n="guideExFirefox"></span>
+            <span data-i18n="guideExAddon"></span>
+          </div>
+          <div class="example-row">
+            <span>YouTube</span>
+            <span><span class="kbd">@y</span></span>
+            <span><span class="kbd dashed">@yt</span> <span class="kbd dashed">@youtube</span></span>
+          </div>
+          <div class="example-row">
+            <span>Wikipedia</span>
+            <span><span class="kbd">@w</span></span>
+            <span><span class="kbd dashed">@wiki</span> <span class="kbd dashed">@wikipedia</span></span>
+          </div>
+        </div>
+
+        <div class="bars">
+          <div class="bar-demo">
+            <div class="urlbar"><span class="chip">YouTube <span class="x">×</span></span><span class="typed" data-i18n="exQuery"></span></div>
+            <p><strong>@y <span data-i18n="exQuery"></span></strong> – <span data-i18n="guideBarMain"></span></p>
+          </div>
+          <div class="bar-demo">
+            <div class="urlbar"><span class="typed">@youtube <span data-i18n="exQuery"></span></span><span class="ghost" data-i18n="guideBarGhost"></span></div>
+            <p><strong>@youtube <span data-i18n="exQuery"></span></strong> – <span data-i18n="guideBarExtra"></span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="faqTitle"></h3>
+        <details class="faq"><summary data-i18n="faq1Q"></summary><p data-i18n="faq1A"></p></details>
+        <details class="faq"><summary data-i18n="faq2Q"></summary><p data-i18n="faq2A"></p></details>
+        <details class="faq"><summary data-i18n="faq3Q"></summary><p data-i18n="faq3A"></p></details>
+        <details class="faq"><summary data-i18n="faq4Q"></summary><p data-i18n="faq4A"></p></details>
+        <details class="faq"><summary data-i18n="faq5Q"></summary><p data-i18n="faq5A"></p></details>
+      </div>
+
+      <div class="card">
+        <h3 data-i18n="privacyTitle"></h3>
+        <p data-i18n="privacyLead"></p>
+        <div class="perm-list">
+          <div><code>search</code><span data-i18n="permSearch"></span></div>
+          <div><code>storage</code><span data-i18n="permStorage"></span></div>
+          <div><code>webRequest</code><span data-i18n="permWebRequest"></span></div>
+          <div><strong data-i18n="permHostLabel"></strong><span data-i18n="permHost"></span></div>
+        </div>
+      </div>
+    </section>
 
     <footer class="support">
       <span data-i18n="supportText"></span>
       <a href="https://buymeacoffee.com/th90dd" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+      <span class="dot-sep">·</span>
+      <a href="https://github.com/TH90DD/barkeys-launcher" target="_blank" rel="noopener noreferrer">GitHub</a>
     </footer>
   </main>
-  <script src="../engines.js"></script>
-  <script src="options.js"></script>
+
+  <script src="../lib/constants.js"></script>
+  <script src="../lib/validate.js"></script>
+  <script src="../lib/store.js"></script>
+  <script src="ui.js"></script>
+  <script src="app.js"></script>
+  <script src="tab-welcome.js"></script>
+  <script src="tab-engines.js"></script>
+  <script src="tab-custom.js"></script>
+  <script src="tab-data.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

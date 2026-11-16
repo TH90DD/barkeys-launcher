@@ -35,12 +35,32 @@ You can also add targets that have no Firefox search engine at all, just a URL w
 
 No data collection, no analytics, no network requests of its own.
 
+**Security notes**
+
+- Everything read from storage, Sync or an import file is validated: keywords (length, no spaces), names, and search URLs (`http(s)` only, must contain `%s`). Invalid entries are dropped, never executed.
+- Redirects only ever go to `http(s)` URLs; search terms are URL-encoded.
+- The options page builds its UI with `textContent` only – no `innerHTML`.
+- Search engine icons are only shown if they're embedded (`data:` etc.), so opening the settings never contacts a website.
+- Data is stored as one small item per entry, well within Firefox Sync's limits (8 KB per item, 100 KB total).
+
+## Sync, backup & sharing
+
+Keywords are stored in `storage.sync`, so they follow you via Firefox Sync (with “Add-ons” enabled). Firefox doesn't sync custom search engines itself; Barkeys lists keywords of missing engines under *Not found in Firefox*. Export/import (JSON) works without Sync and can carry the engines' search URLs to set them up on a new device.
+
 ## Development
 
 ```bash
+node --test tests/   # unit tests for storage, import validation and redirects
 npx web-ext lint
 npx web-ext run      # starts a test Firefox with the add-on
 npx web-ext build    # zip in web-ext-artifacts/
+```
+
+```
+lib/        shared core: constants, validation, storage (sync schema v2), keyword resolver
+background.js   intercepts the default engine's result page and redirects
+options/    settings UI: one file per tab (welcome, engines, custom, data) + guide in HTML
+tests/      node:test unit tests (not shipped in the add-on)
 ```
 
 Or load it temporarily: `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on…" → `manifest.json`.
