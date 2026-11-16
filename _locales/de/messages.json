@@ -555,7 +555,7 @@
     "message": "Adresse"
   },
   "btnAddSite": {
-    "message": "+ Seite hinzufügen"
+    "message": "Seite hinzufügen"
   },
   "btnPickBookmark": {
     "message": "Aus Lesezeichen wählen"
@@ -597,7 +597,7 @@
     "message": "Adressen (eine pro Zeile)"
   },
   "btnAddBundle": {
-    "message": "+ Bündel hinzufügen"
+    "message": "Bündel hinzufügen"
   },
   "bundleCount": {
     "message": "$count$ von max. $max$ Seiten",
@@ -685,5 +685,11 @@
   },
   "preset_ai": {
     "message": "KI-Assistenten"
+  },
+  "tabPresets": {
+    "message": "Vorlagen"
+  },
+  "btnSaveNow": {
+    "message": "Jetzt speichern"
   }
 }

@@ -25,6 +25,7 @@
     <button role="tab" data-tab="engines" data-icon="search"><span data-i18n="tabEngines"></span></button>
     <button role="tab" data-tab="custom" data-icon="link"><span data-i18n="tabCustom"></span></button>
     <button role="tab" data-tab="sites" data-icon="bookmark"><span data-i18n="tabSites"></span></button>
+    <button role="tab" data-tab="presets" data-icon="presets"><span data-i18n="tabPresets"></span></button>
     <button role="tab" data-tab="data" data-icon="database"><span data-i18n="tabData"></span></button>
     <button role="tab" data-tab="guide" data-icon="book"><span data-i18n="tabGuide"></span></button>
     </div>
@@ -130,54 +131,46 @@
 
     <!-- ============ Sites ============ -->
     <section role="tabpanel" id="panel-sites" hidden>
-      <div class="segmented" role="tablist" id="sitesMode">
-        <button role="tab" data-mode="single" aria-selected="true" data-i18n="modeSingle"></button>
-        <button role="tab" data-mode="bundles" aria-selected="false" data-i18n="modeBundles"></button>
-      </div>
-
-      <div class="card" id="sitesSingle">
-        <div class="card-head">
-          <div>
-            <h3 data-i18n="sitesTitle"></h3>
-            <p class="muted" data-i18n="sitesHint"></p>
+      <div class="card">
+        <div class="toolbar">
+          <div class="segmented" role="tablist" id="sitesMode">
+            <button role="tab" data-mode="single" aria-selected="true" data-i18n="modeSingle"></button>
+            <button role="tab" data-mode="bundles" aria-selected="false" data-i18n="modeBundles"></button>
           </div>
           <div class="head-actions">
             <button class="btn ghost pick-bookmark" data-icon="bookmark"><span data-i18n="btnPickBookmark"></span></button>
-            <button id="addSite" class="btn primary" data-i18n="btnAddSite"></button>
+            <button id="addEntry" class="btn primary" data-icon="plus"><span id="addEntryLabel"></span></button>
           </div>
         </div>
-        <div class="table">
-          <div class="thead grid-custom">
-            <span data-i18n="colName"></span>
-            <span data-i18n="colKeywords"></span>
-            <span data-i18n="colSiteUrl"></span>
-            <span></span>
-          </div>
-          <div id="siteRows"></div>
-          <p id="sitesEmpty" class="empty" data-i18n="sitesEmpty" hidden></p>
-        </div>
-      </div>
 
-      <div class="card" id="sitesBundles" hidden>
-        <div class="card-head">
-          <div>
-            <h3 data-i18n="bundlesTitle"></h3>
-            <p class="muted" data-i18n="bundlesHint"></p>
-          </div>
-          <div class="head-actions">
-            <button class="btn ghost pick-bookmark" data-icon="bookmark"><span data-i18n="btnPickBookmark"></span></button>
-            <button id="addBundle" class="btn primary" data-i18n="btnAddBundle"></button>
+        <div id="sitesSingle">
+          <h3 data-i18n="sitesTitle"></h3>
+          <p class="muted" data-i18n="sitesHint"></p>
+          <div class="table">
+            <div class="thead grid-custom">
+              <span data-i18n="colName"></span>
+              <span data-i18n="colKeywords"></span>
+              <span data-i18n="colSiteUrl"></span>
+              <span></span>
+            </div>
+            <div id="siteRows"></div>
+            <p id="sitesEmpty" class="empty" data-i18n="sitesEmpty" hidden></p>
           </div>
         </div>
-        <div class="table">
-          <div class="thead grid-custom">
-            <span data-i18n="colName"></span>
-            <span data-i18n="colKeywords"></span>
-            <span data-i18n="colBundleUrls"></span>
-            <span></span>
+
+        <div id="sitesBundles" hidden>
+          <h3 data-i18n="bundlesTitle"></h3>
+          <p class="muted" data-i18n="bundlesHint"></p>
+          <div class="table">
+            <div class="thead grid-custom">
+              <span data-i18n="colName"></span>
+              <span data-i18n="colKeywords"></span>
+              <span data-i18n="colBundleUrls"></span>
+              <span></span>
+            </div>
+            <div id="bundleRows"></div>
+            <p id="bundlesEmpty" class="empty" data-i18n="bundlesEmpty" hidden></p>
           </div>
-          <div id="bundleRows"></div>
-          <p id="bundlesEmpty" class="empty" data-i18n="bundlesEmpty" hidden></p>
         </div>
       </div>
 
@@ -190,6 +183,17 @@
         <div id="bookmarkResults"></div>
         <p class="muted small" data-i18n="bookmarksPrivacy"></p>
       </div>
+    </section>
+
+    <!-- ============ Presets ============ -->
+    <section role="tabpanel" id="panel-presets" hidden>
+      <div class="card">
+        <h3 data-i18n="presetsTitle"></h3>
+        <p class="muted" data-i18n="presetsHint"></p>
+        <input id="presetFilter" type="text" data-i18n-placeholder="presetsFilter" spellcheck="false">
+        <div id="presetList" class="presets"></div>
+      </div>
+
     </section>
 
     <!-- ============ Data & sync ============ -->
@@ -272,13 +276,6 @@
             <p><strong>@youtube <span data-i18n="exQuery"></span></strong> – <span data-i18n="guideBarExtra"></span></p>
           </div>
         </div>
-      </div>
-
-      <div class="card">
-        <h3 data-i18n="presetsTitle"></h3>
-        <p class="muted" data-i18n="presetsHint"></p>
-        <input id="presetFilter" type="text" data-i18n-placeholder="presetsFilter" spellcheck="false">
-        <div id="presetList" class="presets"></div>
       </div>
 
       <div class="card">

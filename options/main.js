@@ -1,7 +1,7 @@
 "use strict";
 /* global App, BK, applyI18n, $ */
 
-const TAB_IDS = ["welcome", "engines", "custom", "sites", "data", "guide"];
+const TAB_IDS = ["welcome", "engines", "custom", "sites", "presets", "data", "guide"];
 
 const Tabs = {
   current: null,

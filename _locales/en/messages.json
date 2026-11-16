@@ -555,7 +555,7 @@
     "message": "Address"
   },
   "btnAddSite": {
-    "message": "+ Add site"
+    "message": "Add site"
   },
   "btnPickBookmark": {
     "message": "Pick from bookmarks"
@@ -597,7 +597,7 @@
     "message": "Addresses (one per line)"
   },
   "btnAddBundle": {
-    "message": "+ Add bundle"
+    "message": "Add bundle"
   },
   "bundleCount": {
     "message": "$count$ of max. $max$ sites",
@@ -685,5 +685,11 @@
   },
   "preset_ai": {
     "message": "AI assistants"
+  },
+  "tabPresets": {
+    "message": "Presets"
+  },
+  "btnSaveNow": {
+    "message": "Save now"
   }
 }

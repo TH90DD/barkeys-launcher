@@ -196,7 +196,7 @@ main { max-width: 1040px; margin: 0 auto; padding: 8px 24px 64px; }
 .thead { color: var(--muted); font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; padding: 0 0 8px; border-bottom: 1px solid var(--line); }
 .thead + div > .row:first-child { border-top: none; }
 .grid-engines { display: grid; grid-template-columns: 230px 170px 1fr; gap: 12px; align-items: start; }
-.grid-custom { display: grid; grid-template-columns: 190px 210px 1fr 36px; gap: 10px; align-items: start; }
+.grid-custom { display: grid; grid-template-columns: 190px 210px 1fr 72px; gap: 10px; align-items: start; }
 .row { padding: 8px 0; border-top: 1px solid var(--line); }
 .row > * { min-height: 36px; display: flex; align-items: center; min-width: 0; }
 .row > .field { display: block; }
@@ -480,3 +480,9 @@ textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-
   .preset-url { grid-column: 1 / -1; }
   .card-head { flex-direction: column; }
 }
+
+/* Toolbar row inside a card (mode switch left, actions right) */
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
+.row-actions { display: flex; gap: 2px; }
+.icon-btn.save:hover { background: color-mix(in srgb, var(--ok) 15%, transparent); color: var(--ok); }
+.icon-btn.save.done { color: var(--ok); }

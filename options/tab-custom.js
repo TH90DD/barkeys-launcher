@@ -1,5 +1,5 @@
 "use strict";
-/* global App, BK, t, h, $, icon, showRowIssues */
+/* global App, BK, t, h, $, showRowIssues, rowActions */
 
 const CustomView = {
   render() {
@@ -27,15 +27,12 @@ const CustomView = {
       h("div", { class: "field" },
         field(c.u, "https://www.openstreetmap.org/search?query=%s", "mono", t("colUrl"), v => { c.u = v.trim(); }),
         h("div", { class: "msg error", "data-for": "url" })),
-      h("div", null, h("button", {
-        class: "icon-btn", title: t("btnDelete"), "aria-label": t("btnDelete"),
-        onclick: () => {
-          App.state.custom = App.state.custom.filter(x => x !== c);
-          App.changed();
-          this.render();
-          App.refreshIssues();
-        }
-      }, icon("trash")))
+      rowActions(() => {
+        App.state.custom = App.state.custom.filter(x => x !== c);
+        App.changed();
+        this.render();
+        App.refreshIssues();
+      })
     );
   },
 

@@ -1,5 +1,5 @@
 "use strict";
-/* global App, BK, t, h, $, icon, showRowIssues */
+/* global App, BK, t, h, $, icon, showRowIssues, rowActions */
 
 // "example.com" -> "https://example.com"; anything with a scheme is kept as is
 // (and later rejected by validation unless it's http/https).
@@ -25,8 +25,8 @@ const SitesView = {
     });
   },
 
-  deleteButton(onclick) {
-    return h("div", null, h("button", { class: "icon-btn", title: t("btnDelete"), "aria-label": t("btnDelete"), onclick }, icon("trash")));
+  deleteButton(onDelete) {
+    return rowActions(onDelete);
   },
 
   // ----- Single sites -----
@@ -64,6 +64,7 @@ const SitesView = {
     const box = $("bundleRows");
     box.textContent = "";
     for (const x of App.state.bundles) {
+      const count = h("div", { class: "msg muted small", text: t("bundleCount", [String(x.u.length), String(BK.LIMITS.bundleUrls)]) });
       const urls = h("textarea", {
         class: "mono urls",
         rows: String(Math.min(8, Math.max(2, x.u.length + 1))),
@@ -74,6 +75,7 @@ const SitesView = {
         oninput: e => {
           x.u = e.target.value.split("\n").map(withScheme).filter(Boolean);
           e.target.rows = Math.min(8, Math.max(2, e.target.value.split("\n").length));
+          count.textContent = t("bundleCount", [String(x.u.length), String(BK.LIMITS.bundleUrls)]);
           App.changed();
         }
       });
@@ -83,9 +85,7 @@ const SitesView = {
         h("div", { class: "field" },
           this.input(x.a.join(", "), "@workspace", "mono keywords", t("colKeywords"), v => { x.a = BK.splitAliases(v); }),
           h("div", { class: "msg error", "data-for": "keywords" }), h("div", { class: "msg warn" })),
-        h("div", { class: "field" }, urls,
-          h("div", { class: "msg muted small", text: t("bundleCount", [String(x.u.length), String(BK.LIMITS.bundleUrls)]) }),
-          h("div", { class: "msg error", "data-for": "url" })),
+        h("div", { class: "field" }, urls, count, h("div", { class: "msg error", "data-for": "url" })),
         this.deleteButton(() => {
           App.state.bundles = App.state.bundles.filter(b => b !== x);
           if (this.lastBundle === x) this.lastBundle = null;
@@ -124,6 +124,7 @@ const SitesView = {
     }
     $("sitesSingle").hidden = mode !== "single";
     $("sitesBundles").hidden = mode !== "bundles";
+    $("addEntryLabel").textContent = t(mode === "bundles" ? "btnAddBundle" : "btnAddSite");
     if (!$("bookmarkPicker").hidden) Picker.open();
   },
 
@@ -215,8 +216,8 @@ $("bookmarkSearch").addEventListener("input", e => {
   Picker.timer = setTimeout(() => Picker.search(e.target.value), 150);
 });
 $("bookmarkClose").addEventListener("click", () => Picker.close());
-$("addSite").addEventListener("click", () => SitesView.addSite());
-$("addBundle").addEventListener("click", () => SitesView.addBundle());
+$("addEntry").addEventListener("click", () => (SitesView.mode === "bundles" ? SitesView.addBundle() : SitesView.addSite()));
+SitesView.setMode("single");
 for (const btn of document.querySelectorAll("#sitesMode [data-mode]")) {
   btn.addEventListener("click", () => SitesView.setMode(btn.dataset.mode));
 }
