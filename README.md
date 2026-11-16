@@ -69,6 +69,10 @@ tests/      node:test unit tests (not shipped in the add-on)
 
 Or load it temporarily: `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on…" → `manifest.json`.
 
+## Contributing
+
+Issues and pull requests are welcome – see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Languages & translations
 
 The settings follow Firefox's language automatically; under *Data & sync → Language* you can pick a fixed one. Currently: **English** and **German**.

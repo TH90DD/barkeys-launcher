@@ -711,5 +711,49 @@
   },
   "linkPrivacy": {
     "message": "Datenschutz"
+  },
+  "linkCredits": {
+    "message": "Credits"
+  },
+  "creditsTitle": {
+    "message": "Credits"
+  },
+  "btnClose": {
+    "message": "Schließen"
+  },
+  "creditsAuthor": {
+    "message": "Entwicklung"
+  },
+  "creditsContributors": {
+    "message": "Mitwirkende"
+  },
+  "creditsNoContributors": {
+    "message": "Noch niemand – du könntest die erste Person sein!"
+  },
+  "creditsHowTo": {
+    "message": "Verbesserungen, Fehlerberichte und Übersetzungen sind willkommen:"
+  },
+  "creditsHowToLink": {
+    "message": "So machst du mit"
+  },
+  "creditsTranslators": {
+    "message": "Übersetzungen"
+  },
+  "creditsThirdParty": {
+    "message": "Verwendete Projekte"
+  },
+  "creditsIcons": {
+    "message": "Icons"
+  },
+  "creditsLicense": {
+    "message": "Lizenz: $license$",
+    "placeholders": {
+      "license": {
+        "content": "$1"
+      }
+    }
+  },
+  "creditsOwnLicense": {
+    "message": "Barkeys Launcher steht unter der Mozilla Public License 2.0."
   }
 }

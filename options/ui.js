@@ -51,7 +51,7 @@ function h(tag, props, ...children) {
     else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
     else el.setAttribute(k, v === true ? "" : v);
   }
-  for (const c of children.flat()) {
+  for (const c of children.flat(Infinity)) {
     if (c == null || c === false) continue;
     el.append(c instanceof Node ? c : document.createTextNode(String(c)));
   }
@@ -83,6 +83,7 @@ function icon(name) {
 function applyI18n(root = document) {
   for (const el of root.querySelectorAll("[data-i18n]")) el.textContent = t(el.dataset.i18n);
   for (const el of root.querySelectorAll("[data-i18n-placeholder]")) el.placeholder = t(el.dataset.i18nPlaceholder);
+  for (const el of root.querySelectorAll("[data-i18n-title]")) el.title = el.ariaLabel = t(el.dataset.i18nTitle);
   for (const el of root.querySelectorAll("[data-icon]")) el.prepend(icon(el.dataset.icon));
   for (const sum of root.querySelectorAll("details > summary")) {
     sum.prepend(h("span", { class: "toggle" }, icon("chevron")));

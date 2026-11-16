@@ -523,3 +523,41 @@ textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-
 .lang-select { max-width: 320px; }
 .legal { margin-top: 12px; font-size: .82rem; }
 .legal a { border: none; padding: 0; margin: 0; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Credits link + dialog */
+.link-pill {
+  margin-left: 2px;
+  padding: 4px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.link-pill:hover { border-color: var(--accent); }
+.modal {
+  width: min(560px, calc(100vw - 32px));
+  max-height: min(80vh, 720px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .45);
+}
+.modal::backdrop { background: rgba(17, 17, 20, .45); backdrop-filter: blur(4px); }
+.modal-head {
+  position: sticky; top: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 22px 12px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+.modal-head h2 { font-size: 1.2rem; }
+.modal-body { padding: 8px 22px 22px; }
+.modal-body h3 { margin: 18px 0 8px; font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.credit-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.credit-list li { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.credit-list .tag { font-size: .75rem; padding: 1px 8px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+.modal-body .muted a { color: var(--accent); }

@@ -50,6 +50,10 @@ Keine Datensammlung, keine Statistik, keine eigenen Netzwerkverbindungen. Alle D
 
 Kürzel liegen in `storage.sync` und reisen per Firefox Sync mit (wenn „Add-ons“ aktiviert ist). Eigene Suchmaschinen synchronisiert Firefox selbst nicht; Barkeys zeigt Kürzel fehlender Suchmaschinen unter *Nicht in Firefox gefunden*. Export/Import (JSON) funktioniert ohne Sync und kann die Such-URLs mitnehmen, um Suchmaschinen auf einem neuen Gerät anzulegen.
 
+## Mitmachen
+
+Issues und Pull Requests sind willkommen – siehe [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Sprachen & Übersetzungen
 
 Die Einstellungen folgen automatisch der Sprache von Firefox; unter *Daten & Sync → Sprache* kannst du eine feste wählen. Aktuell: **Deutsch** und **Englisch**.

@@ -315,6 +315,8 @@
       <a href="https://buymeacoffee.com/th90dd" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
       <span class="dot-sep">·</span>
       <a href="https://github.com/TH90DD/barkeys-launcher" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <span class="dot-sep">·</span>
+      <button id="openCredits" class="link-pill" data-i18n="linkCredits"></button>
       <div class="legal">
         <span>TH90DD</span>
         <span class="dot-sep">·</span>
@@ -325,10 +327,19 @@
     </footer>
   </main>
 
+  <dialog id="credits" class="modal" aria-labelledby="creditsTitle">
+    <div class="modal-head">
+      <h2 id="creditsTitle" data-i18n="creditsTitle"></h2>
+      <button id="closeCredits" class="icon-btn" data-i18n-title="btnClose"></button>
+    </div>
+    <div id="creditsBody" class="modal-body"></div>
+  </dialog>
+
   <script src="../lib/constants.js"></script>
   <script src="../lib/validate.js"></script>
   <script src="../lib/store.js"></script>
   <script src="../lib/presets.js"></script>
+  <script src="../lib/credits.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>
   <script src="tab-welcome.js"></script>
@@ -337,6 +348,7 @@
   <script src="tab-sites.js"></script>
   <script src="tab-data.js"></script>
   <script src="tab-guide.js"></script>
+  <script src="credits.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
