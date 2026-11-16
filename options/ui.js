@@ -81,13 +81,26 @@ async function copyText(btn, text) {
   } catch { /* clipboard blocked – nothing to do */ }
 }
 
-// Fills the .msg.error / .msg.warn elements of a row from App.issues.
+// Shows errors under the field they belong to (.msg.error[data-for]) and
+// warnings under the keywords. Falls back to the first error slot.
 function showRowIssues(row, issue) {
   const errors = issue ? issue.errors : [];
   const warnings = issue ? issue.warnings : [];
   row.classList.toggle("invalid", errors.length > 0);
-  const err = row.querySelector(".msg.error");
+  const slots = [...row.querySelectorAll(".msg.error")];
+  for (const slot of slots) slot.textContent = "";
+  const byField = new Map();
+  for (const e of errors) {
+    const slot = row.querySelector(`.msg.error[data-for="${e.f}"]`) || slots[0];
+    if (!slot) continue;
+    byField.set(slot, [...(byField.get(slot) || []), e.m]);
+    const input = slot.parentElement.querySelector("input, textarea");
+    if (input) input.classList.add("bad");
+  }
+  for (const [slot, msgs] of byField) slot.textContent = msgs.join(" · ");
+  for (const input of row.querySelectorAll("input.bad, textarea.bad")) {
+    if (![...byField.keys()].some(slot => slot.parentElement.contains(input))) input.classList.remove("bad");
+  }
   const warn = row.querySelector(".msg.warn");
-  if (err) err.textContent = errors.join(" · ");
   if (warn) warn.textContent = errors.length ? "" : warnings.join(" · ");
 }

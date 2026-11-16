@@ -31,7 +31,7 @@ App.register({
         h("div", { class: "mains" }, engine.mains.length
           ? engine.mains.map(a => h("span", { class: "kbd", text: a, title: t("mainActiveTip", [a, engine.name]) }))
           : h("span", { class: "none", text: t("mainNone"), title: t("mainNoneTip") })),
-        h("div", { class: "field" }, input, h("div", { class: "msg error" }), h("div", { class: "msg warn" }))
+        h("div", { class: "field" }, input, h("div", { class: "msg error", "data-for": "keywords" }), h("div", { class: "msg warn" }))
       ));
     }
 

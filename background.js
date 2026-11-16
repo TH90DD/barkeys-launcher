@@ -31,6 +31,17 @@ function matchPattern(pattern, url) {
   return url.pathname.startsWith(m[2].replace(/\*$/, ""));
 }
 
+// Bundle: the first site replaces the search tab, the rest open right
+// next to it in the background, in order.
+async function openBundleRest(tabId, urls) {
+  let index;
+  try { index = (await browser.tabs.get(tabId)).index; } catch { /* tab gone */ }
+  urls.forEach((url, i) => {
+    browser.tabs.create({ url, active: false, index: index == null ? undefined : index + 1 + i })
+      .catch(err => console.error("Barkeys: opening tab failed", err));
+  });
+}
+
 async function onBeforeRequest(details) {
   await ready;
   if (details.type !== "main_frame" || index.size === 0) return {};
@@ -44,6 +55,10 @@ async function onBeforeRequest(details) {
     const hit = BK.resolve(url.searchParams.get(param), index);
     if (!hit) continue;
     if (hit.url) return { redirectUrl: hit.url };
+    if (hit.urls) {
+      openBundleRest(details.tabId, hit.urls.slice(1));
+      return { redirectUrl: hit.urls[0] };
+    }
 
     // Hand the search to the Firefox engine (we never learn its URL).
     if (!(await engineExists(hit.engine))) return {};

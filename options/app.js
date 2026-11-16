@@ -4,7 +4,7 @@
 // Central state for the options page. Tabs register a view with render()
 // and optionally applyIssues(); all edits go through App.changed().
 const App = {
-  state: { engines: new Map(), custom: [], sites: [] },
+  state: { engines: new Map(), custom: [], sites: [], bundles: [] },
   ff: [],                 // Firefox engines: { name, alias, isDefault, icon }
   granted: new Set(),     // SOURCE_ENGINES ids with host permission
   issues: new Map(),      // entry key -> { errors: [], warnings: [] }
@@ -81,46 +81,53 @@ const App = {
 
   // ---------- Validation ----------
 
+  // Errors are { f: field, m: message } so each one shows under its field.
   validate() {
     const issues = new Map();
     const owners = new Map();
     for (const e of this.ff) {
       for (const a of e.mains) owners.set(BK.normAlias(a), { label: e.name, firefox: true });
     }
+    const E = (f, m) => ({ f, m });
 
     const check = (key, label, aliases, errors) => {
       const warnings = [];
-      if (aliases.length > BK.LIMITS.aliasesPerEntry) errors.push(t("errTooMany", String(BK.LIMITS.aliasesPerEntry)));
+      if (aliases.length > BK.LIMITS.aliasesPerEntry) errors.push(E("keywords", t("errTooMany", String(BK.LIMITS.aliasesPerEntry))));
       for (const a of aliases) {
-        if (!BK.validAlias(a)) { errors.push(t("errInvalidAlias", a)); continue; }
+        if (!BK.validAlias(a)) { errors.push(E("keywords", t("errInvalidAlias", a))); continue; }
         const k = BK.normAlias(a);
         const owner = owners.get(k);
-        if (owner) errors.push(owner.firefox ? t("errFirefoxAlias", [a, owner.label]) : t("errDuplicate", [a, owner.label]));
+        if (owner) errors.push(E("keywords", owner.firefox ? t("errFirefoxAlias", [a, owner.label]) : t("errDuplicate", [a, owner.label])));
         else owners.set(k, { label });
         if (BK.isPlainWord(a)) warnings.push(t("warnPlainWord", [a, "@" + a]));
       }
       issues.set(key, { errors, warnings });
     };
+    const isBlank = x => !x.n && !x.a.length && !(Array.isArray(x.u) ? x.u.length : x.u);
+    const entries = (list, prefix, urlCheck) => {
+      for (const x of list) {
+        if (isBlank(x)) { issues.set(prefix + x.id, { errors: [], warnings: [] }); continue; }
+        const errors = [];
+        if (!x.a.length) errors.push(E("keywords", t("errNoAlias")));
+        const urlError = urlCheck(x);
+        if (urlError) errors.push(E("url", urlError));
+        check(prefix + x.id, x.n || String(x.u), x.a, errors);
+      }
+    };
 
     for (const [name, e] of this.state.engines) {
       const errors = [];
-      if (e.u && !BK.validUrlTemplate(e.u)) errors.push(t("errUrl"));
+      if (e.u && !BK.validUrlTemplate(e.u)) errors.push(E("url", t("errUrl")));
       check("e:" + name, name, e.a, errors);
     }
-    for (const c of this.state.custom) {
-      if (!c.n && !c.a.length && !c.u) { issues.set("c:" + c.id, { errors: [], warnings: [] }); continue; }
-      const errors = [];
-      if (!c.a.length) errors.push(t("errNoAlias"));
-      if (!BK.validUrlTemplate(c.u)) errors.push(t("errUrl"));
-      check("c:" + c.id, c.n || c.u, c.a, errors);
-    }
-    for (const x of this.state.sites) {
-      if (!x.n && !x.a.length && !x.u) { issues.set("s:" + x.id, { errors: [], warnings: [] }); continue; }
-      const errors = [];
-      if (!x.a.length) errors.push(t("errNoAlias"));
-      if (!BK.validSiteUrl(x.u)) errors.push(t("errSiteUrl"));
-      check("s:" + x.id, x.n || x.u, x.a, errors);
-    }
+    entries(this.state.custom, "c:", x => BK.validUrlTemplate(x.u) ? "" : t("errUrl"));
+    entries(this.state.sites, "s:", x => BK.validSiteUrl(x.u) ? "" : t("errSiteUrl"));
+    entries(this.state.bundles, "b:", x => {
+      if (!x.u.length) return t("errBundleEmpty");
+      if (x.u.length > BK.LIMITS.bundleUrls) return t("errBundleTooMany", String(BK.LIMITS.bundleUrls));
+      const bad = x.u.find(u => !BK.validSiteUrl(u));
+      return bad ? t("errBundleUrl", bad) : "";
+    });
     this.issues = issues;
   },
 
@@ -173,6 +180,6 @@ const App = {
     setBadge("welcome", todo ? String(todo) : "");
     setBadge("engines", this.hasErrors("e:") || this.orphans().length ? "!" : "");
     setBadge("custom", this.hasErrors("c:") ? "!" : "");
-    setBadge("sites", this.hasErrors("s:") ? "!" : "");
+    setBadge("sites", this.hasErrors("s:") || this.hasErrors("b:") ? "!" : "");
   }
 };

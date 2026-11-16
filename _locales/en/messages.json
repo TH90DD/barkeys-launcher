@@ -577,5 +577,113 @@
   },
   "permBookmarks": {
     "message": "Optional: search bookmarks when you use “Pick from bookmarks” – only asked then."
+  },
+  "modeSingle": {
+    "message": "Single sites"
+  },
+  "modeBundles": {
+    "message": "Bundles"
+  },
+  "bundlesTitle": {
+    "message": "Bundles"
+  },
+  "bundlesHint": {
+    "message": "One keyword opens several sites at once – e.g. @workspace for mail, calendar and project tool. The first site replaces the current tab, the others open next to it."
+  },
+  "bundlesEmpty": {
+    "message": "No bundles yet."
+  },
+  "colBundleUrls": {
+    "message": "Addresses (one per line)"
+  },
+  "btnAddBundle": {
+    "message": "+ Add bundle"
+  },
+  "bundleCount": {
+    "message": "$count$ of max. $max$ sites",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "max": {
+        "content": "$2"
+      }
+    }
+  },
+  "errBundleEmpty": {
+    "message": "Enter at least one address"
+  },
+  "errBundleTooMany": {
+    "message": "At most $max$ addresses per bundle",
+    "placeholders": {
+      "max": {
+        "content": "$1"
+      }
+    }
+  },
+  "errBundleUrl": {
+    "message": "Invalid address: $url$",
+    "placeholders": {
+      "url": {
+        "content": "$1"
+      }
+    }
+  },
+  "pickerTitleSite": {
+    "message": "Add a bookmark as a site"
+  },
+  "pickerTitleBundle": {
+    "message": "Add bookmarks to a bundle (last edited or a new one)"
+  },
+  "btnDone": {
+    "message": "Done"
+  },
+  "presetsTitle": {
+    "message": "Presets: search addresses with %s"
+  },
+  "presetsHint": {
+    "message": "Well-known sites with a search. “Add” creates them under “Custom targets” – with the suggested keyword if it's still free. %s stands for your search terms."
+  },
+  "presetsFilter": {
+    "message": "Filter presets …"
+  },
+  "presetsNone": {
+    "message": "No matching preset."
+  },
+  "presetAdd": {
+    "message": "Add"
+  },
+  "presetAdded": {
+    "message": "Added ✓"
+  },
+  "presetKeywordTaken": {
+    "message": "Keyword already in use – you'll pick another one when adding"
+  },
+  "preset_search": {
+    "message": "Search engines"
+  },
+  "preset_knowledge": {
+    "message": "Knowledge"
+  },
+  "preset_translate": {
+    "message": "Translate"
+  },
+  "preset_maps": {
+    "message": "Maps"
+  },
+  "preset_media": {
+    "message": "Media & social"
+  },
+  "preset_shopping": {
+    "message": "Shopping & everyday"
+  },
+  "preset_dev": {
+    "message": "Development"
+  },
+  "preset_linux": {
+    "message": "Linux"
+  },
+  "preset_ai": {
+    "message": "AI assistants"
   }
 }

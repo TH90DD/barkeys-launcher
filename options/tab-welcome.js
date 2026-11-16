@@ -40,7 +40,8 @@ App.register({
     // 3. Extra keywords in Barkeys
     const extras = [...App.state.engines.values()].reduce((s, e) => s + e.a.length, 0)
       + App.state.custom.reduce((s, c) => s + c.a.length, 0)
-      + App.state.sites.reduce((s, x) => s + x.a.length, 0);
+      + App.state.sites.reduce((s, x) => s + x.a.length, 0)
+      + App.state.bundles.reduce((s, x) => s + x.a.length, 0);
     item(extras > 0,
       extras ? t("setupExtraOk", String(extras)) : t("setupExtraTodo"),
       extras ? "" : t("setupExtraTodoText"),

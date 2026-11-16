@@ -577,5 +577,113 @@
   },
   "permBookmarks": {
     "message": "Optional: Lesezeichen durchsuchen, wenn du „Aus Lesezeichen wählen“ nutzt – erst dann wird gefragt."
+  },
+  "modeSingle": {
+    "message": "Einzelne Seiten"
+  },
+  "modeBundles": {
+    "message": "Bündel"
+  },
+  "bundlesTitle": {
+    "message": "Bündel"
+  },
+  "bundlesHint": {
+    "message": "Ein Kürzel öffnet mehrere Seiten auf einmal – z. B. @workspace für Mail, Kalender und Projekt-Tool. Die erste Seite ersetzt den aktuellen Tab, die anderen öffnen daneben."
+  },
+  "bundlesEmpty": {
+    "message": "Noch keine Bündel."
+  },
+  "colBundleUrls": {
+    "message": "Adressen (eine pro Zeile)"
+  },
+  "btnAddBundle": {
+    "message": "+ Bündel hinzufügen"
+  },
+  "bundleCount": {
+    "message": "$count$ von max. $max$ Seiten",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      },
+      "max": {
+        "content": "$2"
+      }
+    }
+  },
+  "errBundleEmpty": {
+    "message": "Mindestens eine Adresse eintragen"
+  },
+  "errBundleTooMany": {
+    "message": "Höchstens $max$ Adressen pro Bündel",
+    "placeholders": {
+      "max": {
+        "content": "$1"
+      }
+    }
+  },
+  "errBundleUrl": {
+    "message": "Ungültige Adresse: $url$",
+    "placeholders": {
+      "url": {
+        "content": "$1"
+      }
+    }
+  },
+  "pickerTitleSite": {
+    "message": "Lesezeichen als Seite übernehmen"
+  },
+  "pickerTitleBundle": {
+    "message": "Lesezeichen zum Bündel hinzufügen (zuletzt bearbeitetes oder neues)"
+  },
+  "btnDone": {
+    "message": "Fertig"
+  },
+  "presetsTitle": {
+    "message": "Vorlagen: Such-Adressen mit %s"
+  },
+  "presetsHint": {
+    "message": "Bekannte Seiten mit Suchfunktion. „Übernehmen“ legt sie unter „Eigene Ziele“ an – mit dem vorgeschlagenen Kürzel, wenn es noch frei ist. %s steht jeweils für deinen Suchbegriff."
+  },
+  "presetsFilter": {
+    "message": "Vorlagen filtern …"
+  },
+  "presetsNone": {
+    "message": "Keine passende Vorlage."
+  },
+  "presetAdd": {
+    "message": "Übernehmen"
+  },
+  "presetAdded": {
+    "message": "Übernommen ✓"
+  },
+  "presetKeywordTaken": {
+    "message": "Kürzel schon vergeben – du wählst beim Übernehmen ein anderes"
+  },
+  "preset_search": {
+    "message": "Suchmaschinen"
+  },
+  "preset_knowledge": {
+    "message": "Wissen"
+  },
+  "preset_translate": {
+    "message": "Übersetzen"
+  },
+  "preset_maps": {
+    "message": "Karten"
+  },
+  "preset_media": {
+    "message": "Medien & Social"
+  },
+  "preset_shopping": {
+    "message": "Shopping & Alltag"
+  },
+  "preset_dev": {
+    "message": "Entwicklung"
+  },
+  "preset_linux": {
+    "message": "Linux"
+  },
+  "preset_ai": {
+    "message": "KI-Assistenten"
   }
 }

@@ -154,3 +154,23 @@ test("sites survive export -> import round trip", () => {
   const res = BK.Store.applyImport({ engines: new Map(), custom: [], sites: [] }, imp, "merge", []);
   eq(res.state.sites.map(s => [s.n, s.a, s.u]), [["News", ["@news"], "https://news.example/"]]);
 });
+
+test("bundles open all valid sites and drop unsafe ones", () => {
+  const { BK } = sandbox();
+  const state = BK.Store.parse({
+    "b:w1": { n: "Workspace", a: ["@workspace"], u: ["https://mail.example/", "javascript:alert(1)", "https://cal.example/"], o: 0 }
+  });
+  eq(state.bundles[0].u, ["https://mail.example/", "https://cal.example/"]);
+  const hit = BK.resolve("@workspace", BK.buildIndex(state));
+  eq({ ...hit, urls: [...hit.urls] }, { urls: ["https://mail.example/", "https://cal.example/"] });
+});
+
+test("bundles are capped and survive export/import", () => {
+  const { BK } = sandbox();
+  const many = Array.from({ length: 30 }, (_, i) => `https://s${i}.example/`);
+  const imp = BK.Store.parseImport(JSON.stringify({ format: "barkeys-launcher", version: 1, bundles: [{ name: "Big", keywords: ["@big"], urls: many }] }));
+  assert.equal(imp.bundles[0].u.length, BK.LIMITS.bundleUrls);
+  const res = BK.Store.applyImport({ engines: new Map(), custom: [], sites: [], bundles: [] }, imp, "merge", []);
+  const file = BK.Store.exportData(res.state, []);
+  assert.equal(file.bundles[0].urls.length, BK.LIMITS.bundleUrls);
+});

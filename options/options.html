@@ -105,8 +105,16 @@
     <!-- ============ Custom targets ============ -->
     <section role="tabpanel" id="panel-custom" hidden>
       <div class="card">
-        <h3 data-i18n="customTitle"></h3>
-        <p class="muted" data-i18n="customHint"></p>
+        <div class="card-head">
+          <div>
+            <h3 data-i18n="customTitle"></h3>
+            <p class="muted" data-i18n="customHint"></p>
+          </div>
+          <div class="head-actions">
+            <button id="addExamples" class="btn ghost" data-i18n="btnExamples"></button>
+            <button id="addCustom" class="btn primary" data-i18n="btnAdd"></button>
+          </div>
+        </div>
         <div class="table">
           <div class="thead grid-custom">
             <span data-i18n="colName"></span>
@@ -117,18 +125,27 @@
           <div id="customRows"></div>
           <p id="customEmpty" class="empty" data-i18n="customEmpty" hidden></p>
         </div>
-        <div class="actions">
-          <button id="addCustom" class="btn" data-i18n="btnAdd"></button>
-          <button id="addExamples" class="btn ghost" data-i18n="btnExamples"></button>
-        </div>
       </div>
     </section>
 
     <!-- ============ Sites ============ -->
     <section role="tabpanel" id="panel-sites" hidden>
-      <div class="card">
-        <h3 data-i18n="sitesTitle"></h3>
-        <p class="muted" data-i18n="sitesHint"></p>
+      <div class="segmented" role="tablist" id="sitesMode">
+        <button role="tab" data-mode="single" aria-selected="true" data-i18n="modeSingle"></button>
+        <button role="tab" data-mode="bundles" aria-selected="false" data-i18n="modeBundles"></button>
+      </div>
+
+      <div class="card" id="sitesSingle">
+        <div class="card-head">
+          <div>
+            <h3 data-i18n="sitesTitle"></h3>
+            <p class="muted" data-i18n="sitesHint"></p>
+          </div>
+          <div class="head-actions">
+            <button class="btn ghost pick-bookmark" data-icon="bookmark"><span data-i18n="btnPickBookmark"></span></button>
+            <button id="addSite" class="btn primary" data-i18n="btnAddSite"></button>
+          </div>
+        </div>
         <div class="table">
           <div class="thead grid-custom">
             <span data-i18n="colName"></span>
@@ -139,18 +156,39 @@
           <div id="siteRows"></div>
           <p id="sitesEmpty" class="empty" data-i18n="sitesEmpty" hidden></p>
         </div>
-        <div class="actions">
-          <button id="addSite" class="btn" data-i18n="btnAddSite"></button>
-          <button id="pickBookmark" class="btn ghost" data-icon="bookmark"><span data-i18n="btnPickBookmark"></span></button>
-        </div>
-        <div id="bookmarkPicker" class="picker" hidden>
-          <div class="picker-head">
-            <input id="bookmarkSearch" type="text" data-i18n-placeholder="bookmarksSearch" spellcheck="false">
-            <button id="bookmarkClose" class="btn ghost small" data-i18n="btnCancel"></button>
+      </div>
+
+      <div class="card" id="sitesBundles" hidden>
+        <div class="card-head">
+          <div>
+            <h3 data-i18n="bundlesTitle"></h3>
+            <p class="muted" data-i18n="bundlesHint"></p>
           </div>
-          <div id="bookmarkResults"></div>
-          <p class="muted small" data-i18n="bookmarksPrivacy"></p>
+          <div class="head-actions">
+            <button class="btn ghost pick-bookmark" data-icon="bookmark"><span data-i18n="btnPickBookmark"></span></button>
+            <button id="addBundle" class="btn primary" data-i18n="btnAddBundle"></button>
+          </div>
         </div>
+        <div class="table">
+          <div class="thead grid-custom">
+            <span data-i18n="colName"></span>
+            <span data-i18n="colKeywords"></span>
+            <span data-i18n="colBundleUrls"></span>
+            <span></span>
+          </div>
+          <div id="bundleRows"></div>
+          <p id="bundlesEmpty" class="empty" data-i18n="bundlesEmpty" hidden></p>
+        </div>
+      </div>
+
+      <div id="bookmarkPicker" class="card picker" hidden>
+        <div class="picker-head">
+          <strong id="pickerTitle"></strong>
+          <button id="bookmarkClose" class="btn ghost small" data-i18n="btnDone"></button>
+        </div>
+        <input id="bookmarkSearch" type="text" data-i18n-placeholder="bookmarksSearch" spellcheck="false">
+        <div id="bookmarkResults"></div>
+        <p class="muted small" data-i18n="bookmarksPrivacy"></p>
       </div>
     </section>
 
@@ -237,6 +275,13 @@
       </div>
 
       <div class="card">
+        <h3 data-i18n="presetsTitle"></h3>
+        <p class="muted" data-i18n="presetsHint"></p>
+        <input id="presetFilter" type="text" data-i18n-placeholder="presetsFilter" spellcheck="false">
+        <div id="presetList" class="presets"></div>
+      </div>
+
+      <div class="card">
         <h3 data-i18n="faqTitle"></h3>
         <details class="faq"><summary data-i18n="faq1Q"></summary><p data-i18n="faq1A"></p></details>
         <details class="faq"><summary data-i18n="faq2Q"></summary><p data-i18n="faq2A"></p></details>
@@ -269,6 +314,7 @@
   <script src="../lib/constants.js"></script>
   <script src="../lib/validate.js"></script>
   <script src="../lib/store.js"></script>
+  <script src="../lib/presets.js"></script>
   <script src="ui.js"></script>
   <script src="app.js"></script>
   <script src="tab-welcome.js"></script>
@@ -276,6 +322,7 @@
   <script src="tab-custom.js"></script>
   <script src="tab-sites.js"></script>
   <script src="tab-data.js"></script>
+  <script src="tab-guide.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
