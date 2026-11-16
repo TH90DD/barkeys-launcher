@@ -4,3 +4,5 @@ node_modules/
 *.zip
 .env
 .web-extension-id
+design/*
+!design/build-icons.py

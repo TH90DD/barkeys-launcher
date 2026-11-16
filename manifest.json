@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "default_locale": "en",
   "author": "TH90DD",
   "homepage_url": "https://github.com/TH90DD/barkeys-launcher",
@@ -18,8 +18,11 @@
   },
 
   "icons": {
+    "16": "icons/icon-small.svg",
+    "32": "icons/icon-small.svg",
     "48": "icons/icon.svg",
-    "96": "icons/icon.svg"
+    "96": "icons/icon.svg",
+    "128": "icons/icon.svg"
   },
 
   "background": {
