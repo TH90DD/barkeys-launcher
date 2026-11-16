@@ -778,5 +778,11 @@
         "content": "$1"
       }
     }
+  },
+  "faq6Q": {
+    "message": "Wie nutze ich eine Seite in mehreren Ländern oder Sprachen?"
+  },
+  "faq6A": {
+    "message": "Jede Variante braucht ein eigenes Kürzel. Bewährt hat sich: das Grundkürzel für dein Land, ein Zusatz für die anderen – Punkte sind erlaubt. Beispiel: Amazon.de ist in Firefox eingebaut und hat @amazon; amazon.com legst du unter „Eigene Ziele“ mit @amazon.com an, Wikipedia englisch mit @wiki.en. Die Vorlagen schlagen solche Kürzel automatisch vor, wenn du im Dropdown ein anderes Land oder eine andere Sprache wählst."
   }
 }

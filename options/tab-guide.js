@@ -24,14 +24,28 @@ const GuideView = {
     return v.v;
   },
 
+  // Short code for a variant: "amazon.co.uk" -> "uk", "amazon.com.au" -> "au",
+  // "amazon.com" -> "com", "en" -> "en".
+  variantCode(v) {
+    const parts = v.v.split(".");
+    return parts.length === 1 ? parts[0] : parts[parts.length - 1];
+  },
+
   // The variant currently selected for a preset (or the preset itself).
+  // The variant matching the UI language keeps the plain keyword (@amazon);
+  // all others get a suffix (@amazon.com, @wiki.en) so they never clash.
   current(p) {
-    if (!p.variants) return { u: p.u, name: p.n };
+    if (!p.variants) return { u: p.u, name: p.n, a: p.a };
     const lang = uiLang();
-    const value = this.chosen.get(p.n)
-      || (p.variants.find(v => v.lang === lang) || p.variants[0]).v;
-    const v = p.variants.find(x => x.v === value) || p.variants[0];
-    return { u: v.u, name: `${p.n} (${p.kind === "target" ? "→ " + v.v : v.v})`, value: v.v };
+    const home = p.variants.find(v => v.lang === lang) || p.variants[0];
+    const value = this.chosen.get(p.n) || home.v;
+    const v = p.variants.find(x => x.v === value) || home;
+    return {
+      u: v.u,
+      name: `${p.n} (${p.kind === "target" ? "→ " + v.v : v.v})`,
+      a: v === home ? p.a : `${p.a}.${this.variantCode(v)}`,
+      value: v.v
+    };
   },
 
   render() {
@@ -59,32 +73,32 @@ const GuideView = {
   row(p, urls, taken) {
     const cur = this.current(p);
     const added = urls.has(cur.u);
-    const keywordFree = !taken.has(BK.normAlias(p.a));
+    const keywordFree = !taken.has(BK.normAlias(cur.a));
 
-    const name = p.variants
-      ? h("div", { class: "preset-name" },
-          h("span", { text: p.n }),
-          h("select", {
-            class: "variant",
-            "aria-label": t("presetVariant", p.n),
-            onchange: e => { this.chosen.set(p.n, e.target.value); this.render(); }
-          }, p.variants.map(v => {
-            const opt = h("option", { value: v.v, text: this.variantLabel(p, v) });
-            if (v.v === cur.value) opt.selected = true;
-            return opt;
-          })))
-      : h("span", { class: "preset-name", text: p.n });
+    const select = p.variants
+      ? h("select", {
+          class: "variant",
+          "aria-label": t("presetVariant", p.n),
+          onchange: e => { this.chosen.set(p.n, e.target.value); this.render(); }
+        }, p.variants.map(v => {
+          const opt = h("option", { value: v.v, text: this.variantLabel(p, v) });
+          if (v.v === cur.value) opt.selected = true;
+          return opt;
+        }))
+      : null;
 
     return h("div", { class: "preset" },
-      name,
-      h("span", { class: keywordFree ? "kbd dashed" : "kbd dashed taken", text: p.a, title: keywordFree ? "" : t("presetKeywordTaken") }),
+      h("span", { class: "preset-name", text: p.n }),
+      h("span", { class: keywordFree ? "kbd dashed" : "kbd dashed taken", text: cur.a, title: keywordFree ? "" : t("presetKeywordTaken") }),
       h("code", { class: "preset-url", text: cur.u, title: cur.u }),
-      h("button", {
-        class: "btn small" + (added ? " ghost" : ""),
-        disabled: added,
-        text: t(added ? "presetAdded" : "presetAdd"),
-        onclick: () => this.add({ n: cur.name, a: p.a, u: cur.u }, keywordFree)
-      }));
+      h("div", { class: "preset-actions" },
+        select,
+        h("button", {
+          class: "btn small" + (added ? " ghost" : ""),
+          disabled: added,
+          text: t(added ? "presetAdded" : "presetAdd"),
+          onclick: () => this.add({ n: cur.name, a: cur.a, u: cur.u }, keywordFree)
+        })));
   },
 
   add(p, keywordFree) {

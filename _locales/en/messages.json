@@ -778,5 +778,11 @@
         "content": "$1"
       }
     }
+  },
+  "faq6Q": {
+    "message": "How do I use a site in several countries or languages?"
+  },
+  "faq6A": {
+    "message": "Each variant needs its own keyword. A good pattern: the plain keyword for your country, a suffix for the others – dots are allowed. Example: Amazon.de is built into Firefox with @amazon; add amazon.com under “Custom targets” as @amazon.com, English Wikipedia as @wiki.en. The presets suggest such keywords automatically when you pick another country or language in the dropdown."
   }
 }
