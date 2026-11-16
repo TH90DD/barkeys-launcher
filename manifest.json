@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "version": "0.5.0",
+  "default_locale": "en",
+  "author": "TH90DD",
+  "homepage_url": "https://github.com/TH90DD/barkeys-launcher",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{80668c3c-5a8a-449b-bc4b-3079aa49b26d}",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+
+  "background": {
+    "scripts": ["engines.js", "background.js"]
+  },
+
+  "permissions": ["storage", "search", "webRequest", "webRequestBlocking"],
+
+  "optional_host_permissions": [
+    "*://www.google.com/search*",
+    "*://www.google.de/search*",
+    "*://www.google.at/search*",
+    "*://www.google.ch/search*",
+    "*://www.bing.com/search*",
+    "*://duckduckgo.com/*",
+    "*://www.ecosia.org/search*",
+    "*://www.startpage.com/*",
+    "*://www.qwant.com/*",
+    "*://search.brave.com/search*",
+    "*://www.perplexity.ai/search*"
+  ],
+
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title data-i18n="extName"></title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1 data-i18n="extName"></h1>
+      <span id="status" class="status"></span>
+    </header>
+    
+    <!-- Mini guide -->
+    <details id="guide" class="guide" open>
+      <summary><h2 data-i18n="guideTitle"></h2></summary>
+      <p class="lead" data-i18n="guideLead"></p>
+
+      <ol class="steps">
+        <li>
+          <strong data-i18n="guideStep1Title"></strong>
+          <p data-i18n="guideStep1Text"></p>
+        </li>
+        <li>
+          <strong data-i18n="guideStep2Title"></strong>
+          <p data-i18n="guideStep2Text"></p>
+        </li>
+        <li>
+          <strong data-i18n="guideStep3Title"></strong>
+          <p data-i18n="guideStep3Text"></p>
+        </li>
+      </ol>
+
+      <h3 data-i18n="guideExampleTitle"></h3>
+      <div class="example">
+        <div class="example-row head">
+          <span data-i18n="colEngine"></span>
+          <span data-i18n="guideExFirefox"></span>
+          <span data-i18n="guideExAddon"></span>
+        </div>
+        <div class="example-row">
+          <span>YouTube</span>
+          <span><span class="chip-mini">@y</span></span>
+          <span><span class="chip-mini plain">@yt</span> <span class="chip-mini plain">@youtube</span></span>
+        </div>
+        <div class="example-row">
+          <span>Wikipedia</span>
+          <span><span class="chip-mini">@w</span></span>
+          <span><span class="chip-mini plain">@wiki</span> <span class="chip-mini plain">@wikipedia</span></span>
+        </div>
+      </div>
+
+      <div class="explain">
+        <div class="explain-item">
+          <div class="bar"><span class="chip"><span class="dot"></span>YouTube <span class="x">×</span></span><span class="typed" data-i18n="exQuery"></span></div>
+          <p><strong>@y <span data-i18n="exQuery"></span></strong> – <span data-i18n="guideBarMain"></span></p>
+        </div>
+        <div class="explain-item">
+          <div class="bar"><span class="typed">@youtube <span data-i18n="exQuery"></span></span><span class="ghost" data-i18n="guideBarGhost"></span></div>
+          <p><strong>@youtube <span data-i18n="exQuery"></span></strong> – <span data-i18n="guideBarExtra"></span></p>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong data-i18n="guideNoteTitle"></strong>
+        <p data-i18n="guideNoteText"></p>
+      </div>
+
+      <ul class="tips">
+        <li data-i18n="guideTipAt"></li>
+        <li data-i18n="guideTipCustom"></li>
+      </ul>
+    </details>
+
+    <section>
+      <h2 data-i18n="optEnginesTitle"></h2>
+      <p class="hint" data-i18n="optEnginesHint"></p>
+      <div id="sources" class="sources"></div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="optFfTitle"></h2>
+          <p class="hint" data-i18n="optFfHint"></p>
+        </div>
+        <button id="openPrefs" class="secondary" data-i18n="btnNewEngine"></button>
+      </div>
+      <div id="newEngineHelp" class="help" hidden>
+        <p data-i18n="newEngineIntro"></p>
+        <ol>
+          <li data-i18n="newEngineStep1"></li>
+          <li data-i18n="newEngineStep2"></li>
+          <li data-i18n="newEngineStep3"></li>
+        </ol>
+        <p class="hint" data-i18n="newEngineAfter"></p>
+      </div>
+      <div class="list-head">
+        <span data-i18n="colEngine"></span>
+        <span data-i18n="colMain"></span>
+        <span data-i18n="colExtra"></span>
+      </div>
+      <div id="ffEngines"></div>
+    </section>
+
+    <details id="customSection">
+      <summary>
+        <h2 data-i18n="optCustomTitle"></h2>
+        <p class="hint" data-i18n="optCustomHint"></p>
+      </summary>
+      <div class="list-head custom">
+        <span data-i18n="colName"></span>
+        <span data-i18n="colAliasesCustom"></span>
+        <span data-i18n="colUrl"></span>
+        <span></span>
+      </div>
+      <div id="rows"></div>
+      <div class="actions">
+        <button id="add" class="secondary" data-i18n="btnAdd"></button>
+        <button id="reset" class="secondary" data-i18n="btnReset"></button>
+      </div>
+    </details>
+  </main>
+  <script src="../engines.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

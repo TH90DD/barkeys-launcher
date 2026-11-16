@@ -1,0 +1,188 @@
+{
+  "extName": {
+    "message": "Barkeys Launcher"
+  },
+  "extDescription": {
+    "message": "Mehrere Kürzel für Suchmaschinen direkt in der Adressleiste – z. B. @w, @wiki und @wikipedia für Wikipedia."
+  },
+  "optEnginesTitle": {
+    "message": "1. Deine Standardsuchmaschine"
+  },
+  "optEnginesHint": {
+    "message": "Aktiviere die Suchmaschine, die in Firefox als Standard eingestellt ist. Über deren Ergebnisseite erkennt das Add-on die weiteren Kürzel – es bekommt nur darauf Zugriff, sonst nichts."
+  },
+  "optFfTitle": {
+    "message": "2. Deine Firefox-Suchmaschinen"
+  },
+  "optFfHint": {
+    "message": "Trag rechts die weiteren Kürzel ein, mehrere mit Komma getrennt. Wird automatisch gespeichert."
+  },
+  "btnNewEngine": {
+    "message": "+ Neue Suchmaschine in Firefox"
+  },
+  "newEngineIntro": {
+    "message": "Neue Suchmaschinen legst du in Firefox selbst an (Add-ons dürfen das nicht):"
+  },
+  "newEngineStep1": {
+    "message": "Firefox-Einstellungen → Suche öffnen (falls sich kein Tab geöffnet hat: about:preferences#search in die Adressleiste)"
+  },
+  "newEngineStep2": {
+    "message": "Unter „Suchmaschinen“ auf „Hinzufügen“ klicken: Name, Such-URL mit %s und das Haupt-Kürzel (z. B. @w) eintragen"
+  },
+  "newEngineStep3": {
+    "message": "Zurück zu diesem Tab wechseln – die Suchmaschine erscheint hier automatisch"
+  },
+  "newEngineAfter": {
+    "message": "Danach hier die weiteren Kürzel eintragen."
+  },
+  "colEngine": {
+    "message": "Suchmaschine"
+  },
+  "colMain": {
+    "message": "Haupt-Kürzel (Firefox)"
+  },
+  "colExtra": {
+    "message": "Weitere Kürzel"
+  },
+  "mainActiveTip": {
+    "message": "Beim Tippen von $alias$ zeigt Firefox „$engine$“ an. Ändern kannst du das in den Firefox-Einstellungen unter Suche.",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      },
+      "engine": {
+        "content": "$2"
+      }
+    }
+  },
+  "mainNone": {
+    "message": "keins"
+  },
+  "mainNoneTip": {
+    "message": "Diese Suchmaschine hat in Firefox kein Kürzel. Die weiteren Kürzel funktionieren trotzdem, aber ein Haupt-Kürzel (Firefox-Einstellungen → Suche → Stift) bringt die Namensanzeige."
+  },
+  "extraPlaceholder": {
+    "message": "weitere Kürzel …"
+  },
+  "optCustomTitle": {
+    "message": "3. Ausnahme: Ziele ohne Firefox-Suchmaschine"
+  },
+  "optCustomHint": {
+    "message": "Nur nötig, wenn du ein Ziel nicht als Firefox-Suchmaschine anlegen willst. Ziel per URL, %s steht für den Suchbegriff. Keine Namensanzeige beim Tippen."
+  },
+  "colName": {
+    "message": "Name"
+  },
+  "colUrl": {
+    "message": "Such-URL"
+  },
+  "btnAdd": {
+    "message": "+ Ziel hinzufügen"
+  },
+  "btnReset": {
+    "message": "Beispiele wiederherstellen"
+  },
+  "btnDelete": {
+    "message": "Entfernen"
+  },
+  "confirmReset": {
+    "message": "Alle eigenen Ziele durch die Beispiele ersetzen?"
+  },
+  "statusSaved": {
+    "message": "Gespeichert ✓"
+  },
+  "statusUnsaved": {
+    "message": "Speichert …"
+  },
+  "statusInvalid": {
+    "message": "Nicht gespeichert – bitte rot markierte Felder prüfen"
+  },
+  "errFirefoxAlias": {
+    "message": "$alias$ ist schon das Firefox-Kürzel von „$engine$“",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      },
+      "engine": {
+        "content": "$2"
+      }
+    }
+  },
+  "errDuplicate": {
+    "message": "$alias$ ist schon bei „$other$“ vergeben",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      },
+      "other": {
+        "content": "$2"
+      }
+    }
+  },
+  "errNoAlias": {
+    "message": "Mindestens ein Kürzel eintragen"
+  },
+  "errUrl": {
+    "message": "URL muss mit http(s):// beginnen und %s enthalten"
+  },
+  "guideTitle": {
+    "message": "Kurzanleitung"
+  },
+  "guideLead": {
+    "message": "Dieses Add-on ersetzt deine Firefox-Suchmaschinen nicht, es erweitert sie: Jede Suchmaschine hat in Firefox ein Haupt-Kürzel, und hier gibst du ihr beliebig viele weitere dazu."
+  },
+  "guideStep1Title": {
+    "message": "Suchmaschine in Firefox anlegen, mit deinem Lieblingskürzel"
+  },
+  "guideStep1Text": {
+    "message": "Firefox-Einstellungen → Suche. Nimm als Kürzel das, was du am häufigsten tippst (z. B. @y). Nur dafür zeigt Firefox beim Tippen den Namen der Suchmaschine an."
+  },
+  "guideStep2Title": {
+    "message": "Hier weitere Kürzel ergänzen"
+  },
+  "guideStep2Text": {
+    "message": "Unter „2. Deine Firefox-Suchmaschinen“ z. B. @yt und @youtube eintragen. Sie führen zur selben Suche – praktisch als Sicherheitsnetz, wenn du dich mal vertippst oder dir ein anderes Kürzel angewöhnt hast."
+  },
+  "guideStep3Title": {
+    "message": "Standardsuchmaschine freigeben"
+  },
+  "guideStep3Text": {
+    "message": "Unter „1.“ die Suchmaschine anhaken, die in Firefox Standard ist. Darüber erkennt das Add-on die weiteren Kürzel."
+  },
+  "guideExampleTitle": {
+    "message": "Beispiel"
+  },
+  "guideExFirefox": {
+    "message": "Haupt-Kürzel in Firefox"
+  },
+  "guideExAddon": {
+    "message": "Weitere Kürzel im Add-on"
+  },
+  "exQuery": {
+    "message": "katzen"
+  },
+  "guideBarMain": {
+    "message": "Firefox zeigt sofort „YouTube“ an. Du siehst beim Tippen, wo du suchst."
+  },
+  "guideBarGhost": {
+    "message": "· Mit Google suchen"
+  },
+  "guideBarExtra": {
+    "message": "Firefox zeigt „Mit Google suchen“ an, nach Enter landest du trotzdem bei YouTube."
+  },
+  "guideNoteTitle": {
+    "message": "Warum zeigt Firefox bei weiteren Kürzeln nicht den Namen an?"
+  },
+  "guideNoteText": {
+    "message": "Add-ons dürfen die Adressleiste nicht verändern. Das Add-on greift erst nach Enter ein und leitet die Suche um. Deshalb: Das Kürzel, das du am häufigsten benutzt, gehört als Haupt-Kürzel in Firefox – die weiteren Kürzel sind die Ergänzung."
+  },
+  "guideTipAt": {
+    "message": "Tipp: Tippe nur @ in die Adressleiste, dann zeigt Firefox alle Suchmaschinen mit ihren Haupt-Kürzeln."
+  },
+  "guideTipCustom": {
+    "message": "Ausnahme: Unter „3.“ kannst du Ziele auch ganz ohne Firefox-Suchmaschine anlegen, nur mit URL. Dann gibt es für keines ihrer Kürzel eine Namensanzeige."
+  },
+  "colAliasesCustom": {
+    "message": "Kürzel"
+  }
+}

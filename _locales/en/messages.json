@@ -1,0 +1,188 @@
+{
+  "extName": {
+    "message": "Barkeys Launcher"
+  },
+  "extDescription": {
+    "message": "Multiple address bar keywords for your search engines – e.g. @w, @wiki and @wikipedia for Wikipedia."
+  },
+  "optEnginesTitle": {
+    "message": "1. Your default search engine"
+  },
+  "optEnginesHint": {
+    "message": "Enable the search engine that is set as default in Firefox. The add-on spots extra keywords on its result page – it only gets access to that, nothing else."
+  },
+  "optFfTitle": {
+    "message": "2. Your Firefox search engines"
+  },
+  "optFfHint": {
+    "message": "Enter extra keywords on the right, separated by commas. Saved automatically."
+  },
+  "btnNewEngine": {
+    "message": "+ New search engine in Firefox"
+  },
+  "newEngineIntro": {
+    "message": "You add new search engines in Firefox itself (add-ons aren't allowed to):"
+  },
+  "newEngineStep1": {
+    "message": "Open Firefox Settings → Search (if no tab opened: type about:preferences#search into the address bar)"
+  },
+  "newEngineStep2": {
+    "message": "Under “Search engines” click “Add”: enter name, search URL with %s and the main keyword (e.g. @w)"
+  },
+  "newEngineStep3": {
+    "message": "Switch back to this tab – the engine appears here automatically"
+  },
+  "newEngineAfter": {
+    "message": "Then add the extra keywords here."
+  },
+  "colEngine": {
+    "message": "Search engine"
+  },
+  "colMain": {
+    "message": "Main keyword (Firefox)"
+  },
+  "colExtra": {
+    "message": "Extra keywords"
+  },
+  "mainActiveTip": {
+    "message": "Typing $alias$ makes Firefox show “$engine$”. Change it in Firefox Settings → Search.",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      },
+      "engine": {
+        "content": "$2"
+      }
+    }
+  },
+  "mainNone": {
+    "message": "none"
+  },
+  "mainNoneTip": {
+    "message": "This engine has no keyword in Firefox. Extra keywords still work, but a main keyword (Firefox Settings → Search → pencil) adds the name label."
+  },
+  "extraPlaceholder": {
+    "message": "more keywords …"
+  },
+  "optCustomTitle": {
+    "message": "3. Exception: targets without a Firefox search engine"
+  },
+  "optCustomHint": {
+    "message": "Only needed if you don't want to add a target as a Firefox search engine. Target by URL, %s stands for the search terms. No name label while typing."
+  },
+  "colName": {
+    "message": "Name"
+  },
+  "colUrl": {
+    "message": "Search URL"
+  },
+  "btnAdd": {
+    "message": "+ Add target"
+  },
+  "btnReset": {
+    "message": "Restore examples"
+  },
+  "btnDelete": {
+    "message": "Remove"
+  },
+  "confirmReset": {
+    "message": "Replace all custom targets with the examples?"
+  },
+  "statusSaved": {
+    "message": "Saved ✓"
+  },
+  "statusUnsaved": {
+    "message": "Saving …"
+  },
+  "statusInvalid": {
+    "message": "Not saved – please check the fields marked red"
+  },
+  "errFirefoxAlias": {
+    "message": "$alias$ is already the Firefox keyword of “$engine$”",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      },
+      "engine": {
+        "content": "$2"
+      }
+    }
+  },
+  "errDuplicate": {
+    "message": "$alias$ is already used for “$other$”",
+    "placeholders": {
+      "alias": {
+        "content": "$1"
+      },
+      "other": {
+        "content": "$2"
+      }
+    }
+  },
+  "errNoAlias": {
+    "message": "Enter at least one keyword"
+  },
+  "errUrl": {
+    "message": "URL must start with http(s):// and contain %s"
+  },
+  "guideTitle": {
+    "message": "Quick guide"
+  },
+  "guideLead": {
+    "message": "This add-on doesn't replace your Firefox search engines, it extends them: each engine has one main keyword in Firefox, and here you give it as many extra keywords as you like."
+  },
+  "guideStep1Title": {
+    "message": "Add the engine in Firefox, with your favourite keyword"
+  },
+  "guideStep1Text": {
+    "message": "Firefox Settings → Search. Use the keyword you type most often (e.g. @y). Only for that one does Firefox show the engine's name while you type."
+  },
+  "guideStep2Title": {
+    "message": "Add extra keywords here"
+  },
+  "guideStep2Text": {
+    "message": "Under “2. Your Firefox search engines”, enter e.g. @yt and @youtube. They lead to the same search – handy as a safety net when you mistype or are used to a different keyword."
+  },
+  "guideStep3Title": {
+    "message": "Allow your default search engine"
+  },
+  "guideStep3Text": {
+    "message": "Under “1.” tick the search engine that's your Firefox default. That's how the add-on spots the extra keywords."
+  },
+  "guideExampleTitle": {
+    "message": "Example"
+  },
+  "guideExFirefox": {
+    "message": "Main keyword in Firefox"
+  },
+  "guideExAddon": {
+    "message": "Extra keywords in the add-on"
+  },
+  "exQuery": {
+    "message": "cats"
+  },
+  "guideBarMain": {
+    "message": "Firefox shows “YouTube” right away. You see where you're searching while typing."
+  },
+  "guideBarGhost": {
+    "message": "· Search with Google"
+  },
+  "guideBarExtra": {
+    "message": "Firefox says “Search with Google”, but after Enter you still land on YouTube."
+  },
+  "guideNoteTitle": {
+    "message": "Why doesn't Firefox show the name for extra keywords?"
+  },
+  "guideNoteText": {
+    "message": "Add-ons aren't allowed to change the address bar. The add-on only steps in after Enter and redirects the search. So: the keyword you use most belongs in Firefox as the main keyword – the extra keywords are the add-on."
+  },
+  "guideTipAt": {
+    "message": "Tip: type just @ into the address bar and Firefox lists all engines with their main keywords."
+  },
+  "guideTipCustom": {
+    "message": "Exception: under “3.” you can add targets with no Firefox search engine at all, just a URL. None of their keywords get a name label then."
+  },
+  "colAliasesCustom": {
+    "message": "Keywords"
+  }
+}
