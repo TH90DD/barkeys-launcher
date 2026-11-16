@@ -34,7 +34,7 @@ You can also add targets that have no Firefox search engine at all, just a URL w
 | `bookmarks` (optional) | Only when you use “Pick from bookmarks” for site keywords; searched locally |
 | Access to *one* search site (optional) | Only the result page of the default engine you enable in the settings, e.g. `www.google.com/search` |
 
-No data collection, no analytics, no network requests of its own.
+No data collection, no analytics, no network requests of its own. Full details: [PRIVACY.md](PRIVACY.md).
 
 **Security notes**
 
