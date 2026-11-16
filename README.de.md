@@ -31,6 +31,14 @@ Barkeys Launcher **erweitert** deine Firefox-Suchmaschinen, es ersetzt sie nicht
 
 > **Ein Nebenprojekt.** Ich habe Barkeys Launcher für meinen eigenen Bedarf gebaut und teile es, weil es anderen vielleicht auch hilft. Updates und neue Funktionen kommen nach eigenem Ermessen, ohne festen Zeitplan oder zugesicherten Support, und es kann Fehler enthalten. Die Nutzung erfolgt *ohne Gewähr* – siehe [MPL-2.0](LICENSE). Fehlerberichte und Ideen sind über [Issues](https://github.com/TH90DD/barkeys-launcher/issues) willkommen.
 
+## Installation
+
+Barkeys Launcher gibt es **ausschließlich über [addons.mozilla.org](https://addons.mozilla.org/)** – den offiziellen Firefox-Add-on-Store, mit automatischen Updates und Mozillas Prüfung.
+
+> **Bald verfügbar.** Die Store-Seite wird gerade vorbereitet; der Link erscheint hier, sobald sie online ist.
+
+Bitte installiere keine Versionen aus anderen Quellen. Entwickler können den Code zum Testen vorläufig laden – siehe [Entwicklung](#entwicklung).
+
 ## So funktioniert's
 
 | Suchmaschine | Haupt-Kürzel (in Firefox) | Weitere Kürzel (in Barkeys Launcher) |

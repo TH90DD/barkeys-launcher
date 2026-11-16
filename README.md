@@ -31,6 +31,14 @@ It **extends** your Firefox search engines, it doesn't replace them.
 
 > **A side project.** I built Barkeys Launcher for my own needs and share it because others might find it useful. Updates and new features happen at my own discretion, without a fixed schedule or guaranteed support, and it may contain bugs. It's provided *as is*, without warranty – see the [MPL-2.0](LICENSE). Bug reports and ideas are welcome via [issues](https://github.com/TH90DD/barkeys-launcher/issues).
 
+## Installation
+
+Barkeys Launcher is distributed **only via [addons.mozilla.org](https://addons.mozilla.org/)** – the official Firefox add-on store, with automatic updates and Mozilla's review.
+
+> **Coming soon.** The store page is being prepared; the link will appear here once it's live.
+
+Please don't install builds from other sources. Developers can load the code temporarily for testing – see [Development](#development).
+
 ## How it works
 
 | Search engine | Main keyword (set in Firefox) | Extra keywords (set in Barkeys Launcher) |
