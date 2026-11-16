@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.png" alt="Barkeys Launcher – mehr Kürzel für deine Firefox-Adressleiste" width="100%"></p>
+
 # Barkeys Launcher
 
 [English](README.md) · **Deutsch**
@@ -22,6 +24,14 @@ Barkeys Launcher **erweitert** deine Firefox-Suchmaschinen, es ersetzt sie nicht
 3. Barkeys Launcher fängt diese Ergebnisseite ab, bevor sie lädt, und übergibt die Suche stattdessen an deine Firefox-Suchmaschine „Wikipedia“.
 
 Außerdem kannst du Ziele ganz ohne Firefox-Suchmaschine anlegen – nur mit einer URL mit `%s` –, **Seiten-Kürzel**, die direkt eine Seite öffnen (`@news` → deine Nachrichtenseite), optional aus deinen Lesezeichen gewählt, und **Bündel**, die mehrere Seiten auf einmal öffnen (`@workspace` → Mail, Kalender, Projekt-Tool). Im Tab „Vorlagen“ warten rund 45 fertige Such-Adressen (Wikipedia, DeepL, Amazon, GitHub, Flathub …), die du mit einem Klick übernimmst.
+
+### Screenshots
+
+| Weitere Kürzel für deine Suchmaschinen | Bündel: ein Kürzel, mehrere Tabs |
+|---|---|
+| ![Tab Suchmaschinen](docs/screenshots/search-engines.png) | ![Bündel](docs/screenshots/bundles.png) |
+| **45+ Vorlagen mit Länder- & Sprachvarianten** | **Willkommen-Tab mit Einrichtungs-Checkliste** |
+| ![Tab Vorlagen](docs/screenshots/presets.png) | ![Willkommen-Tab](docs/screenshots/welcome.png) |
 
 ### Gut zu wissen
 

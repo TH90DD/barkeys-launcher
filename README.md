@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.png" alt="Barkeys Launcher – more keywords for your Firefox address bar" width="100%"></p>
+
 # Barkeys Launcher
 
 **English** · [Deutsch](README.de.md)
@@ -22,6 +24,14 @@ It **extends** your Firefox search engines, it doesn't replace them.
 3. Barkeys Launcher catches that result page before it loads and hands the search to your Firefox engine "Wikipedia" instead.
 
 You can also add targets that have no Firefox search engine at all, just a URL with `%s` – **site keywords** that open a page directly (`@news` → your news site), optionally picked from your bookmarks, and **bundles** that open several sites at once (`@workspace` → mail, calendar, project tool). The guide includes ~45 ready-made search presets (Wikipedia, DeepL, Amazon, GitHub, Flathub, …) you can add with one click.
+
+### Screenshots
+
+| Extra keywords for your search engines | Bundles: one keyword, several tabs |
+|---|---|
+| ![Search engines tab](docs/screenshots/search-engines.png) | ![Bundles](docs/screenshots/bundles.png) |
+| **45+ presets with country & language variants** | **Welcome tab with setup checklist** |
+| ![Presets tab](docs/screenshots/presets.png) | ![Welcome tab](docs/screenshots/welcome.png) |
 
 ### Good to know
 
