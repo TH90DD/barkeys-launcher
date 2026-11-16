@@ -49,7 +49,15 @@ Switch the language with **“Localize for”** (top right) to enter the German 
 
 **Privacy policy:** paste the content of `PRIVACY.md`
 
-**Screenshots:** welcome tab, search engines tab, presets tab, a bundle (1280×800)
+**Screenshots** (only shown once the add-on is listed – the *Images* section doesn't exist for unlisted add-ons). Upload from `docs/screenshots/`, 1280×800:
+
+| File | Caption |
+|---|---|
+| `welcome.png` | Welcome tab with a quick setup checklist |
+| `search-engines.png` | Add as many keywords as you like to every Firefox search engine |
+| `bundles.png` | Bundles: one keyword opens several sites at once |
+| `presets.png` | 45+ presets with country and language variants |
+| `custom-targets.png` | Turn any site with a search into a keyword |
 
 ---
 
