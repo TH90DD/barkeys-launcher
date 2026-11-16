@@ -69,6 +69,7 @@ node --test tests/   # Unit-Tests für Speicher, Import-Prüfung und Umleitung
 npx web-ext lint
 npx web-ext run      # startet ein Test-Firefox mit dem Add-on
 npx web-ext build    # ZIP in web-ext-artifacts/
+tools/sign.sh        # über addons.mozilla.org signieren (fragt API-Schlüssel verdeckt ab)
 ```
 
 Oder vorläufig laden: `about:debugging#/runtime/this-firefox` → „Temporäres Add-on laden…“ → `manifest.json`.

@@ -59,6 +59,7 @@ node --test tests/   # unit tests for storage, import validation and redirects
 npx web-ext lint
 npx web-ext run      # starts a test Firefox with the add-on
 npx web-ext build    # zip in web-ext-artifacts/
+tools/sign.sh        # sign via addons.mozilla.org (asks for API credentials, hidden)
 ```
 
 ```
