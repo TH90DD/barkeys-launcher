@@ -784,5 +784,23 @@
   },
   "faq6A": {
     "message": "Jede Variante braucht ein eigenes Kürzel. Bewährt hat sich: das Grundkürzel für dein Land, ein Zusatz für die anderen – Punkte sind erlaubt. Beispiel: Amazon.de ist in Firefox eingebaut und hat @amazon; amazon.com legst du unter „Eigene Ziele“ mit @amazon.com an, Wikipedia englisch mit @wiki.en. Die Vorlagen schlagen solche Kürzel automatisch vor, wenn du im Dropdown ein anderes Land oder eine andere Sprache wählst."
+  },
+  "setupPrivateOk": {
+    "message": "Auch in privaten Fenstern aktiv"
+  },
+  "setupPrivateOff": {
+    "message": "Optional: In privaten Fenstern nicht aktiv"
+  },
+  "setupPrivateOffText": {
+    "message": "Firefox lässt Add-ons dort standardmäßig nicht laufen – deine Kürzel funktionieren in privaten Fenstern also nicht. Erlauben: about:addons öffnen → Barkeys Launcher → „In privaten Fenstern ausführen“ auf „Erlauben“."
+  },
+  "btnCopyAddons": {
+    "message": "about:addons kopieren"
+  },
+  "faq7Q": {
+    "message": "Warum funktionieren meine Kürzel im privaten Fenster nicht?"
+  },
+  "faq7A": {
+    "message": "Firefox führt Add-ons in privaten Fenstern nur aus, wenn du es erlaubst. Öffne about:addons → Barkeys Launcher und stelle „In privaten Fenstern ausführen“ auf „Erlauben“. Barkeys Launcher speichert dabei nichts aus privaten Fenstern – es liest wie sonst nur die Suchanfrage, um ein Kürzel zu erkennen."
   }
 }

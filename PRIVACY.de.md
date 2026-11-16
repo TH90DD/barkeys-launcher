@@ -23,6 +23,7 @@ Einige Einstellungen, die nur ein Gerät betreffen (z. B. der zuletzt geöffnete
 - Keine Analyse, kein Tracking, keine Telemetrie, keine Werbung.
 - Keine eigenen Netzwerkverbindungen. Es kontaktiert weder den Entwickler noch Dritte.
 - Es liest, speichert oder überträgt weder deinen Verlauf noch Inhalte von Webseiten.
+- In privaten Fenstern läuft es nur, wenn du es in Firefox erlaubst – und arbeitet dort genauso, ohne etwas aus diesen Fenstern zu speichern.
 
 ## Rechte und wofür sie nötig sind
 

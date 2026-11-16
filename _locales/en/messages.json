@@ -784,5 +784,23 @@
   },
   "faq6A": {
     "message": "Each variant needs its own keyword. A good pattern: the plain keyword for your country, a suffix for the others – dots are allowed. Example: Amazon.de is built into Firefox with @amazon; add amazon.com under “Custom targets” as @amazon.com, English Wikipedia as @wiki.en. The presets suggest such keywords automatically when you pick another country or language in the dropdown."
+  },
+  "setupPrivateOk": {
+    "message": "Also active in private windows"
+  },
+  "setupPrivateOff": {
+    "message": "Optional: not active in private windows"
+  },
+  "setupPrivateOffText": {
+    "message": "Firefox keeps add-ons off there by default, so your keywords don't work in private windows. To allow it: open about:addons → Barkeys Launcher → “Run in Private Windows” → “Allow”."
+  },
+  "btnCopyAddons": {
+    "message": "Copy about:addons"
+  },
+  "faq7Q": {
+    "message": "Why don't my keywords work in a private window?"
+  },
+  "faq7A": {
+    "message": "Firefox only runs add-ons in private windows if you allow it. Open about:addons → Barkeys Launcher and set “Run in Private Windows” to “Allow”. Barkeys Launcher stores nothing from private windows – as always it only reads the search query to spot a keyword."
   }
 }

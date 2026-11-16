@@ -23,6 +23,7 @@ A few settings that only matter on one device (e.g. the last opened tab) are kep
 - No analytics, tracking, telemetry or advertising.
 - No network requests of its own. It never contacts the developer or any third party.
 - It doesn't read, store or transmit your browsing history or the content of websites.
+- In private windows it only runs if you allow it in Firefox – and then works exactly the same way, storing nothing from those windows.
 
 ## Permissions and why they are needed
 

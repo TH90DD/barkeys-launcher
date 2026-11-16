@@ -51,6 +51,14 @@ const App = {
     }
   },
 
+  async refreshPrivate() {
+    try {
+      this.privateAllowed = await browser.extension.isAllowedIncognitoAccess();
+    } catch {
+      this.privateAllowed = null;   // unknown – don't show the hint
+    }
+  },
+
   async refreshGranted() {
     const granted = new Set();
     for (const s of BK.SOURCE_ENGINES) {

@@ -191,6 +191,8 @@ main { max-width: 1040px; margin: 0 auto; padding: 8px 24px 64px; }
 }
 .check.ok .state { background: color-mix(in srgb, var(--ok) 18%, transparent); color: var(--ok); }
 .check.todo .state { background: var(--warn-soft); color: var(--warn); }
+.check.info .state { background: var(--surface); color: var(--muted); border: 1px solid var(--line); font-style: italic; }
+.check .btn svg.icon { width: 15px; height: 15px; }
 .check p { color: var(--muted); font-size: .9rem; }
 
 /* ---------- Tables ---------- */

@@ -67,6 +67,7 @@ function setupTabs() {
 async function refreshFromFirefox() {
   await App.loadFirefoxEngines();
   await App.refreshGranted();
+  await App.refreshPrivate();
   App.renderAll();
 }
 
