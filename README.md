@@ -26,6 +26,7 @@ You can also add targets that have no Firefox search engine at all, just a URL w
 ### Good to know
 
 - **Name label only for the main keyword.** While typing `@w `, Firefox shows "Wikipedia ×". For extra keywords it shows "Search with Google". Barkeys Launcher only steps in after you press Enter, because add-ons can't change the address bar. Tip: use the keyword you type most as the main keyword in Firefox, and let Barkeys Launcher be the safety net for the rest.
+- **Settings:** click the BK button in the toolbar (or pin it from the extensions menu).
 - **Add-ons can't create Firefox search engines.** You add the engine once in Firefox Settings → Search; Barkeys Launcher picks it up automatically.
 
 ## Permissions & privacy

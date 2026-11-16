@@ -802,5 +802,8 @@
   },
   "faq7A": {
     "message": "Firefox only runs add-ons in private windows if you allow it. Open about:addons → Barkeys Launcher and set “Run in Private Windows” to “Allow”. Barkeys Launcher stores nothing from private windows – as always it only reads the search query to spot a keyword."
+  },
+  "actionTitle": {
+    "message": "Barkeys Launcher – open settings"
   }
 }

@@ -802,5 +802,8 @@
   },
   "faq7A": {
     "message": "Firefox führt Add-ons in privaten Fenstern nur aus, wenn du es erlaubst. Öffne about:addons → Barkeys Launcher und stelle „In privaten Fenstern ausführen“ auf „Erlauben“. Barkeys Launcher speichert dabei nichts aus privaten Fenstern – es liest wie sonst nur die Suchanfrage, um ein Kürzel zu erkennen."
+  },
+  "actionTitle": {
+    "message": "Barkeys Launcher – Einstellungen öffnen"
   }
 }

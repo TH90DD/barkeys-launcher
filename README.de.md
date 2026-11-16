@@ -26,6 +26,7 @@ Außerdem kannst du Ziele ganz ohne Firefox-Suchmaschine anlegen – nur mit ein
 ### Gut zu wissen
 
 - **Namensanzeige nur fürs Haupt-Kürzel.** Beim Tippen von `@w ` zeigt Firefox „Wikipedia ×“. Bei weiteren Kürzeln steht dort „Mit Google suchen“ – Barkeys Launcher greift erst nach Enter ein, weil Add-ons die Adressleiste nicht verändern dürfen. Tipp: Nimm das Kürzel, das du am häufigsten tippst, als Haupt-Kürzel in Firefox; Barkeys Launcher ist das Sicherheitsnetz für den Rest.
+- **Einstellungen:** Klick auf den BK-Knopf in der Toolbar (oder im Erweiterungs-Menü anheften).
 - **Add-ons können keine Firefox-Suchmaschinen anlegen.** Du legst die Suchmaschine einmal unter Firefox-Einstellungen → Suche an; Barkeys Launcher erkennt sie automatisch.
 
 ## Rechte & Datenschutz

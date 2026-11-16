@@ -86,6 +86,9 @@ browser.storage.onChanged.addListener((changes, area) => {
   reloadTimer = setTimeout(reload, 150);
 });
 
+// Toolbar button: open the settings.
+browser.action.onClicked.addListener(() => browser.runtime.openOptionsPage());
+
 browser.runtime.onInstalled.addListener(({ reason }) => {
   if (reason === "install") browser.runtime.openOptionsPage();
 });
