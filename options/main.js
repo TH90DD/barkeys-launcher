@@ -1,5 +1,5 @@
 "use strict";
-/* global App, BK, applyI18n, $ */
+/* global App, BK, applyI18n, $, h, icon */
 
 const TAB_IDS = ["welcome", "engines", "custom", "sites", "presets", "data", "guide"];
 
@@ -15,13 +15,38 @@ const Tabs = {
       if (on && focus) btn.focus();
     }
     for (const tid of TAB_IDS) $("panel-" + tid).hidden = tid !== id;
+    Menu.setCurrent(id);
+    Menu.close();
     if (App.loaded) App.renderAll();
     if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
     browser.storage.local.set({ lastTab: id });
   }
 };
 
+// Burger menu for narrow windows (CSS decides when it's visible).
+const Menu = {
+  setCurrent(id) {
+    const btn = document.querySelector(`#tabbar [data-tab="${id}"]`);
+    const box = $("menuCurrent");
+    box.replaceChildren(icon(btn.dataset.icon), h("span", { text: btn.querySelector("[data-i18n]").textContent }));
+  },
+  open() {
+    $("tabs").classList.add("open");
+    $("menuToggle").setAttribute("aria-expanded", "true");
+    $("menuIcon").replaceChildren(icon("close"));
+  },
+  close() {
+    $("tabs").classList.remove("open");
+    $("menuToggle").setAttribute("aria-expanded", "false");
+    $("menuIcon").replaceChildren(icon("menu"));
+  },
+  toggle() { $("tabs").classList.contains("open") ? this.close() : this.open(); }
+};
+
 function setupTabs() {
+  $("menuToggle").addEventListener("click", () => Menu.toggle());
+  document.addEventListener("keydown", e => { if (e.key === "Escape") Menu.close(); });
+  document.addEventListener("click", e => { if (!$("tabs").contains(e.target)) Menu.close(); });
   const buttons = [...document.querySelectorAll("#tabs [data-tab]")];
   for (const btn of buttons) {
     btn.setAttribute("aria-controls", "panel-" + btn.dataset.tab);

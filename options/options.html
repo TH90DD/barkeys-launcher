@@ -20,7 +20,11 @@
   </header>
 
   <nav class="tabs" id="tabs">
-    <div class="tabbar" role="tablist">
+    <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="tabbar">
+      <span class="menu-current" id="menuCurrent"></span>
+      <span class="menu-icon" id="menuIcon"></span>
+    </button>
+    <div class="tabbar" role="tablist" id="tabbar">
     <button role="tab" data-tab="welcome" data-icon="home"><span data-i18n="tabWelcome"></span></button>
     <button role="tab" data-tab="engines" data-icon="search"><span data-i18n="tabEngines"></span></button>
     <button role="tab" data-tab="custom" data-icon="link"><span data-i18n="tabCustom"></span></button>
