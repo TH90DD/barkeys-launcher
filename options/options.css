@@ -94,19 +94,27 @@ a { color: var(--accent); }
   z-index: 5;
   max-width: 1040px;
   margin: 0 auto;
-  padding: 10px 24px;
-  display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px);
+  padding: 10px 24px 14px;
 }
-.tabs button {
+.tabbar {
+  display: flex;
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+}
+.tabbar button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  border: 1px solid transparent;
+  border: none;
   border-radius: 999px;
   background: transparent;
   color: var(--ink-soft);
@@ -114,15 +122,10 @@ a { color: var(--accent); }
   cursor: pointer;
   white-space: nowrap;
 }
-.tabs button:hover { background: var(--surface-2); }
-.tabs button[aria-selected="true"] {
-  background: var(--surface);
-  border-color: var(--line);
-  color: var(--ink);
-  box-shadow: var(--shadow);
-}
-.tabs button[aria-selected="true"] svg { color: var(--accent); }
-.tabs .badge {
+.tabbar button:hover { background: var(--surface-2); }
+.tabbar button[aria-selected="true"] { background: var(--accent-soft); color: var(--accent); }
+.tabbar button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.tabbar .badge {
   min-width: 18px;
   padding: 0 6px;
   border-radius: 999px;
@@ -278,7 +281,24 @@ input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1
   white-space: nowrap;
 }
 .pill.on { background: var(--accent-soft); border-color: var(--accent); }
-.pill input { margin: 0; accent-color: var(--accent); }
+/* Round checkbox with a check mark */
+.pill input[type="checkbox"] {
+  appearance: none;
+  width: 18px; height: 18px;
+  margin: 0;
+  border: 1.5px solid var(--muted);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.pill input[type="checkbox"]:checked {
+  background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 12px no-repeat;
+  border-color: var(--accent);
+}
+.pill input[type="checkbox"]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+input[type="radio"] { accent-color: var(--accent); width: 16px; height: 16px; }
 
 /* ---------- Misc ---------- */
 .callout {
@@ -291,7 +311,29 @@ input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1
 .meter { height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 14px 0 6px; }
 .meter > div { height: 100%; background: var(--accent); border-radius: 999px; width: 0; transition: width .3s; }
 details.sub { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 14px; }
-details summary { cursor: pointer; font-weight: 500; }
+/* Disclosure: Lucide chevron in a circle */
+details > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+}
+details > summary::-webkit-details-marker { display: none; }
+details > summary .toggle {
+  width: 26px; height: 26px;
+  flex: none;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  transition: transform .2s ease;
+  transform: rotate(-90deg);
+}
+details > summary .toggle svg { width: 16px; height: 16px; }
+details[open] > summary .toggle { transform: rotate(0); }
+details > summary:hover .toggle { background: color-mix(in srgb, var(--accent) 22%, var(--accent-soft)); }
 details.sub[open] summary { margin-bottom: 8px; }
 .url-row { display: grid; grid-template-columns: 200px 1fr; gap: 12px; align-items: center; padding: 6px 0; }
 .import-preview { margin-top: 16px; padding: 16px; border-radius: 12px; background: var(--surface-2); display: grid; gap: 10px; }
@@ -347,7 +389,7 @@ details.sub[open] summary { margin-bottom: 8px; }
   .grid-engines, .grid-custom, .example-row, .perm-list > div, .url-row, .missing-row { grid-template-columns: 1fr; }
   .thead { display: none; }
   .hero { flex-direction: column; text-align: center; }
-  .tabs button span { display: none; }
+  .tabbar button span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   [role="tabpanel"] { animation: none; }

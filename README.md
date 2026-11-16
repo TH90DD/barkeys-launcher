@@ -77,4 +77,4 @@ If Barkeys saves you some keystrokes, you can [buy me a coffee ☕](https://buym
 
 ## License
 
-[MPL-2.0](LICENSE) © TH90DD
+[MPL-2.0](LICENSE) © TH90DD · Interface icons by [Lucide](https://lucide.dev) (ISC), see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
