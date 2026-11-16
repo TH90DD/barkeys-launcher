@@ -27,11 +27,16 @@ You can also add targets that have no Firefox search engine at all, just a URL w
 
 ### Screenshots
 
-| Extra keywords for your search engines | Bundles: one keyword, several tabs |
-|---|---|
-| ![Search engines tab](docs/screenshots/search-engines.png) | ![Bundles](docs/screenshots/bundles.png) |
-| **45+ presets with country & language variants** | **Welcome tab with setup checklist** |
-| ![Presets tab](docs/screenshots/presets.png) | ![Welcome tab](docs/screenshots/welcome.png) |
+<table>
+  <tr>
+    <td align="center" width="50%"><b>Extra keywords for your search engines</b><br><br><img src="docs/screenshots/search-engines.png" alt="Search engines tab"></td>
+    <td align="center" width="50%"><b>Bundles: one keyword, several tabs</b><br><br><img src="docs/screenshots/bundles.png" alt="Bundles"></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><b>45+ presets with country &amp; language variants</b><br><br><img src="docs/screenshots/presets.png" alt="Presets tab"></td>
+    <td align="center" width="50%"><b>Welcome tab with setup checklist</b><br><br><img src="docs/screenshots/welcome.png" alt="Welcome tab"></td>
+  </tr>
+</table>
 
 ### Good to know
 

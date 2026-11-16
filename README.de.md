@@ -27,11 +27,16 @@ Außerdem kannst du Ziele ganz ohne Firefox-Suchmaschine anlegen – nur mit ein
 
 ### Screenshots
 
-| Weitere Kürzel für deine Suchmaschinen | Bündel: ein Kürzel, mehrere Tabs |
-|---|---|
-| ![Tab Suchmaschinen](docs/screenshots/search-engines.png) | ![Bündel](docs/screenshots/bundles.png) |
-| **45+ Vorlagen mit Länder- & Sprachvarianten** | **Willkommen-Tab mit Einrichtungs-Checkliste** |
-| ![Tab Vorlagen](docs/screenshots/presets.png) | ![Willkommen-Tab](docs/screenshots/welcome.png) |
+<table>
+  <tr>
+    <td align="center" width="50%"><b>Weitere Kürzel für deine Suchmaschinen</b><br><br><img src="docs/screenshots/search-engines.png" alt="Tab Suchmaschinen"></td>
+    <td align="center" width="50%"><b>Bündel: ein Kürzel, mehrere Tabs</b><br><br><img src="docs/screenshots/bundles.png" alt="Bündel"></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><b>45+ Vorlagen mit Länder- &amp; Sprachvarianten</b><br><br><img src="docs/screenshots/presets.png" alt="Tab Vorlagen"></td>
+    <td align="center" width="50%"><b>Willkommen-Tab mit Einrichtungs-Checkliste</b><br><br><img src="docs/screenshots/welcome.png" alt="Willkommen-Tab"></td>
+  </tr>
+</table>
 
 ### Gut zu wissen
 
