@@ -56,7 +56,7 @@
     "message": "Custom targets"
   },
   "featCustomText": {
-    "message": "Any site with a search becomes a keyword via its URL – no Firefox search engine needed."
+    "message": "Any site with a search becomes a keyword via its URL – and site keywords open your favourite pages directly."
   },
   "featPrivacyTitle": {
     "message": "Private & synced"
@@ -158,7 +158,7 @@
     "message": "You add new search engines in Firefox itself (add-ons aren't allowed to):"
   },
   "newEngineStep1": {
-    "message": "Open Firefox Settings → Search (if no tab opened: type about:preferences#search into the address bar)"
+    "message": "Open Firefox Settings → Search. Add-ons can't open it directly – copy the address and paste it into a new tab (Ctrl+T, Ctrl+V, Enter):"
   },
   "newEngineStep2": {
     "message": "Under “Search engines” click “Add”: enter name, search URL with %s and the main keyword (e.g. @w)"
@@ -293,7 +293,7 @@
     "message": "Import preview"
   },
   "importSummary": {
-    "message": "$engines$ search engines, $custom$ custom targets, $keywords$ keywords",
+    "message": "$engines$ search engines, $custom$ custom targets, $sites$ sites, $keywords$ keywords",
     "placeholders": {
       "engines": {
         "content": "$1"
@@ -301,8 +301,11 @@
       "custom": {
         "content": "$2"
       },
-      "keywords": {
+      "sites": {
         "content": "$3"
+      },
+      "keywords": {
+        "content": "$4"
       }
     }
   },
@@ -532,5 +535,47 @@
   },
   "supportText": {
     "message": "Enjoying Barkeys?"
+  },
+  "btnCopyAddress": {
+    "message": "Copy address"
+  },
+  "tabSites": {
+    "message": "Sites"
+  },
+  "sitesTitle": {
+    "message": "Site keywords"
+  },
+  "sitesHint": {
+    "message": "A keyword opens a specific site directly – no search. E.g. @news for your news site."
+  },
+  "sitesEmpty": {
+    "message": "No site keywords yet."
+  },
+  "colSiteUrl": {
+    "message": "Address"
+  },
+  "btnAddSite": {
+    "message": "+ Add site"
+  },
+  "btnPickBookmark": {
+    "message": "Pick from bookmarks"
+  },
+  "bookmarksSearch": {
+    "message": "Search bookmarks …"
+  },
+  "bookmarksNone": {
+    "message": "No matching bookmarks."
+  },
+  "bookmarksAdded": {
+    "message": "added"
+  },
+  "bookmarksPrivacy": {
+    "message": "Bookmark search runs locally in Firefox only. You can revoke the permission anytime in about:addons → Barkeys → Permissions."
+  },
+  "errSiteUrl": {
+    "message": "Address must start with http(s)://"
+  },
+  "permBookmarks": {
+    "message": "Optional: search bookmarks when you use “Pick from bookmarks” – only asked then."
   }
 }

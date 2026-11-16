@@ -1,5 +1,5 @@
 "use strict";
-/* global App, BK, t, h, $, icon, showRowIssues */
+/* global App, BK, t, h, $, icon, showRowIssues, copyText */
 
 App.register({
   render() {
@@ -28,8 +28,8 @@ App.register({
           engine.icon ? h("img", { src: engine.icon, alt: "" }) : h("span", { class: "fallback", text: engine.name.charAt(0) }),
           h("span", { text: engine.name }),
           engine.isDefault ? h("span", { class: "default-tag", text: t("sourceDefaultBadge") }) : null),
-        h("div", null, engine.alias
-          ? h("span", { class: "kbd", text: engine.alias, title: t("mainActiveTip", [engine.alias, engine.name]) })
+        h("div", { class: "mains" }, engine.mains.length
+          ? engine.mains.map(a => h("span", { class: "kbd", text: a, title: t("mainActiveTip", [a, engine.name]) }))
           : h("span", { class: "none", text: t("mainNone"), title: t("mainNoneTip") })),
         h("div", { class: "field" }, input, h("div", { class: "msg error" }), h("div", { class: "msg warn" }))
       ));
@@ -79,7 +79,6 @@ App.register({
   }
 });
 
-$("newEngine").addEventListener("click", async () => {
-  $("newEngineHelp").hidden = false;
-  try { await browser.tabs.create({ url: "about:preferences#search" }); } catch { /* not allowed – steps are shown */ }
-});
+// Firefox doesn't let add-ons open about:preferences, so we offer to copy it.
+$("newEngine").addEventListener("click", () => { $("newEngineHelp").hidden = !$("newEngineHelp").hidden; });
+$("copyPrefsUrl").addEventListener("click", e => copyText(e.currentTarget, "about:preferences#search"));

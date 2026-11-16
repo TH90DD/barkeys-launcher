@@ -97,7 +97,7 @@ $("importFile").addEventListener("change", async e => {
   const replace = h("input", { type: "radio", name: "importMode", value: "replace" });
   box.append(h("div", { class: "import-preview" },
     h("strong", { text: t("importPreviewTitle") }),
-    h("p", { text: t("importSummary", [String(imp.engines.length), String(imp.custom.length), String(imp.keywords)]) }),
+    h("p", { text: t("importSummary", [String(imp.engines.length), String(imp.custom.length), String(imp.sites.length), String(imp.keywords)]) }),
     imp.skipped ? h("p", { class: "msg warn", text: t("importSkipped", String(imp.skipped)) }) : null,
     h("label", null, merge, t("importModeMerge")),
     h("label", null, replace, t("importModeReplace")),

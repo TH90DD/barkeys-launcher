@@ -24,6 +24,7 @@
     <button role="tab" data-tab="welcome" data-icon="home"><span data-i18n="tabWelcome"></span></button>
     <button role="tab" data-tab="engines" data-icon="search"><span data-i18n="tabEngines"></span></button>
     <button role="tab" data-tab="custom" data-icon="link"><span data-i18n="tabCustom"></span></button>
+    <button role="tab" data-tab="sites" data-icon="bookmark"><span data-i18n="tabSites"></span></button>
     <button role="tab" data-tab="data" data-icon="database"><span data-i18n="tabData"></span></button>
     <button role="tab" data-tab="guide" data-icon="book"><span data-i18n="tabGuide"></span></button>
     </div>
@@ -78,7 +79,8 @@
         <div id="newEngineHelp" class="callout" hidden>
           <p data-i18n="newEngineIntro"></p>
           <ol>
-            <li data-i18n="newEngineStep1"></li>
+            <li><span data-i18n="newEngineStep1"></span>
+              <span class="copy-line"><code>about:preferences#search</code><button id="copyPrefsUrl" class="btn small" data-icon="copy"><span data-i18n="btnCopyAddress"></span></button></span></li>
             <li data-i18n="newEngineStep2"></li>
             <li data-i18n="newEngineStep3"></li>
           </ol>
@@ -118,6 +120,36 @@
         <div class="actions">
           <button id="addCustom" class="btn" data-i18n="btnAdd"></button>
           <button id="addExamples" class="btn ghost" data-i18n="btnExamples"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Sites ============ -->
+    <section role="tabpanel" id="panel-sites" hidden>
+      <div class="card">
+        <h3 data-i18n="sitesTitle"></h3>
+        <p class="muted" data-i18n="sitesHint"></p>
+        <div class="table">
+          <div class="thead grid-custom">
+            <span data-i18n="colName"></span>
+            <span data-i18n="colKeywords"></span>
+            <span data-i18n="colSiteUrl"></span>
+            <span></span>
+          </div>
+          <div id="siteRows"></div>
+          <p id="sitesEmpty" class="empty" data-i18n="sitesEmpty" hidden></p>
+        </div>
+        <div class="actions">
+          <button id="addSite" class="btn" data-i18n="btnAddSite"></button>
+          <button id="pickBookmark" class="btn ghost" data-icon="bookmark"><span data-i18n="btnPickBookmark"></span></button>
+        </div>
+        <div id="bookmarkPicker" class="picker" hidden>
+          <div class="picker-head">
+            <input id="bookmarkSearch" type="text" data-i18n-placeholder="bookmarksSearch" spellcheck="false">
+            <button id="bookmarkClose" class="btn ghost small" data-i18n="btnCancel"></button>
+          </div>
+          <div id="bookmarkResults"></div>
+          <p class="muted small" data-i18n="bookmarksPrivacy"></p>
         </div>
       </div>
     </section>
@@ -220,6 +252,7 @@
           <div><code>search</code><span data-i18n="permSearch"></span></div>
           <div><code>storage</code><span data-i18n="permStorage"></span></div>
           <div><code>webRequest</code><span data-i18n="permWebRequest"></span></div>
+          <div><code>bookmarks</code><span data-i18n="permBookmarks"></span></div>
           <div><strong data-i18n="permHostLabel"></strong><span data-i18n="permHost"></span></div>
         </div>
       </div>
@@ -241,6 +274,7 @@
   <script src="tab-welcome.js"></script>
   <script src="tab-engines.js"></script>
   <script src="tab-custom.js"></script>
+  <script src="tab-sites.js"></script>
   <script src="tab-data.js"></script>
   <script src="main.js"></script>
 </body>

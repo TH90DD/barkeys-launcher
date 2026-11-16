@@ -132,3 +132,25 @@ test("resolve: engines, URLs, encoding and safety", () => {
   assert.equal(BK.resolve("plain search", index), null);
   assert.equal(BK.resolve("", index), null);
 });
+
+test("site keywords open the site, only http(s)", () => {
+  const { BK } = sandbox();
+  const state = BK.Store.parse({
+    "s:a1": { n: "News", a: ["@news"], u: "https://www.tagesschau.de/", o: 0 },
+    "s:a2": { n: "Evil", a: ["@evil"], u: "javascript:alert(1)", o: 1 }
+  });
+  eq(state.sites.map(s => s.u), ["https://www.tagesschau.de/", ""], "javascript: URL is dropped on read");
+  const index = BK.buildIndex(state);
+  eq({ ...BK.resolve("@news", index) }, { url: "https://www.tagesschau.de/" });
+  eq({ ...BK.resolve("@NEWS extra words", index) }, { url: "https://www.tagesschau.de/" });
+  assert.equal(BK.resolve("@evil", index), null);
+});
+
+test("sites survive export -> import round trip", () => {
+  const { BK } = sandbox();
+  const state = { engines: new Map(), custom: [], sites: [{ id: "a", n: "News", a: ["@news"], u: "https://news.example/" }] };
+  const file = JSON.stringify(BK.Store.exportData(state, []));
+  const imp = BK.Store.parseImport(file);
+  const res = BK.Store.applyImport({ engines: new Map(), custom: [], sites: [] }, imp, "merge", []);
+  eq(res.state.sites.map(s => [s.n, s.a, s.u]), [["News", ["@news"], "https://news.example/"]]);
+});

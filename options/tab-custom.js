@@ -54,9 +54,10 @@ $("addCustom").addEventListener("click", () => {
 });
 
 $("addExamples").addEventListener("click", () => {
-  const taken = new Set(App.ff.filter(e => e.alias).map(e => BK.normAlias(e.alias)));
+  const taken = new Set(App.ff.flatMap(e => e.mains).map(BK.normAlias));
   for (const e of App.state.engines.values()) e.a.forEach(a => taken.add(BK.normAlias(a)));
   for (const c of App.state.custom) c.a.forEach(a => taken.add(BK.normAlias(a)));
+  for (const x of App.state.sites) x.a.forEach(a => taken.add(BK.normAlias(a)));
   const urls = new Set(App.state.custom.map(c => c.u));
   for (const ex of BK.EXAMPLES) {
     if (urls.has(ex.u)) continue;

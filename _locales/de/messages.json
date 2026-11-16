@@ -56,7 +56,7 @@
     "message": "Eigene Ziele"
   },
   "featCustomText": {
-    "message": "Jede Seite mit Suchfunktion wird per URL zum Kürzel – ganz ohne Firefox-Suchmaschine."
+    "message": "Jede Seite mit Suchfunktion wird per URL zum Kürzel – und mit Seiten-Kürzeln öffnest du Lieblingsseiten direkt."
   },
   "featPrivacyTitle": {
     "message": "Privat & synchron"
@@ -158,7 +158,7 @@
     "message": "Neue Suchmaschinen legst du in Firefox selbst an (Add-ons dürfen das nicht):"
   },
   "newEngineStep1": {
-    "message": "Firefox-Einstellungen → Suche öffnen (falls sich kein Tab geöffnet hat: about:preferences#search in die Adressleiste)"
+    "message": "Firefox-Einstellungen → Suche öffnen. Add-ons dürfen sie nicht direkt öffnen – kopier die Adresse und füge sie in einen neuen Tab ein (Strg+T, Strg+V, Enter):"
   },
   "newEngineStep2": {
     "message": "Unter „Suchmaschinen“ auf „Hinzufügen“ klicken: Name, Such-URL mit %s und das Haupt-Kürzel (z. B. @w) eintragen"
@@ -293,7 +293,7 @@
     "message": "Import-Vorschau"
   },
   "importSummary": {
-    "message": "$engines$ Suchmaschinen, $custom$ eigene Ziele, $keywords$ Kürzel",
+    "message": "$engines$ Suchmaschinen, $custom$ eigene Ziele, $sites$ Seiten, $keywords$ Kürzel",
     "placeholders": {
       "engines": {
         "content": "$1"
@@ -301,8 +301,11 @@
       "custom": {
         "content": "$2"
       },
-      "keywords": {
+      "sites": {
         "content": "$3"
+      },
+      "keywords": {
+        "content": "$4"
       }
     }
   },
@@ -532,5 +535,47 @@
   },
   "supportText": {
     "message": "Gefällt dir Barkeys?"
+  },
+  "btnCopyAddress": {
+    "message": "Adresse kopieren"
+  },
+  "tabSites": {
+    "message": "Seiten"
+  },
+  "sitesTitle": {
+    "message": "Seiten-Kürzel"
+  },
+  "sitesHint": {
+    "message": "Ein Kürzel öffnet direkt eine bestimmte Seite – ohne Suche. Z. B. @news für deine Nachrichtenseite."
+  },
+  "sitesEmpty": {
+    "message": "Noch keine Seiten-Kürzel."
+  },
+  "colSiteUrl": {
+    "message": "Adresse"
+  },
+  "btnAddSite": {
+    "message": "+ Seite hinzufügen"
+  },
+  "btnPickBookmark": {
+    "message": "Aus Lesezeichen wählen"
+  },
+  "bookmarksSearch": {
+    "message": "Lesezeichen durchsuchen …"
+  },
+  "bookmarksNone": {
+    "message": "Keine passenden Lesezeichen."
+  },
+  "bookmarksAdded": {
+    "message": "schon drin"
+  },
+  "bookmarksPrivacy": {
+    "message": "Die Lesezeichen-Suche läuft nur lokal in Firefox. Das Recht dafür kannst du jederzeit unter about:addons → Barkeys → Berechtigungen widerrufen."
+  },
+  "errSiteUrl": {
+    "message": "Adresse muss mit http(s):// beginnen"
+  },
+  "permBookmarks": {
+    "message": "Optional: Lesezeichen durchsuchen, wenn du „Aus Lesezeichen wählen“ nutzt – erst dann wird gefragt."
   }
 }

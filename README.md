@@ -17,7 +17,7 @@ It **extends** your Firefox search engines, it doesn't replace them.
 2. Firefox doesn't know `@wiki`, so it sends the text to your default search engine.
 3. Barkeys catches that result page before it loads and hands the search to your Firefox engine "Wikipedia" instead.
 
-You can also add targets that have no Firefox search engine at all, just a URL with `%s`.
+You can also add targets that have no Firefox search engine at all, just a URL with `%s` – and **site keywords** that open a page directly (`@news` → your news site), optionally picked from your bookmarks.
 
 ### Good to know
 
@@ -31,6 +31,7 @@ You can also add targets that have no Firefox search engine at all, just a URL w
 | `search` | List your Firefox search engines and run searches with them |
 | `storage` | Save your keywords (synced via Firefox Sync if enabled) |
 | `webRequest`, `webRequestBlocking` | Catch the default engine's result page and redirect it |
+| `bookmarks` (optional) | Only when you use “Pick from bookmarks” for site keywords; searched locally |
 | Access to *one* search site (optional) | Only the result page of the default engine you enable in the settings, e.g. `www.google.com/search` |
 
 No data collection, no analytics, no network requests of its own.
@@ -67,7 +68,6 @@ Or load it temporarily: `about:debugging#/runtime/this-firefox` → "Load Tempor
 
 ## Roadmap
 
-- Site keywords (`@news` → your favourite news site)
 - Live suggestions in the address bar via a dedicated keyword
 - Smarter bookmark search
 

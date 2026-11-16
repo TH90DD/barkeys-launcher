@@ -4,7 +4,7 @@
 // Central state for the options page. Tabs register a view with render()
 // and optionally applyIssues(); all edits go through App.changed().
 const App = {
-  state: { engines: new Map(), custom: [] },
+  state: { engines: new Map(), custom: [], sites: [] },
   ff: [],                 // Firefox engines: { name, alias, isDefault, icon }
   granted: new Set(),     // SOURCE_ENGINES ids with host permission
   issues: new Map(),      // entry key -> { errors: [], warnings: [] }
@@ -34,12 +34,18 @@ const App = {
 
   async loadFirefoxEngines() {
     try {
-      this.ff = (await browser.search.get()).map(e => ({
-        name: e.name,
-        alias: (e.alias || "").trim(),
-        isDefault: !!e.isDefault,
-        icon: safeIconUrl(e.favIconUrl)
-      }));
+      this.ff = (await browser.search.get()).map(e => {
+        const alias = (e.alias || "").trim();
+        const builtin = (BK.BUILTIN_ALIASES[e.name] || []).filter(a => BK.normAlias(a) !== BK.normAlias(alias));
+        return {
+          name: e.name,
+          alias,
+          builtin,                              // Firefox's own keywords for built-in engines
+          mains: [alias, ...builtin].filter(Boolean),
+          isDefault: !!e.isDefault,
+          icon: safeIconUrl(e.favIconUrl)
+        };
+      });
     } catch {
       this.ff = [];
     }
@@ -79,7 +85,7 @@ const App = {
     const issues = new Map();
     const owners = new Map();
     for (const e of this.ff) {
-      if (e.alias) owners.set(BK.normAlias(e.alias), { label: e.name, firefox: true });
+      for (const a of e.mains) owners.set(BK.normAlias(a), { label: e.name, firefox: true });
     }
 
     const check = (key, label, aliases, errors) => {
@@ -107,6 +113,13 @@ const App = {
       if (!c.a.length) errors.push(t("errNoAlias"));
       if (!BK.validUrlTemplate(c.u)) errors.push(t("errUrl"));
       check("c:" + c.id, c.n || c.u, c.a, errors);
+    }
+    for (const x of this.state.sites) {
+      if (!x.n && !x.a.length && !x.u) { issues.set("s:" + x.id, { errors: [], warnings: [] }); continue; }
+      const errors = [];
+      if (!x.a.length) errors.push(t("errNoAlias"));
+      if (!BK.validSiteUrl(x.u)) errors.push(t("errSiteUrl"));
+      check("s:" + x.id, x.n || x.u, x.a, errors);
     }
     this.issues = issues;
   },
@@ -156,9 +169,10 @@ const App = {
       b.textContent = text;
     };
     const { source } = this.defaultSource();
-    const todo = (!source || !this.granted.has(source.id) ? 1 : 0) + (this.ff.some(e => e.alias) ? 0 : 1);
+    const todo = (!source || !this.granted.has(source.id) ? 1 : 0) + (this.ff.some(e => e.mains.length) ? 0 : 1);
     setBadge("welcome", todo ? String(todo) : "");
     setBadge("engines", this.hasErrors("e:") || this.orphans().length ? "!" : "");
     setBadge("custom", this.hasErrors("c:") ? "!" : "");
+    setBadge("sites", this.hasErrors("s:") ? "!" : "");
   }
 };

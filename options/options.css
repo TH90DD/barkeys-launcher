@@ -395,3 +395,32 @@ details.sub[open] summary { margin-bottom: 8px; }
   [role="tabpanel"] { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+.mains { display: flex; flex-wrap: wrap; gap: 4px; }
+.copy-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 6px 0 4px; }
+.copy-line code { font-family: var(--mono); font-size: .88rem; padding: 3px 10px; border-radius: 8px; background: var(--surface); }
+.btn svg.icon { width: 15px; height: 15px; }
+
+/* Bookmark picker */
+.picker { margin-top: 14px; padding: 14px; border-radius: 12px; background: var(--surface-2); display: grid; gap: 10px; }
+.picker-head { display: flex; gap: 8px; }
+#bookmarkResults { display: grid; gap: 4px; }
+.bookmark-hit {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr) minmax(0, 1.4fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.bookmark-hit:hover:not(:disabled) { border-color: var(--accent); }
+.bookmark-hit:disabled { opacity: .6; cursor: default; }
+.bookmark-hit svg { color: var(--accent); width: 16px; height: 16px; }
+.bm-title { font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bm-url { color: var(--muted); font: .85rem var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
