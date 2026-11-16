@@ -44,7 +44,7 @@
     "message": "Willkommen bei Barkeys Launcher"
   },
   "welcomeLead": {
-    "message": "Firefox erlaubt pro Suchmaschine nur ein Kürzel. Barkeys gibt jeder Suchmaschine so viele weitere, wie du willst – und macht jede Seite mit Suchfunktion zum Kürzel."
+    "message": "Firefox erlaubt pro Suchmaschine nur ein Kürzel. Barkeys Launcher gibt jeder Suchmaschine so viele weitere, wie du willst – und macht jede Seite mit Suchfunktion zum Kürzel."
   },
   "featKeywordsTitle": {
     "message": "Mehr Kürzel"
@@ -87,7 +87,7 @@
     }
   },
   "setupDefaultTodoText": {
-    "message": "Barkeys braucht Zugriff auf deren Ergebnisseite, um weitere Kürzel zu erkennen – auf nichts sonst."
+    "message": "Barkeys Launcher braucht Zugriff auf deren Ergebnisseite, um weitere Kürzel zu erkennen – auf nichts sonst."
   },
   "setupDefaultUnsupported": {
     "message": "Deine Standardsuche „$engine$“ wird noch nicht unterstützt",
@@ -246,7 +246,7 @@
     "message": "Standardsuchmaschine"
   },
   "dataSourceHint": {
-    "message": "Aktiviere die Suchmaschine, die in Firefox als Standard eingestellt ist. Über deren Ergebnisseite erkennt Barkeys die weiteren Kürzel – es bekommt nur darauf Zugriff, sonst nichts."
+    "message": "Aktiviere die Suchmaschine, die in Firefox als Standard eingestellt ist. Über deren Ergebnisseite erkennt Barkeys Launcher die weiteren Kürzel – es bekommt nur darauf Zugriff, sonst nichts."
   },
   "syncTitle": {
     "message": "Firefox Sync"
@@ -287,7 +287,7 @@
     "message": "Such-URLs für den Export (optional)"
   },
   "urlsHint": {
-    "message": "Firefox verrät Add-ons die URLs seiner Suchmaschinen nicht. Trägst du sie hier ein, zeigt Barkeys sie beim Import auf einem neuen Gerät zum Anlegen an."
+    "message": "Firefox verrät Add-ons die URLs seiner Suchmaschinen nicht. Trägst du sie hier ein, zeigt Barkeys Launcher sie beim Import auf einem neuen Gerät zum Anlegen an."
   },
   "importPreviewTitle": {
     "message": "Import-Vorschau"
@@ -353,7 +353,7 @@
     "message": "Kopiert ✓"
   },
   "errImportFile": {
-    "message": "Das ist keine gültige Barkeys-Exportdatei."
+    "message": "Das ist keine gültige Exportdatei von Barkeys Launcher."
   },
   "errImportSize": {
     "message": "Die Datei ist zu groß (max. 256 KB)."
@@ -362,13 +362,13 @@
     "message": "Alles zurücksetzen"
   },
   "resetHint": {
-    "message": "Löscht alle Kürzel und eigenen Ziele von Barkeys – mit Sync auf allen Geräten. Deine Firefox-Suchmaschinen bleiben unberührt."
+    "message": "Löscht alle Kürzel und eigenen Ziele von Barkeys Launcher – mit Sync auf allen Geräten. Deine Firefox-Suchmaschinen bleiben unberührt."
   },
   "btnResetAll": {
-    "message": "Alle Barkeys-Daten löschen"
+    "message": "Alle Daten von Barkeys Launcher löschen"
   },
   "confirmReset": {
-    "message": "Wirklich alle Barkeys-Daten löschen? Das lässt sich nicht rückgängig machen."
+    "message": "Wirklich alle Daten von Barkeys Launcher löschen? Das lässt sich nicht rückgängig machen."
   },
   "errFirefoxAlias": {
     "message": "$alias$ ist schon das Firefox-Kürzel von „$engine$“",
@@ -435,10 +435,10 @@
     }
   },
   "guideTitle": {
-    "message": "So funktioniert Barkeys"
+    "message": "So funktioniert Barkeys Launcher"
   },
   "guideLead": {
-    "message": "Barkeys ersetzt deine Firefox-Suchmaschinen nicht, es erweitert sie: Jede Suchmaschine hat in Firefox ein Haupt-Kürzel, und in Barkeys gibst du ihr beliebig viele weitere dazu."
+    "message": "Barkeys Launcher ersetzt deine Firefox-Suchmaschinen nicht, es erweitert sie: Jede Suchmaschine hat in Firefox ein Haupt-Kürzel, und in Barkeys Launcher gibst du ihr beliebig viele weitere dazu."
   },
   "guideStep1Title": {
     "message": "Suchmaschine in Firefox anlegen, mit deinem Lieblingskürzel"
@@ -447,7 +447,7 @@
     "message": "Firefox-Einstellungen → Suche. Nimm als Kürzel das, was du am häufigsten tippst (z. B. @y). Nur dafür zeigt Firefox beim Tippen den Namen der Suchmaschine an."
   },
   "guideStep2Title": {
-    "message": "In Barkeys weitere Kürzel ergänzen"
+    "message": "In Barkeys Launcher weitere Kürzel ergänzen"
   },
   "guideStep2Text": {
     "message": "Im Tab „Suchmaschinen“ z. B. @yt und @youtube eintragen. Sie führen zur selben Suche – praktisch als Sicherheitsnetz."
@@ -456,7 +456,7 @@
     "message": "Standardsuchmaschine freigeben"
   },
   "guideStep3Text": {
-    "message": "Einmalig im Tab „Willkommen“ oder „Daten & Sync“. Darüber erkennt Barkeys die weiteren Kürzel."
+    "message": "Einmalig im Tab „Willkommen“ oder „Daten & Sync“. Darüber erkennt Barkeys Launcher die weiteren Kürzel."
   },
   "guideExampleTitle": {
     "message": "Beispiel"
@@ -465,7 +465,7 @@
     "message": "Haupt-Kürzel in Firefox"
   },
   "guideExAddon": {
-    "message": "Weitere Kürzel in Barkeys"
+    "message": "Weitere Kürzel in Barkeys Launcher"
   },
   "exQuery": {
     "message": "katzen"
@@ -486,13 +486,13 @@
     "message": "Warum zeigt Firefox bei weiteren Kürzeln keinen Namen an?"
   },
   "faq1A": {
-    "message": "Add-ons dürfen die Adressleiste nicht verändern. Barkeys greift erst nach Enter ein und leitet die Suche um. Deshalb gehört das Kürzel, das du am häufigsten benutzt, als Haupt-Kürzel in Firefox – die weiteren Kürzel sind die Ergänzung."
+    "message": "Add-ons dürfen die Adressleiste nicht verändern. Barkeys Launcher greift erst nach Enter ein und leitet die Suche um. Deshalb gehört das Kürzel, das du am häufigsten benutzt, als Haupt-Kürzel in Firefox – die weiteren Kürzel sind die Ergänzung."
   },
   "faq2Q": {
     "message": "Warum muss ich meine Standardsuche freigeben?"
   },
   "faq2A": {
-    "message": "Kennt Firefox ein Kürzel nicht, schickt es den Text an deine Standardsuche. Barkeys erkennt das Kürzel auf deren Ergebnisseite und leitet um, bevor die Seite lädt. Andere Seiten sieht Barkeys nie."
+    "message": "Kennt Firefox ein Kürzel nicht, schickt es den Text an deine Standardsuche. Barkeys Launcher erkennt das Kürzel auf deren Ergebnisseite und leitet um, bevor die Seite lädt. Andere Seiten sieht Barkeys Launcher nie."
   },
   "faq3Q": {
     "message": "Warum Kürzel mit @?"
@@ -504,19 +504,19 @@
     "message": "Werden meine Kürzel synchronisiert?"
   },
   "faq4A": {
-    "message": "Ja, über Firefox Sync, wenn dort „Add-ons“ aktiviert ist. Firefox synchronisiert aber eigene Suchmaschinen nicht – die musst du auf jedem Gerät anlegen. Fehlt eine, zeigt Barkeys ihre Kürzel unter „Nicht in Firefox gefunden“."
+    "message": "Ja, über Firefox Sync, wenn dort „Add-ons“ aktiviert ist. Firefox synchronisiert aber eigene Suchmaschinen nicht – die musst du auf jedem Gerät anlegen. Fehlt eine, zeigt Barkeys Launcher ihre Kürzel unter „Nicht in Firefox gefunden“."
   },
   "faq5Q": {
     "message": "Was passiert beim Export mit meinen Daten?"
   },
   "faq5A": {
-    "message": "Die Datei wird nur lokal gespeichert. Barkeys schickt nichts ins Internet. Beim Import wird jede Angabe geprüft; ungültige Einträge werden verworfen."
+    "message": "Die Datei wird nur lokal gespeichert. Barkeys Launcher schickt nichts ins Internet. Beim Import wird jede Angabe geprüft; ungültige Einträge werden verworfen."
   },
   "privacyTitle": {
     "message": "Datenschutz & Rechte"
   },
   "privacyLead": {
-    "message": "Barkeys sammelt keine Daten, hat keine Statistik und baut keine eigenen Netzwerkverbindungen auf. Diese Rechte braucht es:"
+    "message": "Barkeys Launcher sammelt keine Daten, hat keine Statistik und baut keine eigenen Netzwerkverbindungen auf. Diese Rechte braucht es:"
   },
   "permSearch": {
     "message": "Deine Firefox-Suchmaschinen auflisten und damit suchen"
@@ -570,7 +570,7 @@
     "message": "schon drin"
   },
   "bookmarksPrivacy": {
-    "message": "Die Lesezeichen-Suche läuft nur lokal in Firefox. Das Recht dafür kannst du jederzeit unter about:addons → Barkeys → Berechtigungen widerrufen."
+    "message": "Die Lesezeichen-Suche läuft nur lokal in Firefox. Das Recht dafür kannst du jederzeit unter about:addons → Barkeys Launcher → Berechtigungen widerrufen."
   },
   "errSiteUrl": {
     "message": "Adresse muss mit http(s):// beginnen"
@@ -696,7 +696,7 @@
     "message": "Sprache"
   },
   "langHint": {
-    "message": "Barkeys nutzt automatisch die Sprache von Firefox. Hier kannst du sie für die Einstellungen fest wählen."
+    "message": "Barkeys Launcher nutzt automatisch die Sprache von Firefox. Hier kannst du sie für die Einstellungen fest wählen."
   },
   "langAuto": {
     "message": "Automatisch (wie Firefox: $lang$)",
@@ -760,7 +760,7 @@
     "message": "Ein Nebenprojekt – mit Liebe, aber ohne Garantie"
   },
   "disclaimerText": {
-    "message": "Barkeys ist entstanden, weil ich es selbst brauchte. Updates und neue Funktionen kommen nach eigenem Ermessen und ohne festen Zeitplan, und es kann Fehler enthalten. Die Nutzung erfolgt ohne Gewähr (siehe Lizenz MPL-2.0). Fehlerberichte und Ideen sind trotzdem herzlich willkommen."
+    "message": "Barkeys Launcher ist entstanden, weil ich es selbst brauchte. Updates und neue Funktionen kommen nach eigenem Ermessen und ohne festen Zeitplan, und es kann Fehler enthalten. Die Nutzung erfolgt ohne Gewähr (siehe Lizenz MPL-2.0). Fehlerberichte und Ideen sind trotzdem herzlich willkommen."
   },
   "disclaimerLink": {
     "message": "Fehler melden oder Idee teilen"

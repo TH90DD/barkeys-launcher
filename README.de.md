@@ -6,27 +6,27 @@
 
 Firefox erlaubt pro Suchmaschine genau **ein** Kürzel. Barkeys Launcher ergänzt beliebig viele weitere – `@w`, `@wiki` und `@wikipedia` durchsuchen alle Wikipedia.
 
-Barkeys **erweitert** deine Firefox-Suchmaschinen, es ersetzt sie nicht.
+Barkeys Launcher **erweitert** deine Firefox-Suchmaschinen, es ersetzt sie nicht.
 
 > **Ein Nebenprojekt.** Ich habe Barkeys Launcher für meinen eigenen Bedarf gebaut und teile es, weil es anderen vielleicht auch hilft. Updates und neue Funktionen kommen nach eigenem Ermessen, ohne festen Zeitplan oder zugesicherten Support, und es kann Fehler enthalten. Die Nutzung erfolgt *ohne Gewähr* – siehe [MPL-2.0](LICENSE). Fehlerberichte und Ideen sind über [Issues](https://github.com/TH90DD/barkeys-launcher/issues) willkommen.
 
 ## So funktioniert's
 
-| Suchmaschine | Haupt-Kürzel (in Firefox) | Weitere Kürzel (in Barkeys) |
+| Suchmaschine | Haupt-Kürzel (in Firefox) | Weitere Kürzel (in Barkeys Launcher) |
 |---|---|---|
 | YouTube | `@y` | `@yt`, `@youtube` |
 | Wikipedia | `@w` | `@wiki`, `@wikipedia` |
 
 1. Du tippst `@wiki katzen` in die Adressleiste.
 2. Firefox kennt `@wiki` nicht und schickt den Text an deine Standardsuchmaschine.
-3. Barkeys fängt diese Ergebnisseite ab, bevor sie lädt, und übergibt die Suche stattdessen an deine Firefox-Suchmaschine „Wikipedia“.
+3. Barkeys Launcher fängt diese Ergebnisseite ab, bevor sie lädt, und übergibt die Suche stattdessen an deine Firefox-Suchmaschine „Wikipedia“.
 
 Außerdem kannst du Ziele ganz ohne Firefox-Suchmaschine anlegen – nur mit einer URL mit `%s` –, **Seiten-Kürzel**, die direkt eine Seite öffnen (`@news` → deine Nachrichtenseite), optional aus deinen Lesezeichen gewählt, und **Bündel**, die mehrere Seiten auf einmal öffnen (`@workspace` → Mail, Kalender, Projekt-Tool). Im Tab „Vorlagen“ warten rund 45 fertige Such-Adressen (Wikipedia, DeepL, Amazon, GitHub, Flathub …), die du mit einem Klick übernimmst.
 
 ### Gut zu wissen
 
-- **Namensanzeige nur fürs Haupt-Kürzel.** Beim Tippen von `@w ` zeigt Firefox „Wikipedia ×“. Bei weiteren Kürzeln steht dort „Mit Google suchen“ – Barkeys greift erst nach Enter ein, weil Add-ons die Adressleiste nicht verändern dürfen. Tipp: Nimm das Kürzel, das du am häufigsten tippst, als Haupt-Kürzel in Firefox; Barkeys ist das Sicherheitsnetz für den Rest.
-- **Add-ons können keine Firefox-Suchmaschinen anlegen.** Du legst die Suchmaschine einmal unter Firefox-Einstellungen → Suche an; Barkeys erkennt sie automatisch.
+- **Namensanzeige nur fürs Haupt-Kürzel.** Beim Tippen von `@w ` zeigt Firefox „Wikipedia ×“. Bei weiteren Kürzeln steht dort „Mit Google suchen“ – Barkeys Launcher greift erst nach Enter ein, weil Add-ons die Adressleiste nicht verändern dürfen. Tipp: Nimm das Kürzel, das du am häufigsten tippst, als Haupt-Kürzel in Firefox; Barkeys Launcher ist das Sicherheitsnetz für den Rest.
+- **Add-ons können keine Firefox-Suchmaschinen anlegen.** Du legst die Suchmaschine einmal unter Firefox-Einstellungen → Suche an; Barkeys Launcher erkennt sie automatisch.
 
 ## Rechte & Datenschutz
 
@@ -50,7 +50,7 @@ Keine Datensammlung, keine Statistik, keine eigenen Netzwerkverbindungen. Alle D
 
 ## Sync, Backup & Teilen
 
-Kürzel liegen in `storage.sync` und reisen per Firefox Sync mit (wenn „Add-ons“ aktiviert ist). Eigene Suchmaschinen synchronisiert Firefox selbst nicht; Barkeys zeigt Kürzel fehlender Suchmaschinen unter *Nicht in Firefox gefunden*. Export/Import (JSON) funktioniert ohne Sync und kann die Such-URLs mitnehmen, um Suchmaschinen auf einem neuen Gerät anzulegen.
+Kürzel liegen in `storage.sync` und reisen per Firefox Sync mit (wenn „Add-ons“ aktiviert ist). Eigene Suchmaschinen synchronisiert Firefox selbst nicht; Barkeys Launcher zeigt Kürzel fehlender Suchmaschinen unter *Nicht in Firefox gefunden*. Export/Import (JSON) funktioniert ohne Sync und kann die Such-URLs mitnehmen, um Suchmaschinen auf einem neuen Gerät anzulegen.
 
 ## Mitmachen
 
@@ -81,7 +81,7 @@ Oder vorläufig laden: `about:debugging#/runtime/this-firefox` → „Temporäre
 
 ## Unterstützen
 
-Wenn dir Barkeys ein paar Tastendrücke spart, freue ich mich über einen [Kaffee ☕](https://buymeacoffee.com/th90dd).
+Wenn dir Barkeys Launcher ein paar Tastendrücke spart, freue ich mich über einen [Kaffee ☕](https://buymeacoffee.com/th90dd).
 
 ## Rechtliches
 

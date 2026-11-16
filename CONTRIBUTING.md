@@ -19,7 +19,7 @@ Then load the add-on via `about:debugging` and try your change in Firefox.
 
 ## Ground rules
 
-Barkeys promises its users a few things. Pull requests must keep them:
+Barkeys Launcher promises its users a few things. Pull requests must keep them:
 
 - **No data collection, no analytics, no network requests of its own.**
 - **Minimal permissions.** New features that need a permission request it as *optional*, only when the user turns the feature on.

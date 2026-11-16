@@ -44,7 +44,7 @@
     "message": "Welcome to Barkeys Launcher"
   },
   "welcomeLead": {
-    "message": "Firefox allows only one keyword per search engine. Barkeys gives each engine as many extra keywords as you like – and turns any site with a search into a keyword."
+    "message": "Firefox allows only one keyword per search engine. Barkeys Launcher gives each engine as many extra keywords as you like – and turns any site with a search into a keyword."
   },
   "featKeywordsTitle": {
     "message": "More keywords"
@@ -87,7 +87,7 @@
     }
   },
   "setupDefaultTodoText": {
-    "message": "Barkeys needs access to its result page to spot extra keywords – nothing else."
+    "message": "Barkeys Launcher needs access to its result page to spot extra keywords – nothing else."
   },
   "setupDefaultUnsupported": {
     "message": "Your default search “$engine$” isn't supported yet",
@@ -246,7 +246,7 @@
     "message": "Default search engine"
   },
   "dataSourceHint": {
-    "message": "Enable the search engine that is your Firefox default. Barkeys spots extra keywords on its result page – it gets access to that and nothing else."
+    "message": "Enable the search engine that is your Firefox default. Barkeys Launcher spots extra keywords on its result page – it gets access to that and nothing else."
   },
   "syncTitle": {
     "message": "Firefox Sync"
@@ -287,7 +287,7 @@
     "message": "Search URLs for export (optional)"
   },
   "urlsHint": {
-    "message": "Firefox doesn't tell add-ons the URLs of its search engines. If you enter them here, Barkeys shows them on import so you can add the engines on a new device."
+    "message": "Firefox doesn't tell add-ons the URLs of its search engines. If you enter them here, Barkeys Launcher shows them on import so you can add the engines on a new device."
   },
   "importPreviewTitle": {
     "message": "Import preview"
@@ -353,7 +353,7 @@
     "message": "Copied ✓"
   },
   "errImportFile": {
-    "message": "This isn't a valid Barkeys export file."
+    "message": "This isn't a valid Barkeys Launcher export file."
   },
   "errImportSize": {
     "message": "The file is too large (max. 256 KB)."
@@ -362,13 +362,13 @@
     "message": "Reset everything"
   },
   "resetHint": {
-    "message": "Deletes all Barkeys keywords and custom targets – with Sync, on all devices. Your Firefox search engines stay untouched."
+    "message": "Deletes all Barkeys Launcher keywords and custom targets – with Sync, on all devices. Your Firefox search engines stay untouched."
   },
   "btnResetAll": {
-    "message": "Delete all Barkeys data"
+    "message": "Delete all Barkeys Launcher data"
   },
   "confirmReset": {
-    "message": "Really delete all Barkeys data? This can't be undone."
+    "message": "Really delete all Barkeys Launcher data? This can't be undone."
   },
   "errFirefoxAlias": {
     "message": "$alias$ is already the Firefox keyword of “$engine$”",
@@ -435,10 +435,10 @@
     }
   },
   "guideTitle": {
-    "message": "How Barkeys works"
+    "message": "How Barkeys Launcher works"
   },
   "guideLead": {
-    "message": "Barkeys doesn't replace your Firefox search engines, it extends them: each engine has one main keyword in Firefox, and in Barkeys you add as many extra keywords as you like."
+    "message": "Barkeys Launcher doesn't replace your Firefox search engines, it extends them: each engine has one main keyword in Firefox, and in Barkeys Launcher you add as many extra keywords as you like."
   },
   "guideStep1Title": {
     "message": "Add the engine in Firefox, with your favourite keyword"
@@ -447,7 +447,7 @@
     "message": "Firefox Settings → Search. Use the keyword you type most often (e.g. @y). Only for that one does Firefox show the engine's name while you type."
   },
   "guideStep2Title": {
-    "message": "Add extra keywords in Barkeys"
+    "message": "Add extra keywords in Barkeys Launcher"
   },
   "guideStep2Text": {
     "message": "In the “Search engines” tab, enter e.g. @yt and @youtube. They lead to the same search – handy as a safety net."
@@ -456,7 +456,7 @@
     "message": "Enable your default search engine"
   },
   "guideStep3Text": {
-    "message": "Once, in the “Welcome” or “Data & sync” tab. That's how Barkeys spots the extra keywords."
+    "message": "Once, in the “Welcome” or “Data & sync” tab. That's how Barkeys Launcher spots the extra keywords."
   },
   "guideExampleTitle": {
     "message": "Example"
@@ -465,7 +465,7 @@
     "message": "Main keyword in Firefox"
   },
   "guideExAddon": {
-    "message": "Extra keywords in Barkeys"
+    "message": "Extra keywords in Barkeys Launcher"
   },
   "exQuery": {
     "message": "cats"
@@ -486,13 +486,13 @@
     "message": "Why doesn't Firefox show the name for extra keywords?"
   },
   "faq1A": {
-    "message": "Add-ons aren't allowed to change the address bar. Barkeys only steps in after Enter and redirects the search. So the keyword you use most belongs in Firefox as the main keyword – the extra keywords are the add-on."
+    "message": "Add-ons aren't allowed to change the address bar. Barkeys Launcher only steps in after Enter and redirects the search. So the keyword you use most belongs in Firefox as the main keyword – the extra keywords are the add-on."
   },
   "faq2Q": {
     "message": "Why do I have to enable my default search?"
   },
   "faq2A": {
-    "message": "When Firefox doesn't know a keyword, it sends the text to your default search. Barkeys spots the keyword on that result page and redirects before it loads. Barkeys never sees any other site."
+    "message": "When Firefox doesn't know a keyword, it sends the text to your default search. Barkeys Launcher spots the keyword on that result page and redirects before it loads. Barkeys Launcher never sees any other site."
   },
   "faq3Q": {
     "message": "Why keywords with @?"
@@ -504,19 +504,19 @@
     "message": "Are my keywords synced?"
   },
   "faq4A": {
-    "message": "Yes, via Firefox Sync when “Add-ons” is enabled there. Firefox doesn't sync custom search engines, though – add them on each device. If one is missing, Barkeys lists its keywords under “Not found in Firefox”."
+    "message": "Yes, via Firefox Sync when “Add-ons” is enabled there. Firefox doesn't sync custom search engines, though – add them on each device. If one is missing, Barkeys Launcher lists its keywords under “Not found in Firefox”."
   },
   "faq5Q": {
     "message": "What happens to my data on export?"
   },
   "faq5A": {
-    "message": "The file is only saved locally. Barkeys sends nothing to the internet. On import every value is checked; invalid entries are dropped."
+    "message": "The file is only saved locally. Barkeys Launcher sends nothing to the internet. On import every value is checked; invalid entries are dropped."
   },
   "privacyTitle": {
     "message": "Privacy & permissions"
   },
   "privacyLead": {
-    "message": "Barkeys collects no data, has no analytics and makes no network requests of its own. It needs these permissions:"
+    "message": "Barkeys Launcher collects no data, has no analytics and makes no network requests of its own. It needs these permissions:"
   },
   "permSearch": {
     "message": "List your Firefox search engines and search with them"
@@ -570,7 +570,7 @@
     "message": "added"
   },
   "bookmarksPrivacy": {
-    "message": "Bookmark search runs locally in Firefox only. You can revoke the permission anytime in about:addons → Barkeys → Permissions."
+    "message": "Bookmark search runs locally in Firefox only. You can revoke the permission anytime in about:addons → Barkeys Launcher → Permissions."
   },
   "errSiteUrl": {
     "message": "Address must start with http(s)://"
@@ -696,7 +696,7 @@
     "message": "Language"
   },
   "langHint": {
-    "message": "Barkeys follows Firefox's language automatically. Here you can pick a fixed language for the settings."
+    "message": "Barkeys Launcher follows Firefox's language automatically. Here you can pick a fixed language for the settings."
   },
   "langAuto": {
     "message": "Automatic (like Firefox: $lang$)",
@@ -760,7 +760,7 @@
     "message": "A side project – made with care, but no guarantees"
   },
   "disclaimerText": {
-    "message": "I built Barkeys because I needed it myself. Updates and new features come at my own discretion, without a fixed schedule, and it may contain bugs. It's provided as is, without warranty (see the MPL-2.0 license). Bug reports and ideas are still very welcome."
+    "message": "I built Barkeys Launcher because I needed it myself. Updates and new features come at my own discretion, without a fixed schedule, and it may contain bugs. It's provided as is, without warranty (see the MPL-2.0 license). Bug reports and ideas are still very welcome."
   },
   "disclaimerLink": {
     "message": "Report a bug or share an idea"

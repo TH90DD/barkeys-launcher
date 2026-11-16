@@ -12,21 +12,21 @@ It **extends** your Firefox search engines, it doesn't replace them.
 
 ## How it works
 
-| Search engine | Main keyword (set in Firefox) | Extra keywords (set in Barkeys) |
+| Search engine | Main keyword (set in Firefox) | Extra keywords (set in Barkeys Launcher) |
 |---|---|---|
 | YouTube | `@y` | `@yt`, `@youtube` |
 | Wikipedia | `@w` | `@wiki`, `@wikipedia` |
 
 1. You type `@wiki cats` into the address bar.
 2. Firefox doesn't know `@wiki`, so it sends the text to your default search engine.
-3. Barkeys catches that result page before it loads and hands the search to your Firefox engine "Wikipedia" instead.
+3. Barkeys Launcher catches that result page before it loads and hands the search to your Firefox engine "Wikipedia" instead.
 
 You can also add targets that have no Firefox search engine at all, just a URL with `%s` – **site keywords** that open a page directly (`@news` → your news site), optionally picked from your bookmarks, and **bundles** that open several sites at once (`@workspace` → mail, calendar, project tool). The guide includes ~45 ready-made search presets (Wikipedia, DeepL, Amazon, GitHub, Flathub, …) you can add with one click.
 
 ### Good to know
 
-- **Name label only for the main keyword.** While typing `@w `, Firefox shows "Wikipedia ×". For extra keywords it shows "Search with Google". Barkeys only steps in after you press Enter, because add-ons can't change the address bar. Tip: use the keyword you type most as the main keyword in Firefox, and let Barkeys be the safety net for the rest.
-- **Add-ons can't create Firefox search engines.** You add the engine once in Firefox Settings → Search; Barkeys picks it up automatically.
+- **Name label only for the main keyword.** While typing `@w `, Firefox shows "Wikipedia ×". For extra keywords it shows "Search with Google". Barkeys Launcher only steps in after you press Enter, because add-ons can't change the address bar. Tip: use the keyword you type most as the main keyword in Firefox, and let Barkeys Launcher be the safety net for the rest.
+- **Add-ons can't create Firefox search engines.** You add the engine once in Firefox Settings → Search; Barkeys Launcher picks it up automatically.
 
 ## Permissions & privacy
 
@@ -50,7 +50,7 @@ No data collection, no analytics, no network requests of its own. Full details: 
 
 ## Sync, backup & sharing
 
-Keywords are stored in `storage.sync`, so they follow you via Firefox Sync (with “Add-ons” enabled). Firefox doesn't sync custom search engines itself; Barkeys lists keywords of missing engines under *Not found in Firefox*. Export/import (JSON) works without Sync and can carry the engines' search URLs to set them up on a new device.
+Keywords are stored in `storage.sync`, so they follow you via Firefox Sync (with “Add-ons” enabled). Firefox doesn't sync custom search engines itself; Barkeys Launcher lists keywords of missing engines under *Not found in Firefox*. Export/import (JSON) works without Sync and can carry the engines' search URLs to set them up on a new device.
 
 ## Development
 
@@ -89,7 +89,7 @@ Want to add a language? Copy `_locales/en/messages.json` to `_locales/<code>/mes
 
 ## Support
 
-If Barkeys saves you some keystrokes, you can [buy me a coffee ☕](https://buymeacoffee.com/th90dd).
+If Barkeys Launcher saves you some keystrokes, you can [buy me a coffee ☕](https://buymeacoffee.com/th90dd).
 
 ## Legal
 

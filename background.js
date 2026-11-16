@@ -6,10 +6,10 @@ let ready = null;
 
 function reload() {
   ready = BK.Store.migrate()
-    .catch(err => console.error("Barkeys: migration failed", err))
+    .catch(err => console.error("Barkeys Launcher: migration failed", err))
     .then(() => BK.Store.load())
     .then(state => { index = BK.buildIndex(state); })
-    .catch(err => console.error("Barkeys: loading settings failed", err));
+    .catch(err => console.error("Barkeys Launcher: loading settings failed", err));
   return ready;
 }
 
@@ -38,7 +38,7 @@ async function openBundleRest(tabId, urls) {
   try { index = (await browser.tabs.get(tabId)).index; } catch { /* tab gone */ }
   urls.forEach((url, i) => {
     browser.tabs.create({ url, active: false, index: index == null ? undefined : index + 1 + i })
-      .catch(err => console.error("Barkeys: opening tab failed", err));
+      .catch(err => console.error("Barkeys Launcher: opening tab failed", err));
   });
 }
 
@@ -64,7 +64,7 @@ async function onBeforeRequest(details) {
     if (!(await engineExists(hit.engine))) return {};
     setTimeout(() => {
       browser.search.search({ query: hit.terms, engine: hit.engine, tabId: details.tabId })
-        .catch(err => console.error("Barkeys: search failed", err));
+        .catch(err => console.error("Barkeys Launcher: search failed", err));
     }, 0);
     return { cancel: true };
   }
