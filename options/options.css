@@ -220,7 +220,7 @@ main { max-width: 1040px; margin: 0 auto; padding: 8px 24px 64px; }
   display: inline-block;
   width: fit-content;
   font: 500 .85rem/1.55 var(--mono);
-  padding: 3px 12px;
+  padding: 4px 12px;
   border-radius: 999px;
   background: var(--accent-soft);
   border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
@@ -475,7 +475,13 @@ textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-
   padding: 7px 0;
   border-top: 1px solid var(--line);
 }
-.preset-name { font-weight: 500; min-width: 0; }
+.preset-name { font-weight: 500; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.preset.has-variants { align-items: end; }
+/* Same height for chip, dropdown and button within a preset row */
+.preset .btn.small { padding: 4px 14px; font-size: .85rem; line-height: 1.55; }
+/* URL text centred on the 31 px pill height, dropdowns share one width */
+
+.preset select.variant { min-width: 160px; }
 .preset .kbd { justify-self: start; }
 .preset-actions { display: flex; gap: 8px; align-items: center; justify-content: flex-end; }
 /* Variant dropdown styled like the small pill buttons, with a Lucide chevron */
@@ -493,7 +499,7 @@ textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-
   cursor: pointer;
 }
 .preset select.variant:hover { border-color: var(--accent); }
-.preset-url { font: .84rem var(--mono); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.preset-url { font: .84rem/31px var(--mono); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .kbd.taken { opacity: .45; text-decoration: line-through; }
 @media (max-width: 780px) {
   .preset { grid-template-columns: 1fr auto; }

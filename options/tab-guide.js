@@ -20,7 +20,7 @@ const GuideView = {
 
   variantLabel(p, v) {
     if (p.kind === "lang") return `${this.languageName(v.v)} (${v.v})`;
-    if (p.kind === "target") return "→ " + this.languageName(v.v);
+    if (p.kind === "target") return this.languageName(v.v);
     return v.v;
   },
 
@@ -42,7 +42,7 @@ const GuideView = {
     const v = p.variants.find(x => x.v === value) || home;
     return {
       u: v.u,
-      name: `${p.n} (${p.kind === "target" ? "→ " + v.v : v.v})`,
+      name: `${p.n} (${v.v})`,
       a: v === home ? p.a : `${p.a}.${this.variantCode(v)}`,
       value: v.v
     };
@@ -87,12 +87,13 @@ const GuideView = {
         }))
       : null;
 
-    return h("div", { class: "preset" },
-      h("span", { class: "preset-name", text: p.n }),
+    // With variants: name on top, dropdown below it; keyword, URL and button
+    // line up with the dropdown (the row aligns its cells to the bottom).
+    return h("div", { class: "preset" + (select ? " has-variants" : "") },
+      h("div", { class: "preset-name" }, h("span", { text: p.n }), select),
       h("span", { class: keywordFree ? "kbd dashed" : "kbd dashed taken", text: cur.a, title: keywordFree ? "" : t("presetKeywordTaken") }),
       h("code", { class: "preset-url", text: cur.u, title: cur.u }),
       h("div", { class: "preset-actions" },
-        select,
         h("button", {
           class: "btn small" + (added ? " ghost" : ""),
           disabled: added,
