@@ -1,5 +1,7 @@
 # Barkeys Launcher
 
+**English** · [Deutsch](README.de.md)
+
 **Smarter search with address bar keywords.**
 
 Firefox lets you give each search engine exactly **one** keyword. Barkeys Launcher adds as many extra keywords as you like – `@w`, `@wiki` and `@wikipedia` all search Wikipedia.
@@ -60,11 +62,18 @@ npx web-ext build    # zip in web-ext-artifacts/
 ```
 lib/        shared core: constants, validation, storage (sync schema v2), keyword resolver
 background.js   intercepts the default engine's result page and redirects
-options/    settings UI: one file per tab (welcome, engines, custom, data) + guide in HTML
+options/    settings UI: one file per tab (welcome, engines, custom, sites, presets, data) + guide in HTML
+_locales/   UI translations (de, en)
 tests/      node:test unit tests (not shipped in the add-on)
 ```
 
 Or load it temporarily: `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on…" → `manifest.json`.
+
+## Languages & translations
+
+The settings follow Firefox's language automatically; under *Data & sync → Language* you can pick a fixed one. Currently: **English** and **German**.
+
+Want to add a language? Copy `_locales/en/messages.json` to `_locales/<code>/messages.json` (e.g. `fr`), translate the `message` values (keep `$placeholders$` and `%s` as they are), add the language to `BK.LOCALES` in `lib/constants.js` and open a pull request.
 
 ## Roadmap
 
@@ -75,6 +84,10 @@ Or load it temporarily: `about:debugging#/runtime/this-firefox` → "Load Tempor
 ## Support
 
 If Barkeys saves you some keystrokes, you can [buy me a coffee ☕](https://buymeacoffee.com/th90dd).
+
+## Legal
+
+Published by TH90DD · [Legal notice](https://th90dd.com/imprint) · [Privacy policy](PRIVACY.md)
 
 ## License
 

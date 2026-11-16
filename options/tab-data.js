@@ -149,3 +149,20 @@ $("resetAll").addEventListener("click", async () => {
   App.renderAll();
   Status.show(t("statusSaved"), "ok", 1800);
 });
+
+// ---------- UI language ----------
+(async () => {
+  const select = $("uiLangSelect");
+  const { uiLang: chosen } = await browser.storage.local.get("uiLang");
+  const firefoxLang = browser.i18n.getUILanguage();
+  let firefoxName = firefoxLang;
+  try { firefoxName = new Intl.DisplayNames([firefoxLang], { type: "language" }).of(firefoxLang); } catch { /* keep code */ }
+  select.append(h("option", { value: "", text: t("langAuto", firefoxName) }));
+  for (const l of BK.LOCALES) select.append(h("option", { value: l.code, text: l.name }));
+  select.value = chosen && BK.LOCALES.some(l => l.code === chosen) ? chosen : "";
+  select.addEventListener("change", async () => {
+    if (select.value) await browser.storage.local.set({ uiLang: select.value });
+    else await browser.storage.local.remove("uiLang");
+    location.reload();
+  });
+})();

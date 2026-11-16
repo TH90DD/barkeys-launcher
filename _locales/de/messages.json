@@ -691,5 +691,25 @@
   },
   "btnSaveNow": {
     "message": "Jetzt speichern"
+  },
+  "langTitle": {
+    "message": "Sprache"
+  },
+  "langHint": {
+    "message": "Barkeys nutzt automatisch die Sprache von Firefox. Hier kannst du sie für die Einstellungen fest wählen."
+  },
+  "langAuto": {
+    "message": "Automatisch (wie Firefox: $lang$)",
+    "placeholders": {
+      "lang": {
+        "content": "$1"
+      }
+    }
+  },
+  "linkImprint": {
+    "message": "Impressum"
+  },
+  "linkPrivacy": {
+    "message": "Datenschutz"
   }
 }

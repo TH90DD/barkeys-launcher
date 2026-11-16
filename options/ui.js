@@ -1,7 +1,42 @@
 "use strict";
 // Small DOM helpers. Text is always set via textContent – never innerHTML.
 
-const t = (key, subs) => browser.i18n.getMessage(key, subs) || key;
+// Firefox picks the UI language automatically. Users can override it; then
+// the chosen _locales/<lang>/messages.json is loaded and used instead.
+let MESSAGES = null;
+
+function formatMessage(entry, subs) {
+  const list = [].concat(subs == null ? [] : subs).map(String);
+  let text = entry.message;
+  for (const [name, p] of Object.entries(entry.placeholders || {})) {
+    const value = p.content.replace(/\$(\d)/g, (_, n) => list[n - 1] ?? "");
+    text = text.split("$" + name + "$").join(value);
+  }
+  return text;
+}
+
+function t(key, subs) {
+  if (MESSAGES && MESSAGES[key]) return formatMessage(MESSAGES[key], subs);
+  return browser.i18n.getMessage(key, subs) || key;
+}
+
+// Effective UI language ("de", "en", …).
+function uiLang() {
+  return (UI_LANG || browser.i18n.getUILanguage()).split("-")[0];
+}
+let UI_LANG = null;
+
+async function loadLanguage() {
+  const { uiLang: chosen } = await browser.storage.local.get("uiLang");
+  if (!chosen || !BK.LOCALES.some(l => l.code === chosen)) return;
+  try {
+    const res = await fetch(browser.runtime.getURL(`_locales/${chosen}/messages.json`));
+    MESSAGES = await res.json();
+    UI_LANG = chosen;
+  } catch {
+    MESSAGES = null;
+  }
+}
 const $ = id => document.getElementById(id);
 
 function h(tag, props, ...children) {
@@ -52,7 +87,7 @@ function applyI18n(root = document) {
   for (const sum of root.querySelectorAll("details > summary")) {
     sum.prepend(h("span", { class: "toggle" }, icon("chevron")));
   }
-  document.documentElement.lang = browser.i18n.getUILanguage();
+  document.documentElement.lang = uiLang();
 }
 
 // Only show icons that don't trigger a network request (privacy).

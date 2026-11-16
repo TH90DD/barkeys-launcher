@@ -691,5 +691,25 @@
   },
   "btnSaveNow": {
     "message": "Save now"
+  },
+  "langTitle": {
+    "message": "Language"
+  },
+  "langHint": {
+    "message": "Barkeys follows Firefox's language automatically. Here you can pick a fixed language for the settings."
+  },
+  "langAuto": {
+    "message": "Automatic (like Firefox: $lang$)",
+    "placeholders": {
+      "lang": {
+        "content": "$1"
+      }
+    }
+  },
+  "linkImprint": {
+    "message": "Legal notice"
+  },
+  "linkPrivacy": {
+    "message": "Privacy"
   }
 }

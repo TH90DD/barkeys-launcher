@@ -1,5 +1,5 @@
 "use strict";
-/* global App, BK, applyI18n, $, h, icon */
+/* global App, BK, applyI18n, loadLanguage, uiLang, $, h, icon */
 
 const TAB_IDS = ["welcome", "engines", "custom", "sites", "presets", "data", "guide"];
 
@@ -46,7 +46,8 @@ const Menu = {
 function setupTabs() {
   $("menuToggle").addEventListener("click", () => Menu.toggle());
   document.addEventListener("keydown", e => { if (e.key === "Escape") Menu.close(); });
-  document.addEventListener("click", e => { if (!$("tabs").contains(e.target)) Menu.close(); });
+  // composedPath() still knows the clicked icon even after the toggle swapped it out.
+  document.addEventListener("click", e => { if (!e.composedPath().includes($("tabs"))) Menu.close(); });
   const buttons = [...document.querySelectorAll("#tabs [data-tab]")];
   for (const btn of buttons) {
     btn.setAttribute("aria-controls", "panel-" + btn.dataset.tab);
@@ -70,7 +71,11 @@ async function refreshFromFirefox() {
 }
 
 (async () => {
+  await loadLanguage();
   applyI18n();
+  const lang = BK.LEGAL.imprint[uiLang()] ? uiLang() : "en";
+  $("imprintLink").href = BK.LEGAL.imprint[lang];
+  $("privacyLink").href = BK.LEGAL.privacy[lang];
   setupTabs();
   const { lastTab } = await browser.storage.local.get("lastTab");
   Tabs.show(location.hash.slice(1) || lastTab || "welcome");

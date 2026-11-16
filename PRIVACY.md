@@ -1,5 +1,7 @@
 # Privacy policy – Barkeys Launcher
 
+**English** · [Deutsch](PRIVACY.de.md)
+
 *Last updated: 2026-11-16*
 
 Barkeys Launcher is a Firefox add-on by TH90DD. This policy explains what the add-on does with data. Short version: **it collects nothing and sends nothing anywhere.**
@@ -44,4 +46,4 @@ When a keyword sends you to a website (e.g. a search engine or a site in a bundl
 
 ## Contact
 
-Questions about this policy: please open an issue at <https://github.com/TH90DD/barkeys-launcher/issues>. The responsible party and contact details are listed in the legal notice (Impressum) of TH90DD.
+Questions about this policy: please open an issue at <https://github.com/TH90DD/barkeys-launcher/issues>. The responsible party and contact details are listed in the [legal notice of TH90DD](https://th90dd.com/imprint).
