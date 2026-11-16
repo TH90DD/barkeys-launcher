@@ -770,5 +770,13 @@
   },
   "setupExtraOkOne": {
     "message": "1 extra keyword set up"
+  },
+  "presetVariant": {
+    "message": "Country or language for $name$",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
   }
 }

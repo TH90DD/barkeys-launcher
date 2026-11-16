@@ -770,5 +770,13 @@
   },
   "setupExtraOkOne": {
     "message": "1 weiteres Kürzel eingerichtet"
+  },
+  "presetVariant": {
+    "message": "Land bzw. Sprache für $name$",
+    "placeholders": {
+      "name": {
+        "content": "$1"
+      }
+    }
   }
 }

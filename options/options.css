@@ -473,7 +473,8 @@ textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-
   padding: 7px 0;
   border-top: 1px solid var(--line);
 }
-.preset-name { font-weight: 500; }
+.preset-name { font-weight: 500; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.preset select.variant { padding: 3px 8px; font-size: .84rem; border-radius: 8px; width: auto; max-width: 100%; }
 .preset-url { font: .84rem var(--mono); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .kbd.taken { opacity: .45; text-decoration: line-through; }
 @media (max-width: 780px) {
