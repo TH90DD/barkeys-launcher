@@ -34,10 +34,10 @@ function matchPattern(pattern, url) {
 // Bundle: the first site replaces the search tab, the rest open right
 // next to it in the background, in order.
 async function openBundleRest(tabId, urls) {
-  let index;
-  try { index = (await browser.tabs.get(tabId)).index; } catch { /* tab gone */ }
+  let tabIndex;
+  try { tabIndex = (await browser.tabs.get(tabId)).index; } catch { /* tab gone */ }
   urls.forEach((url, i) => {
-    browser.tabs.create({ url, active: false, index: index == null ? undefined : index + 1 + i })
+    browser.tabs.create({ url, active: false, index: tabIndex == null ? undefined : tabIndex + 1 + i })
       .catch(err => console.error("Barkeys Launcher: opening tab failed", err));
   });
 }
@@ -62,10 +62,9 @@ async function onBeforeRequest(details) {
 
     // Hand the search to the Firefox engine (we never learn its URL).
     if (!(await engineExists(hit.engine))) return {};
-    setTimeout(() => {
-      browser.search.search({ query: hit.terms, engine: hit.engine, tabId: details.tabId })
-        .catch(err => console.error("Barkeys Launcher: search failed", err));
-    }, 0);
+    // Not deferred with a timer: an event page may suspend before a timer fires.
+    browser.search.search({ query: hit.terms, engine: hit.engine, tabId: details.tabId })
+      .catch(err => console.error("Barkeys Launcher: search failed", err));
     return { cancel: true };
   }
   return {};

@@ -106,7 +106,7 @@ Du möchtest eine Sprache ergänzen? Kopiere `_locales/en/messages.json` nach `_
 ## Entwicklung
 
 ```bash
-node --test tests/   # Unit-Tests für Speicher, Import-Prüfung und Umleitung
+node --test 'tests/*.test.mjs'   # Unit-Tests für Speicher, Import-Prüfung und Umleitung
 npx web-ext lint
 npx web-ext run      # startet ein Test-Firefox mit dem Add-on
 npx web-ext build    # ZIP in web-ext-artifacts/

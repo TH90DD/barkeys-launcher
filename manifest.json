@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extName__",
   "description": "__MSG_extDescription__",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "default_locale": "en",
   "author": "TH90DD",
   "homepage_url": "https://github.com/TH90DD/barkeys-launcher",
@@ -41,7 +41,7 @@
     "*://www.bing.com/search*",
     "*://duckduckgo.com/*",
     "*://www.ecosia.org/search*",
-    "*://www.startpage.com/*",
+    "*://www.startpage.com/sp/search*",
     "*://www.qwant.com/*",
     "*://search.brave.com/search*",
     "*://www.perplexity.ai/search*"

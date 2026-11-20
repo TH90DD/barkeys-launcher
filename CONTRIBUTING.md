@@ -11,7 +11,7 @@ Thanks for helping! *Deutsch: Beiträge sind auch auf Deutsch willkommen – Iss
 ## Before you open a pull request
 
 ```bash
-node --test tests/   # all tests must pass
+node --test 'tests/*.test.mjs'   # all tests must pass
 npx web-ext lint     # 0 errors, 0 warnings
 ```
 

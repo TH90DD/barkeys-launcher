@@ -1,4 +1,4 @@
-// Run with: node --test tests/
+// Run with: node --test 'tests/*.test.mjs'
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -173,4 +173,30 @@ test("bundles are capped and survive export/import", () => {
   const res = BK.Store.applyImport({ engines: new Map(), custom: [], sites: [], bundles: [] }, imp, "merge", []);
   const file = BK.Store.exportData(res.state, []);
   assert.equal(file.bundles[0].urls.length, BK.LIMITS.bundleUrls);
+});
+
+test("import drops plain-word keywords and lists the target domains", () => {
+  const { BK } = sandbox();
+  const imp = BK.Store.parseImport(JSON.stringify({
+    format: "barkeys-launcher", version: 1,
+    custom: [
+      { name: "phish", keywords: ["login", "google"], url: "https://evil.example/?q=%s" },
+      { name: "ok", keywords: ["@ok", "paypal"], url: "https://ok.example/?q=%s" }
+    ],
+    sites: [{ name: "Mail", keywords: ["@mail"], url: "https://mail.example/" }]
+  }));
+  assert.ok(!imp.custom.some(c => c.u.includes("evil")), "plain words must not bring in foreign domains");
+  eq(imp.custom.map(c => c.a), [["@ok"]]);
+  eq(imp.hosts, ["mail.example", "ok.example"]);
+  // login, google, paypal (rejected keywords) + the entry left without keywords
+  assert.equal(imp.skipped, 4);
+});
+
+test("URL templates may not put %s in the host or user info", () => {
+  const { BK } = sandbox();
+  assert.equal(BK.validUrlTemplate("https://%s.example.com/"), false);
+  assert.equal(BK.validUrlTemplate("https://u:%s@example.com/"), false);
+  assert.equal(BK.validUrlTemplate("https://example.com/?q=%s"), true);
+  assert.equal(BK.validUrlTemplate("https://example.com/%s"), true);
+  assert.equal(BK.validUrlTemplate("https://example.com/#%s"), true);
 });

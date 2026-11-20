@@ -96,7 +96,7 @@ Keywords are stored in `storage.sync`, so they follow you via Firefox Sync (with
 ## Development
 
 ```bash
-node --test tests/   # unit tests for storage, import validation and redirects
+node --test 'tests/*.test.mjs'   # unit tests for storage, import validation and redirects
 npx web-ext lint
 npx web-ext run      # starts a test Firefox with the add-on
 npx web-ext build    # zip in web-ext-artifacts/

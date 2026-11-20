@@ -309,6 +309,9 @@
       }
     }
   },
+  "importTargets": {
+    "message": "Ziel-Domains in dieser Datei:"
+  },
   "importSkipped": {
     "message": "$count$ ungültige Einträge werden übersprungen.",
     "placeholders": {

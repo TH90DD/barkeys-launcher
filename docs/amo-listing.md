@@ -92,21 +92,3 @@ Switch the language with **“Localize for”** (top right) to enter the German 
 
 **Datenschutzrichtlinie:** Inhalt von `PRIVACY.de.md` einfügen
 
----
-
-## Technical Details → Whiteboard (notes for reviewers, not public)
-
-```
-Barkeys Launcher adds extra address bar keywords for Firefox search engines.
-
-Why the permissions:
-- webRequest/webRequestBlocking + optional host permission for ONE search result page (e.g. www.google.com/search): when Firefox sends an unknown keyword like "@yt cats" to the default engine, the add-on reads only the query parameter of that main_frame request and redirects (or hands the search to the Firefox engine via search.search). No other requests are inspected.
-- search: list Firefox search engines and run searches with them.
-- storage: user settings in storage.sync.
-- bookmarks (optional): only for "Pick from bookmarks", searched locally.
-
-No remote code, no minification, no build step, no data collection, no network requests of its own.
-Source and tests: https://github.com/TH90DD/barkeys-launcher (node --test tests/)
-```
-
-Additional Details: Default locale English (US); tags from Mozilla's fixed list (e.g. search, productivity); UUID never changes.

@@ -17,7 +17,7 @@ version=$(grep -oP '"version":\s*"\K[^"]+' manifest.json)
 echo "Barkeys Launcher $version → channel: $channel"
 
 echo "1/3 Tests …"
-node --test tests/ >/dev/null || { echo "Tests failed – not signing." >&2; exit 1; }
+node --test 'tests/*.test.mjs' >/dev/null || { echo "Tests failed – not signing." >&2; exit 1; }
 
 echo "2/3 Lint …"
 lint=$(npx --yes web-ext lint 2>&1 || true)
