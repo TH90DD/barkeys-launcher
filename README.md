@@ -35,7 +35,7 @@ It **extends** your Firefox search engines, it doesn't replace them.
 
 Barkeys Launcher is distributed **only via [addons.mozilla.org](https://addons.mozilla.org/)** – the official Firefox add-on store, with automatic updates and Mozilla's review.
 
-> **Coming soon.** The store page is being prepared; the link will appear here once it's live.
+**➜ [Get Barkeys Launcher for Firefox](https://addons.mozilla.org/en-US/firefox/addon/barkeys-launcher/)**
 
 Please don't install builds from other sources. Developers can load the code temporarily for testing – see [Development](#development).
 

@@ -35,7 +35,7 @@ Barkeys Launcher **erweitert** deine Firefox-Suchmaschinen, es ersetzt sie nicht
 
 Barkeys Launcher gibt es **ausschließlich über [addons.mozilla.org](https://addons.mozilla.org/)** – den offiziellen Firefox-Add-on-Store, mit automatischen Updates und Mozillas Prüfung.
 
-> **Bald verfügbar.** Die Store-Seite wird gerade vorbereitet; der Link erscheint hier, sobald sie online ist.
+**➜ [Barkeys Launcher für Firefox holen](https://addons.mozilla.org/de/firefox/addon/barkeys-launcher/)**
 
 Bitte installiere keine Versionen aus anderen Quellen. Entwickler können den Code zum Testen vorläufig laden – siehe [Entwicklung](#entwicklung).
 
