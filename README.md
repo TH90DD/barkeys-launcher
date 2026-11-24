@@ -5,6 +5,7 @@
 <p align="center">
   <img alt="Version" src="https://img.shields.io/github/manifest-json/v/TH90DD/barkeys-launcher?label=version&color=d60042">
   <img alt="Firefox 142+" src="https://img.shields.io/badge/Firefox-142%2B-ff7139?logo=firefoxbrowser&logoColor=white">
+  <a href="https://addons.mozilla.org/en-US/firefox/addon/barkeys-launcher/"><img alt="Firefox users" src="https://img.shields.io/amo/users/barkeys-launcher?label=users&color=ff7139&logo=firefoxbrowser&logoColor=white"></a>
   <img alt="License MPL-2.0" src="https://img.shields.io/github/license/TH90DD/barkeys-launcher?color=181721">
   <img alt="Data collection: none" src="https://img.shields.io/badge/data%20collection-none-2ea44f">
   <img alt="Languages EN | DE" src="https://img.shields.io/badge/languages-EN%20%7C%20DE-6b6a76">
